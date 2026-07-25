@@ -112,6 +112,8 @@ async function loadStore() {
       /* */
     }
   }
+  // 4) Ephemeral memory (same lambda instance)
+  if (globalThis.__AF_USER_STORE) return globalThis.__AF_USER_STORE;
   return emptyStore();
 }
 
@@ -128,13 +130,15 @@ async function saveStore(store) {
   }
   const gh = await githubPutText(USERS_REL, text, "auth: update users store");
   if (gh.ok) return { ok: true, via: "github" };
-  // Last resort: remember nothing durable — return error so client knows
+
+  // Ephemeral process memory (last resort) — works for single warm lambda; set AF_GITHUB_TOKEN for real prod
+  if (!globalThis.__AF_USER_STORE) globalThis.__AF_USER_STORE = emptyStore();
+  globalThis.__AF_USER_STORE = store;
   return {
-    ok: false,
-    via: "none",
-    error:
-      gh.error ||
-      "No durable store. Set AF_GITHUB_TOKEN (repo write) or run signup from a writable host.",
+    ok: true,
+    via: "memory",
+    warning:
+      "Users stored in warm memory only until AF_GITHUB_TOKEN is set on Vercel (repo contents write).",
   };
 }
 

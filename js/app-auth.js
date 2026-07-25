@@ -33,11 +33,15 @@
     );
     var t = token();
     if (t) headers.authorization = "Bearer " + t;
-    var res = await fetch(API + path, {
+    // Vercel project uses trailingSlash:true — POST without / gets 308 and drops body
+    var p = path;
+    if (p.indexOf("?") === -1 && p.charAt(p.length - 1) !== "/") p = p + "/";
+    var res = await fetch(API + p, {
       method: opts.method || "GET",
       headers: headers,
       body: opts.body ? JSON.stringify(opts.body) : undefined,
       credentials: "include",
+      redirect: "manual",
     });
     var data = {};
     try {
