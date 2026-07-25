@@ -9,7 +9,9 @@
     "build": "node scripts/build-blog.mjs && node scripts/build-sitemap.mjs",
     "new:post": "node scripts/new-post.mjs",
     "publish:next": "node scripts/publish-next.mjs",
-    "pipeline": "node scripts/publish-next.mjs && node scripts/build-blog.mjs && node scripts/build-sitemap.mjs"
+    "pipeline": "node scripts/publish-next.mjs && node scripts/build-blog.mjs && node scripts/build-sitemap.mjs",
+    "build:vercel": "node scripts/prepare-vercel.mjs",
+    "vercel-build": "node scripts/prepare-vercel.mjs"
   },
   "engines": {
     "node": ">=18"

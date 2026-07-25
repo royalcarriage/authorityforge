@@ -1,4 +1,9 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "node scripts/prepare-vercel.mjs",
+  "outputDirectory": "dist",
+  "installCommand": "echo 'static site — no install'",
+  "framework": null,
   "cleanUrls": true,
   "trailingSlash": true,
   "headers": [
@@ -18,6 +23,29 @@
           "value": "DENY"
         }
       ]
+    },
+    {
+      "source": "/ads.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/privacy",
+      "destination": "/legal/privacy/"
+    },
+    {
+      "source": "/privacy/",
+      "destination": "/legal/privacy/"
     }
   ]
 }
