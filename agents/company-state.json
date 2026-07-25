@@ -98,5 +98,28 @@
     ],
     "autonomyDefault": "pr",
     "zeroCost": true
+  },
+  "objectiveRef": "agents/control-plane/objective.json",
+  "wiring": {
+    "lastCheckAt": "2026-07-25T12:49:12.641Z",
+    "liveOk": 11,
+    "liveTotal": 11,
+    "gaps": [
+      "Optional: AI_GATEWAY_API_KEY in GH secrets + Vercel (free models only after card unlock)",
+      "Vercel env missing GEMINI_API_KEY — CEO LLM briefing stays null",
+      "No Stripe revenue yet (expected) — affiliates/AdSense human gates"
+    ],
+    "ghSecrets": [
+      "GEMINI_API_KEY"
+    ],
+    "llmSmoke": {
+      "ok": true,
+      "provider": "ollama",
+      "costUsd": 0,
+      "zeroCost": true,
+      "gatewayKeyPresent": false,
+      "textPreview": "SYSTEM_CHECK_OK",
+      "errors": []
+    }
   }
 }

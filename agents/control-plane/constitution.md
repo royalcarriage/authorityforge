@@ -31,3 +31,6 @@ Objective: continuously improve AuthorityForge systems so the business earns mor
 - Affiliate enablement path
 - AdSense + CMP ready
 - Self-improving agent logs on each cycle
+
+## Primary objective (machine-readable)
+See `agents/control-plane/objective.json` — north star, success criteria, human gates.

@@ -79,6 +79,7 @@
         ' · open tasks: ' + j.openTasks +
         ' · zero-cost: ' + j.zeroCost + '</p>' +
         '<p class="muted">Gemini key: ' + (j.llm&&j.llm.geminiKeyConfigured?'configured':'not set on Vercel') +
+        ' · objective: self-operating revenue systems' +
         ' · plugins: ' + (j.marketplace&&j.marketplace.pluginCount) + '</p>' +
         '<pre style="overflow:auto;max-height:220px;font-size:.75rem;background:#0a0c10;padding:1rem;border-radius:8px">' +
         JSON.stringify({org:j.orgChart,treasury:j.treasury,lastCycle:j.lastCycle},null,2) + '</pre>';

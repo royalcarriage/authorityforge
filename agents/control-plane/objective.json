@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "name": "AuthorityForge Primary Objective",
+  "updatedAt": "2026-07-25",
+  "northStar": "Build a self-operating content + affiliate + AdSense business that earns real revenue at near-zero operating cost, then reinvest earnings to grow.",
+  "mission": "Self-optimizing AI + SEO systems that compound rankings and passive revenue.",
+  "successCriteria": [
+    {
+      "id": "pages",
+      "metric": "published commercial/content pages",
+      "target": 25,
+      "why": "AdSense quality + topical depth"
+    },
+    {
+      "id": "affiliates_enabled",
+      "metric": "AFFILIATES keys with enabled:true",
+      "target": 3,
+      "why": "First real money path"
+    },
+    {
+      "id": "adsense_serving",
+      "metric": "ads live + CMP published",
+      "target": true,
+      "why": "Display revenue"
+    },
+    {
+      "id": "gsc_property",
+      "metric": "Search Console property verified",
+      "target": true,
+      "why": "Organic feedback loop"
+    },
+    {
+      "id": "agent_cycle_green",
+      "metric": "Autonomous cycle produces plan + optional publish weekly",
+      "target": true,
+      "why": "Self-operation"
+    },
+    {
+      "id": "zero_paid_llm",
+      "metric": "AF_ZERO_COST until revenue_cents > 0",
+      "target": true,
+      "why": "Survive until self-funded"
+    }
+  ],
+  "operatingLoop": [
+    "Sense health + queue + KPIs",
+    "Plan with free LLM (Gemini / Gateway free / Ollama)",
+    "Act: seed content, publish, docs, agent state",
+    "Ship: git push → Vercel deploy",
+    "Learn: research-log + kpi-latest.json"
+  ],
+  "humanGates": [
+    "AdSense / CMP publish clicks",
+    "Affiliate program applications + tracking IDs",
+    "GSC property verification",
+    "Vercel env secrets",
+    "Money movement / email send",
+    "Credit card unlock for AI Gateway free tier"
+  ]
+}

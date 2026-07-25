@@ -139,6 +139,7 @@ export function companySnapshot() {
   const policy = readJson("agents/treasury/policy.json", {});
   const budget = readJson("agents/treasury/budget.json", {});
   const marketplace = readJson("agents/marketplace/catalog.json", { plugins: [] });
+  const objective = readJson("agents/control-plane/objective.json", null);
   const queue = readJson("content/queue.json", { posts: [] });
   const posts = queue.posts || [];
   const rolesDir = path.join(ROOT, "agents/roles");
@@ -202,6 +203,7 @@ export function companySnapshot() {
       marketplace: "/api/marketplace",
       org: "/api/company/org",
     },
+    objective: objective ? { northStar: objective.northStar, successCriteria: objective.successCriteria } : null,
     generatedAt: new Date().toISOString(),
   };
 }

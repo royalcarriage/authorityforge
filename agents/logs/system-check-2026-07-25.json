@@ -1,0 +1,162 @@
+{
+  "ok": true,
+  "at": "2026-07-25T12:49:12.641Z",
+  "primary": "https://authorityforge-tau.vercel.app",
+  "objective": "Build a self-operating content + affiliate + AdSense business that earns real revenue at near-zero operating cost, then reinvest earnings to grow.",
+  "cycleCount": 5,
+  "content": {
+    "queued": 3,
+    "published": 9
+  },
+  "files": {
+    "agentAutonomous": true,
+    "freeLlm": true,
+    "ceoRun": true,
+    "prepareVercel": true,
+    "workflowAutonomous": true,
+    "workflowCeo": true,
+    "workflowContent": true,
+    "objective": true,
+    "constitution": true,
+    "companyState": true,
+    "apiHealth": true,
+    "apiStatus": true,
+    "apiCeo": true
+  },
+  "keysLocal": [
+    {
+      "name": "GEMINI_API_KEY",
+      "present": true,
+      "length": 39
+    },
+    {
+      "name": "AI_GATEWAY_API_KEY",
+      "present": false,
+      "length": 0
+    },
+    {
+      "name": "AF_AI_GATEWAY_API_KEY",
+      "present": false,
+      "length": 0
+    },
+    {
+      "name": "VERCEL_AI_GATEWAY_API_KEY",
+      "present": false,
+      "length": 0
+    },
+    {
+      "name": "AF_GITHUB_TOKEN",
+      "present": false,
+      "length": 0
+    },
+    {
+      "name": "AF_AGENT_SECRET",
+      "present": false,
+      "length": 0
+    },
+    {
+      "name": "AF_STRIPE_SECRET_KEY",
+      "present": false,
+      "length": 0
+    },
+    {
+      "name": "OPENAI_API_KEY",
+      "present": true,
+      "length": 22,
+      "note": "present but IGNORED while AF_ZERO_COST=1"
+    }
+  ],
+  "ghSecretsConfigured": [
+    "GEMINI_API_KEY"
+  ],
+  "live": [
+    {
+      "path": "/",
+      "status": 200,
+      "ok": true,
+      "sample": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\" /> <meta name=\"viewport\" content=\"width=device-width, "
+    },
+    {
+      "path": "/company/",
+      "status": 200,
+      "ok": true,
+      "sample": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\" /> <meta name=\"viewport\" content=\"width=device-width, "
+    },
+    {
+      "path": "/api/company/status",
+      "status": 200,
+      "ok": true,
+      "sample": "{ \"ok\": true, \"platform\": \"vercel\", \"zeroCost\": true, \"company\": { \"name\": \"AuthorityForge\", \"mission\": "
+    },
+    {
+      "path": "/api/health",
+      "status": 200,
+      "ok": true,
+      "sample": "{ \"ok\": true, \"platform\": \"vercel\", \"zeroCost\": true, \"cycleCount\": 5, \"company\": \"AuthorityForge\", \"gemini\""
+    },
+    {
+      "path": "/api/ceo/cycle",
+      "status": 200,
+      "ok": true,
+      "sample": "{ \"ok\": true, \"report\": { \"agent\": \"af-ceo-vercel-v1\", \"platform\": \"vercel\", \"startedAt\": \"2026-07-25T12"
+    },
+    {
+      "path": "/api/agents",
+      "status": 200,
+      "ok": true,
+      "sample": "{ \"ok\": true, \"platform\": \"vercel\", \"ceo\": \"af-ceo-v1\", \"orgChart\": { \"ceo\": \"af-ceo\", \"reports\": [ "
+    },
+    {
+      "path": "/api/marketplace",
+      "status": 200,
+      "ok": true,
+      "sample": "{ \"ok\": true, \"platform\": \"vercel\", \"version\": 1, \"description\": \"AuthorityForge internal plugin marketplace — m"
+    },
+    {
+      "path": "/ads.txt",
+      "status": 200,
+      "ok": true,
+      "sample": "# Google AdSense — AuthorityForge # https://support.google.com/adsense/answer/7532444 google.com, pub-1959018852581373, "
+    },
+    {
+      "path": "/blog/",
+      "status": 200,
+      "ok": true,
+      "sample": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\" /> <meta name=\"viewport\" content=\"width=device-width, "
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "ok": true,
+      "sample": "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\"> <url> <loc>htt"
+    },
+    {
+      "path": "/legal/privacy/",
+      "status": 200,
+      "ok": true,
+      "sample": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\" /> <meta name=\"viewport\" content=\"width=device-width, "
+    }
+  ],
+  "llmSmoke": {
+    "ok": true,
+    "provider": "ollama",
+    "costUsd": 0,
+    "zeroCost": true,
+    "gatewayKeyPresent": false,
+    "textPreview": "SYSTEM_CHECK_OK",
+    "errors": []
+  },
+  "treasuryPolicy": "free_only",
+  "gaps": [
+    "Optional: AI_GATEWAY_API_KEY in GH secrets + Vercel (free models only after card unlock)",
+    "Vercel env missing GEMINI_API_KEY — CEO LLM briefing stays null",
+    "No Stripe revenue yet (expected) — affiliates/AdSense human gates"
+  ],
+  "nextHumanActions": [
+    "Vercel env: GEMINI_API_KEY, AI_GATEWAY_API_KEY, AF_ZERO_COST=1",
+    "Vercel AI Gateway: add card to unlock free tier (still use free models only)",
+    "GitHub secret GEMINI_API_KEY (done if listed above)",
+    "AdSense CMP publish + affiliate tracking IDs",
+    "GSC property for authorityforge-tau.vercel.app"
+  ]
+}

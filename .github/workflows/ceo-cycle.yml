@@ -24,11 +24,14 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
 
       - name: Run CEO cycle
         env:
           AF_ZERO_COST: "1"
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
+          AF_PRIMARY_URL: https://authorityforge-tau.vercel.app
           AF_CEO_PUBLISH: ${{ inputs.publish == true && '1' || '0' }}
           SITE_URL: https://authorityforge-tau.vercel.app
         run: node scripts/ceo-run.mjs

@@ -30,7 +30,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
 
       - name: Publish next queued post (zero-cost)
         if: ${{ inputs.dry_run != true }}
@@ -40,6 +40,7 @@ jobs:
           AF_LLM_PROVIDER: auto
           # Free-tier Gemini only — do NOT set OPENAI_API_KEY here
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
           SITE_URL: https://authorityforge-tau.vercel.app
           BASE_PATH: ""
         run: node scripts/publish-next.mjs
