@@ -2,6 +2,10 @@
 
 This guide is for **https://grok.com** (or xAI Grok web/app) plus this repo.
 
+## 0. Grant write access (required for remote)
+
+See **[GROK-CONNECTOR-WRITE-ACCESS.md](./GROK-CONNECTOR-WRITE-ACCESS.md)** — GitHub → Settings → Installations → Grok → Contents Read and write on `royalcarriage/authorityforge`.
+
 ## 1. Open Grok in the browser
 
 1. Go to **https://grok.com** (or the Grok surface you use with GitHub connected).
