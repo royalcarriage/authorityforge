@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-25T20:37:38.306Z",
+  "updatedAt": "2026-07-25T20:37:40.343Z",
   "users": [
     {
       "id": "3cffde52-7772-4bd0-99b3-e78859114d8d",
@@ -645,13 +645,13 @@
       "metrics": {
         "pages": 0,
         "spokesPlanned": 12,
-        "revenueUsd": 0
+        "revenueUsd": 12.5
       },
       "checklist": [
         {
           "id": "niche",
           "label": "Define niche + money keywords",
-          "done": false
+          "done": true
         },
         {
           "id": "hub",
