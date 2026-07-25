@@ -1,7 +1,7 @@
-export const config = { runtime: "nodejs", maxDuration: 10 };
+export const config = { runtime: "nodejs" };
 
-import { cors, json, readJson, requireAgentAuth } from "../lib/runtime.mjs";
-import * as gh from "../lib/github.mjs";
+import { cors, json, readJson, requireAgentAuth } from "../lib/runtime.js";
+import * as gh from "../lib/github.js";
 
 /** List / register sister projects the primary agent may operate */
 export default async function handler(req, res) {

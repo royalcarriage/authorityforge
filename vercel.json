@@ -6,12 +6,6 @@
   "framework": null,
   "cleanUrls": true,
   "trailingSlash": true,
-  "functions": {
-    "api/**/*.js": {
-      "maxDuration": 10,
-      "includeFiles": "api/_bundle/**"
-    }
-  },
   "crons": [
     {
       "path": "/api/ceo/cycle",
@@ -33,10 +27,6 @@
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
         }
       ]
     },
@@ -48,16 +38,6 @@
           "value": "no-store"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/privacy",
-      "destination": "/legal/privacy/"
-    },
-    {
-      "source": "/privacy/",
-      "destination": "/legal/privacy/"
     }
   ]
 }

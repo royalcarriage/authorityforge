@@ -1,7 +1,7 @@
-export const config = { runtime: "nodejs", maxDuration: 10 };
+export const config = { runtime: "nodejs" };
 
-import { cors, json, requireAgentAuth } from "../lib/runtime.mjs";
-import { runAutonomousCycle } from "../lib/autonomous.mjs";
+import { cors, json, requireAgentAuth } from "../lib/runtime.js";
+import { runAutonomousCycle } from "../lib/autonomous.js";
 
 /**
  * Full autonomous improve cycle inside Vercel.

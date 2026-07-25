@@ -1,2 +1,2 @@
-export const config = { runtime: "nodejs", maxDuration: 10 };
+export const config = { runtime: "nodejs" };
 export { default } from "./company/status.js";

@@ -1,6 +1,6 @@
-export const config = { runtime: "nodejs", maxDuration: 10 };
+export const config = { runtime: "nodejs" };
 
-import { cors, json, requireAgentAuth, freeGemini } from "../lib/runtime.mjs";
+import { cors, json, requireAgentAuth, freeGemini } from "../lib/runtime.js";
 
 /** Free Gemini complete — paid models refused */
 export default async function handler(req, res) {

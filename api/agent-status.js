@@ -1,9 +1,9 @@
-export const config = { runtime: "nodejs", maxDuration: 10 };
+export const config = { runtime: "nodejs" };
 
-import { cors, json, companySnapshot } from "./lib/runtime.mjs";
-import { githubConfigured } from "./lib/github.mjs";
-import { vercelConfigured } from "./lib/vercel-api.mjs";
-import { readJson } from "./lib/runtime.mjs";
+import { cors, json, companySnapshot } from "./lib/runtime.js";
+import { githubConfigured } from "./lib/github.js";
+import { vercelConfigured } from "./lib/vercel-api.js";
+import { readJson } from "./lib/runtime.js";
 
 export default async function handler(req, res) {
   cors(res);

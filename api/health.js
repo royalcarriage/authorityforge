@@ -1,6 +1,6 @@
-export const config = { runtime: "nodejs", maxDuration: 10 };
+export const config = { runtime: "nodejs" };
 
-import { cors, json, companySnapshot } from "./lib/runtime.mjs";
+import { cors, json, companySnapshot } from "./lib/runtime.js";
 
 /** Lightweight health — no recursive fetches that can 500 the function */
 export default async function handler(req, res) {

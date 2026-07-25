@@ -1,6 +1,6 @@
-export const config = { runtime: "nodejs", maxDuration: 10 };
+export const config = { runtime: "nodejs" };
 
-import { cors, json, companySnapshot, readJson, ROOT } from "../lib/runtime.mjs";
+import { cors, json, companySnapshot, readJson, ROOT } from "../lib/runtime.js";
 import fs from "node:fs";
 import path from "node:path";
 

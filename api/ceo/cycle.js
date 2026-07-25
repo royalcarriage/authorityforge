@@ -1,6 +1,6 @@
-export const config = { runtime: "nodejs", maxDuration: 10 };
+export const config = { runtime: "nodejs" };
 
-import { cors, json, requireAgentAuth, runCeoCycle } from "../lib/runtime.mjs";
+import { cors, json, requireAgentAuth, runCeoCycle } from "../lib/runtime.js";
 
 /**
  * Vercel Cron + manual trigger.
