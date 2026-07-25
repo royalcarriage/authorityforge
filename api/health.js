@@ -1,4 +1,4 @@
-export const config = { runtime: "nodejs", maxDuration: 60 };
+export const config = { runtime: "nodejs", maxDuration: 10 };
 
 import { cors, json, companySnapshot } from "./lib/runtime.mjs";
 
