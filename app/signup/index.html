@@ -74,7 +74,13 @@
         btn.disabled = false;
         return;
       }
-      msg.textContent = "Welcome — opening dashboard…";
+      msg.textContent = "Welcome — starting onboard…";
+      try {
+        if (localStorage.getItem("af_onboard_done") !== "1") {
+          location.href = "/authorityforge/app/onboard/";
+          return;
+        }
+      } catch (e) {}
       location.href = r.next || "/authorityforge/app/dashboard/";
     });
   })();

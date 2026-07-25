@@ -99,7 +99,7 @@ export default async function handler(req, res) {
         user: publicUser(result.user),
         token,
         storeVia: result.storeVia,
-        next: "/app/dashboard/",
+        next: "/app/onboard/",
       });
     }
     if (op === "login") {

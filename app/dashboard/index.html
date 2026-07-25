@@ -28,9 +28,13 @@
       </div>
       <a class="btn btn-sm" href="/authorityforge/pricing/">Upgrade for revenue tools</a>
     </div>
+    <div class="money-bar" id="onboard-banner" style="display:none">
+      <div><strong>Next step for you</strong><br /><span class="muted" id="onboard-next">Finish your first checklist item.</span></div>
+      <a class="btn btn-sm" href="/authorityforge/app/onboard/" id="onboard-link">Finish onboard</a>
+    </div>
     <div class="money-bar" id="money-bar">
       <div><span class="muted">Projected checklist value</span><br /><strong id="rev-est">$0</strong></div>
-      <div class="muted">Complete revenue steps → unlock affiliate + AdSense paths. Real cash needs your program IDs.</div>
+      <div class="muted"><strong>Why this helps:</strong> each check = closer to affiliate/AdSense readiness. Real cash still needs your program IDs.</div>
     </div>
     <div class="app-grid">
       <nav class="app-nav" aria-label="App">
@@ -153,6 +157,24 @@
           el.style.display = "";
         });
       }
+      try {
+        var done = localStorage.getItem("af_onboard_done") === "1";
+        var niche = localStorage.getItem("af_onboard_niche") || "";
+        var ban = document.getElementById("onboard-banner");
+        if (!done) {
+          ban.style.display = "flex";
+          document.getElementById("onboard-next").textContent =
+            "Complete the 3-step onboard so we know your niche and money goal.";
+        } else if (niche) {
+          ban.style.display = "flex";
+          document.getElementById("onboard-link").style.display = "none";
+          document.getElementById("onboard-next").textContent =
+            "Your niche: “" + niche + "”. Check “Define niche” on your project, then run an AI brief.";
+        }
+        if (new URLSearchParams(location.search).get("onboard") === "1" && niche) {
+          ban.style.display = "flex";
+        }
+      } catch (e) {}
       renderProjects(m.projects);
       renderPlans(m.plans, m.user.plan);
     }

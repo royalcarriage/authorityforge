@@ -37,7 +37,7 @@ export default async function handler(req, res) {
       return json(res, 200, { ok: true, projects });
     }
 
-    if (op === "admin") {
+    if (op === "admin" || (req.method === "GET" && String(req.url || "").includes("admin"))) {
       if (sess.role !== "operator") {
         return json(res, 403, { ok: false, error: "Operator only" });
       }
@@ -58,6 +58,11 @@ export default async function handler(req, res) {
           note: "No auto money moves — approval-queue only",
         },
       });
+    }
+
+    if (req.method === "GET") {
+      const projects = await listProjectsForUser(sess.sub);
+      return json(res, 200, { ok: true, projects });
     }
 
     if (req.method !== "POST") return json(res, 405, { error: "POST required for this action" });

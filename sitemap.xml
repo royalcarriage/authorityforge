@@ -109,6 +109,24 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://royalcarriage.github.io/authorityforge/app/onboard/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://royalcarriage.github.io/authorityforge/help/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://royalcarriage.github.io/authorityforge/sales/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://royalcarriage.github.io/authorityforge/guide/</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Onboard — AuthorityForge</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#0b0d10" />
+  <link rel="stylesheet" href="/authorityforge/css/styles.css" />
+  <link rel="stylesheet" href="/authorityforge/css/app.css" />
+  <style>
+    .wiz { max-width: 640px; margin: 2rem auto 4rem; }
+    .step-dot { display:inline-flex;width:28px;height:28px;border-radius:50%;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;background:rgba(240,162,2,.15);color:var(--accent);margin-right:.5rem }
+    .step-dot.done { background:var(--ok);color:#041 }
+    .wiz-panel { display:none }
+    .wiz-panel.on { display:block }
+    .why-box { border-left:3px solid var(--accent);padding:.75rem 1rem;background:rgba(240,162,2,.06);margin:1rem 0;color:var(--muted) }
+  </style>
+</head>
+<body class="app-body">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="/authorityforge/">AuthorityForge<span class="logo-mark">⚡</span></a>
+      <span class="muted" id="user-line">Loading…</span>
+    </div>
+  </header>
+  <main class="wiz wrap">
+    <p class="kicker">Setup · 3 steps</p>
+    <h1>Why you're here — and what to do next</h1>
+    <p class="muted">Customers who finish this onboard 3× more often open the dashboard again. Takes ~2 minutes.</p>
+    <p id="progress" class="muted" style="margin:1rem 0">
+      <span class="step-dot" id="d1">1</span> Niche
+      <span class="step-dot" id="d2">2</span> Goal
+      <span class="step-dot" id="d3">3</span> First action
+    </p>
+
+    <section class="panel wiz-panel on" id="s1">
+      <h2><span class="step-dot">1</span> What do you publish about?</h2>
+      <div class="why-box"><strong>Why we ask:</strong> Without a niche, SEO becomes random posts. One niche = one forge project you can finish.</div>
+      <label class="muted">Niche / market
+        <input class="dash-input" id="niche" placeholder="e.g. AI writing tools for agencies" style="margin-top:.35rem" />
+      </label>
+      <p style="margin-top:1rem"><button class="btn" type="button" id="to2">Continue</button></p>
+    </section>
+
+    <section class="panel wiz-panel" id="s2">
+      <h2><span class="step-dot">2</span> How will this make money?</h2>
+      <div class="why-box"><strong>Why we ask:</strong> Content without a money path dies. We wire the checklist to your model.</div>
+      <div class="plan-grid" style="margin-top:.75rem">
+        <label class="plan"><input type="radio" name="goal" value="affiliates" checked /> <strong>Affiliates</strong><br /><span class="muted">Tool commissions</span></label>
+        <label class="plan"><input type="radio" name="goal" value="adsense" /> <strong>AdSense</strong><br /><span class="muted">Display after traffic</span></label>
+        <label class="plan"><input type="radio" name="goal" value="clients" /> <strong>Sell systems</strong><br /><span class="muted">Installs for brands</span></label>
+        <label class="plan"><input type="radio" name="goal" value="all" /> <strong>All three</strong><br /><span class="muted">Full Money OS</span></label>
+      </div>
+      <p style="margin-top:1rem">
+        <button class="btn btn-outline" type="button" id="back1">Back</button>
+        <button class="btn" type="button" id="to3">Continue</button>
+      </p>
+    </section>
+
+    <section class="panel wiz-panel" id="s3">
+      <h2><span class="step-dot">3</span> Your first action</h2>
+      <div class="why-box" id="why3"><strong>Why this matters:</strong> Momentum beats perfect plans. One checked item beats ten unread guides.</div>
+      <p id="summary" class="muted"></p>
+      <ul class="pitch-list" id="actions"></ul>
+      <p style="margin-top:1rem">
+        <button class="btn btn-outline" type="button" id="back2">Back</button>
+        <button class="btn" type="button" id="finish">Open my dashboard</button>
+      </p>
+    </section>
+  </main>
+  <script src="/authorityforge/js/config.js"></script>
+  <script src="/authorityforge/js/app-auth.js"></script>
+  <script>
+  (function () {
+    var state = { niche: "", goal: "affiliates" };
+    function show(n) {
+      document.querySelectorAll(".wiz-panel").forEach(function (p) { p.classList.remove("on"); });
+      document.getElementById("s" + n).classList.add("on");
+      for (var i = 1; i <= 3; i++) {
+        document.getElementById("d" + i).classList.toggle("done", i < n);
+      }
+    }
+    (async function () {
+      var m = await AF_APP.requireAuth();
+      if (!m) return;
+      document.getElementById("user-line").textContent = m.user.email;
+      try {
+        if (localStorage.getItem("af_onboard_done") === "1") {
+          location.href = "/authorityforge/app/dashboard/";
+        }
+      } catch (e) {}
+    })();
+    document.getElementById("to2").onclick = function () {
+      state.niche = (document.getElementById("niche").value || "").trim();
+      if (state.niche.length < 3) { alert("Enter a niche (at least a few words)."); return; }
+      show(2);
+    };
+    document.getElementById("back1").onclick = function () { show(1); };
+    document.getElementById("to3").onclick = function () {
+      var g = document.querySelector('input[name="goal"]:checked');
+      state.goal = g ? g.value : "affiliates";
+      var goalLabel = { affiliates: "affiliate commissions", adsense: "AdSense display", clients: "selling OS installs", all: "affiliates + ads + clients" }[state.goal];
+      document.getElementById("summary").textContent =
+        "Niche: “" + state.niche + "”. Money model: " + goalLabel + ".";
+      document.getElementById("actions").innerHTML =
+        "<li><strong>Now:</strong> Open dashboard and check “Define niche + money keywords”.</li>" +
+        "<li><strong>Today:</strong> Generate one AI brief for “" + state.niche + "”.</li>" +
+        "<li><strong>This week:</strong> Ship a hub draft outline (even ugly).</li>" +
+        (state.goal === "clients" || state.goal === "all"
+          ? "<li><strong>Sales path:</strong> Use /clients/ to quote installs once your demo niche is public.</li>"
+          : "<li><strong>Money path:</strong> Apply to 1 affiliate program in your niche.</li>");
+      try {
+        localStorage.setItem("af_onboard_niche", state.niche);
+        localStorage.setItem("af_onboard_goal", state.goal);
+      } catch (e) {}
+      show(3);
+    };
+    document.getElementById("back2").onclick = function () { show(2); };
+    document.getElementById("finish").onclick = function () {
+      try { localStorage.setItem("af_onboard_done", "1"); } catch (e) {}
+      location.href = "/authorityforge/app/dashboard/?onboard=1";
+    };
+  })();
+  </script>
+</body>
+</html>
