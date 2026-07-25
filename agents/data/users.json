@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-25T18:58:44.429Z",
+  "updatedAt": "2026-07-25T18:59:59.655Z",
   "users": [
     {
       "id": "3cffde52-7772-4bd0-99b3-e78859114d8d",
@@ -24,6 +24,29 @@
         "adsenseReady": false,
         "estimatedMonthlyUsd": 0
       }
+    },
+    {
+      "id": "f753c667-e6be-4b59-b69c-920dcd7f7074",
+      "email": "ceo-audit-@example.com",
+      "name": "CEO Audit",
+      "role": "customer",
+      "plan": "free",
+      "salt": "819d09f54026df049bc0cc78a71fe275",
+      "hash": "ab10cb40e59a9fef5c3e2176752c097812dc2afb349acfee1a024aa0eed1eecd",
+      "createdAt": "2026-07-25T18:59:59.655Z",
+      "projectIds": [
+        "2aacad69-60fb-4667-9a60-bbd8d10d1b0b"
+      ],
+      "services": {
+        "clusterBuilder": true,
+        "moneyWiring": false,
+        "agentOps": false
+      },
+      "revenue": {
+        "affiliateEnabled": false,
+        "adsenseReady": false,
+        "estimatedMonthlyUsd": 0
+      }
     }
   ],
   "projects": [
@@ -34,6 +57,46 @@
       "status": "active",
       "type": "authority_cluster",
       "createdAt": "2026-07-25T18:58:44.429Z",
+      "metrics": {
+        "pages": 0,
+        "spokesPlanned": 12,
+        "revenueUsd": 0
+      },
+      "checklist": [
+        {
+          "id": "niche",
+          "label": "Define niche + money keywords",
+          "done": false
+        },
+        {
+          "id": "hub",
+          "label": "Ship hub page",
+          "done": false
+        },
+        {
+          "id": "spokes",
+          "label": "Ship 6–12 commercial spokes",
+          "done": false
+        },
+        {
+          "id": "affiliates",
+          "label": "Enable 1+ affiliate IDs",
+          "done": false
+        },
+        {
+          "id": "adsense",
+          "label": "AdSense site ready",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "2aacad69-60fb-4667-9a60-bbd8d10d1b0b",
+      "ownerId": "f753c667-e6be-4b59-b69c-920dcd7f7074",
+      "name": "CEO Audit's first forge",
+      "status": "active",
+      "type": "authority_cluster",
+      "createdAt": "2026-07-25T18:59:59.655Z",
       "metrics": {
         "pages": 0,
         "spokesPlanned": 12,
