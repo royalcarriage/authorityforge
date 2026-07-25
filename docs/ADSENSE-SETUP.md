@@ -1,3 +1,5 @@
+> **Configured publisher:** `ca-pub-1959018852581373` (2026-07-25)
+
 # Google AdSense setup — AuthorityForge
 
 ## Status
@@ -9,8 +11,8 @@
 | Privacy policy (required) | ✅ `/legal/privacy/` |
 | AdSense loader (off until approved) | ✅ `js/ads.js` + `js/config.js` |
 | ads.txt placeholder | ✅ `/ads.txt` |
-| AdSense account application | ⏳ Owner Google login in Chrome |
-| ADS_ENABLED = true | ⏳ Only after approval |
+| AdSense publisher ID | ✅ ca-pub-1959018852581373 |
+| ADS_ENABLED = true | ✅ ca-pub-1959018852581373 |
 
 ## Apply in Chrome (you must sign in)
 

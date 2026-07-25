@@ -1,6 +1,3 @@
-# Google AdSense ads.txt — replace PUBLISHER_ID after approval
-# Format: google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
-# See https://support.google.com/adsense/answer/7532444
-#
-# PLACEHOLDER — do not leave pub-0000 in production after approval
-# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+# Google AdSense — AuthorityForge
+# https://support.google.com/adsense/answer/7532444
+google.com, pub-1959018852581373, DIRECT, f08c47fec0942fa0
