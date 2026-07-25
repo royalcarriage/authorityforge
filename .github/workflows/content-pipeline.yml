@@ -3,7 +3,7 @@ name: Content pipeline
 on:
   schedule:
     # Tuesdays 15:00 UTC (~10:00 America/Chicago)
-    - cron: "0 15 * * 2"
+    - cron: "0 15 * * 2,5"
   workflow_dispatch:
     inputs:
       use_llm:
@@ -38,11 +38,13 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           AF_USE_LLM: ${{ inputs.use_llm == true && '1' || '0' }}
           SITE_URL: https://royalcarriage.github.io/authorityforge
+          BASE_PATH: /authorityforge
         run: node scripts/publish-next.mjs
 
       - name: Build blog + sitemap
         env:
           SITE_URL: https://royalcarriage.github.io/authorityforge
+          BASE_PATH: /authorityforge
         run: |
           node scripts/build-blog.mjs
           node scripts/build-sitemap.mjs
