@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-25T19:02:50.634Z",
+  "updatedAt": "2026-07-25T19:03:45.244Z",
   "users": [
     {
       "id": "3cffde52-7772-4bd0-99b3-e78859114d8d",
@@ -82,6 +82,29 @@
       "createdAt": "2026-07-25T19:02:50.633Z",
       "projectIds": [
         "ecf82c75-5dc8-4e32-8888-f3500b500061"
+      ],
+      "services": {
+        "clusterBuilder": true,
+        "moneyWiring": false,
+        "agentOps": false
+      },
+      "revenue": {
+        "affiliateEnabled": false,
+        "adsenseReady": false,
+        "estimatedMonthlyUsd": 0
+      }
+    },
+    {
+      "id": "d043f023-ce9d-450d-a7d5-c384ea39bf4b",
+      "email": "uidbg-1785006224@example.com",
+      "name": "UI Debug",
+      "role": "customer",
+      "plan": "free",
+      "salt": "357895e507e42e7d333c5b91d37aab4a",
+      "hash": "1503313c75c93171ef9a05164349911e10632e3a9632e7d5434ab0137b4fed61",
+      "createdAt": "2026-07-25T19:03:45.244Z",
+      "projectIds": [
+        "f092bfc1-cf61-4b0f-a982-600cae1f4bcb"
       ],
       "services": {
         "clusterBuilder": true,
@@ -223,6 +246,46 @@
       "status": "active",
       "type": "authority_cluster",
       "createdAt": "2026-07-25T19:02:50.634Z",
+      "metrics": {
+        "pages": 0,
+        "spokesPlanned": 12,
+        "revenueUsd": 0
+      },
+      "checklist": [
+        {
+          "id": "niche",
+          "label": "Define niche + money keywords",
+          "done": false
+        },
+        {
+          "id": "hub",
+          "label": "Ship hub page",
+          "done": false
+        },
+        {
+          "id": "spokes",
+          "label": "Ship 6–12 commercial spokes",
+          "done": false
+        },
+        {
+          "id": "affiliates",
+          "label": "Enable 1+ affiliate IDs",
+          "done": false
+        },
+        {
+          "id": "adsense",
+          "label": "AdSense site ready",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "f092bfc1-cf61-4b0f-a982-600cae1f4bcb",
+      "ownerId": "d043f023-ce9d-450d-a7d5-c384ea39bf4b",
+      "name": "UI Debug's first forge",
+      "status": "active",
+      "type": "authority_cluster",
+      "createdAt": "2026-07-25T19:03:45.244Z",
       "metrics": {
         "pages": 0,
         "spokesPlanned": 12,
