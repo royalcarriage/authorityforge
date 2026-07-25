@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Topical Maps for SaaS and AI Tools | AuthorityForge</title>
-  <meta name="description" content="Build a topical map that separates feature docs, comparisons, and educational hubs." />
-  <link rel="canonical" href="https://royalcarriage.github.io/authorityforge/blog/topical-maps-for-saas/" />
+  <title>Operator Money Dashboard | AuthorityForge</title>
+  <meta name="description" content="Status board for AuthorityForge monetization: affiliates to enable, AdSense review, treasury rules, next actions." />
+  <link rel="canonical" href="https://royalcarriage.github.io/authorityforge/resources/money-dashboard/" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#0b0d10" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="AuthorityForge" />
-  <meta property="og:title" content="Topical Maps for SaaS and AI Tools | AuthorityForge" />
-  <meta property="og:description" content="Build a topical map that separates feature docs, comparisons, and educational hubs." />
-  <meta property="og:url" content="https://royalcarriage.github.io/authorityforge/blog/topical-maps-for-saas/" />
+  <meta property="og:title" content="Operator Money Dashboard | AuthorityForge" />
+  <meta property="og:description" content="Status board for AuthorityForge monetization: affiliates to enable, AdSense review, treasury rules, next actions." />
+  <meta property="og:url" content="https://royalcarriage.github.io/authorityforge/resources/money-dashboard/" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="/authorityforge/css/styles.css" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1959018852581373" crossorigin="anonymous"></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Topical Maps for SaaS and AI Tools","description":"Build a topical map that separates feature docs, comparisons, and educational hubs.","datePublished":"2026-07-25","dateModified":"2026-07-25","author":{"@type":"Organization","name":"AuthorityForge"},"publisher":{"@type":"Organization","name":"AuthorityForge","url":"https://royalcarriage.github.io/authorityforge"},"mainEntityOfPage":"https://royalcarriage.github.io/authorityforge/blog/topical-maps-for-saas/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Operator Money Dashboard","description":"Status board for AuthorityForge monetization: affiliates to enable, AdSense review, treasury rules, next actions.","url":"https://royalcarriage.github.io/authorityforge/resources/money-dashboard/","dateModified":"2026-07-25","isPartOf":{"@type":"WebSite","name":"AuthorityForge","url":"https://royalcarriage.github.io/authorityforge"}}</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -28,8 +28,8 @@
           <a href="/authorityforge/systems/" class="nav-link">Systems</a>
           <a href="/authorityforge/systems/money/" class="nav-link">Money</a>
           <a href="/authorityforge/clients/" class="nav-link">Clients</a>
-          <a href="/authorityforge/blog/" class="nav-link is-active">Blog</a>
-          <a href="/authorityforge/resources/" class="nav-link">Resources</a>
+          <a href="/authorityforge/blog/" class="nav-link">Blog</a>
+          <a href="/authorityforge/resources/" class="nav-link is-active">Resources</a>
       </nav>
       <a class="btn btn-sm" href="/authorityforge/guide/search-authority-playbook/">Start playbook</a>
     </div>
@@ -44,23 +44,35 @@
   <main id="main">
 
   <header class="page-hero"><div class="wrap prose">
-    <p class="kicker">Blog · 2026-07-25</p>
-    <h1>Topical Maps for SaaS and AI Tools</h1>
-    <p>Build a topical map that separates feature docs, comparisons, and educational hubs.</p>
+    <p class="kicker">Operator only · Public status</p>
+    <h1>Money dashboard</h1>
+    <p>Single page for what is live vs what only the owner can unlock (KYC, affiliate approvals, bank).</p>
   </div></header>
   <section class="section"><div class="wrap prose">
-    <p><strong>Direct answer:</strong> Map three layers—product (features), market (comparisons/alternatives), and education (how-to)—then assign a single URL owner in each cell.</p>
-<h2 null>Common failure</h2>
-<p>Blog posts that clone the homepage keyword. Fix with redirects or retitling to question intent.</p>
-    <div class="cta-band partner-cta">
-      <p><strong>Tools we research</strong> (affiliate when live):
-        <a href="#" data-aff="semrush">Semrush</a> ·
-        <a href="#" data-aff="ahrefs">Ahrefs</a> ·
-        <a href="#" data-aff="surfer">Surfer</a> ·
-        <a href="/authorityforge/resources/affiliates/">all programs</a>
-      </p>
+    <h2>Stream status</h2>
+    <table>
+      <thead><tr><th>Stream</th><th>State</th><th>Next action</th></tr></thead>
+      <tbody>
+        <tr><td>AdSense ca-pub-1959018852581373</td><td>Getting ready / review</td><td>Wait · do not click own ads</td></tr>
+        <tr><td>Affiliates (config)</td><td>Resolver live · IDs off</td><td>Apply + enable 3+ programs</td></tr>
+        <tr><td>Content commercial cluster</td><td>Live</td><td>Publish queue weekly</td></tr>
+        <tr><td>Client systems</td><td>Offer live</td><td>Reply to inbound email</td></tr>
+        <tr><td>AF Stripe products</td><td>Optional</td><td>Add AF_STRIPE_* when ready</td></tr>
+        <tr><td>Treasury auto-spend</td><td>Level 1 propose only</td><td>Keep maxAutoSpend = 0</td></tr>
+      </tbody>
+    </table>
+    <h2>Enable an affiliate in 4 steps</h2>
+    <ol>
+      <li>Apply at <a href="/authorityforge/resources/affiliates/">/resources/affiliates/</a>.</li>
+      <li>Copy tracking URL when approved.</li>
+      <li>Set in <code>js/config.js</code>: <code>enabled: true</code>, <code>url: "…"</code>.</li>
+      <li>Push <code>main</code> — all <code>data-aff</code> CTAs update.</li>
+    </ol>
+    <div class="cta-band">
+      <a class="btn" href="/authorityforge/systems/money/">Money OS</a>
+      <a class="btn btn-outline" href="/authorityforge/resources/affiliates/">Programs</a>
+      <a class="btn btn-outline" href="/authorityforge/company/">HQ</a>
     </div>
-    <p><a href="/authorityforge/systems/topical-clusters/">Related hub</a> · <a href="/authorityforge/blog/">← All posts</a> · <a href="/authorityforge/guide/search-authority-playbook/">Playbook</a></p>
   </div></section>
 
   </main>

@@ -22,6 +22,44 @@ window.AF_CONFIG = {
   monetizationPhase: 2,
 
   /**
+   * Public money status (operator truth — update when streams change).
+   * Agent pages and /systems/money/ mirror this.
+   */
+  MONEY: {
+    adsense: {
+      client: "ca-pub-1959018852581373",
+      status: "getting_ready", // getting_ready | ready | rejected
+      sites: [
+        "royalcarriage.github.io",
+        "authorityforge-tau.vercel.app",
+      ],
+      adsTxt: [
+        "https://royalcarriage.github.io/ads.txt",
+        "https://authorityforge-tau.vercel.app/ads.txt",
+      ],
+    },
+    affiliates: {
+      enabledCount: 0,
+      targetMin: 3,
+      applyHub: "/resources/affiliates/",
+    },
+    clients: {
+      offerUrl: "/clients/",
+      contactEmail: "royalcarriagelimollc@gmail.com",
+    },
+    products: {
+      hub: "/products/",
+      stripeEnv: "AF_STRIPE_SECRET_KEY",
+      note: "Separate from Royal Carriage limo Stripe acct_1OV50…",
+    },
+    treasury: {
+      autonomyLevel: 1,
+      autoSpendCents: 0,
+      policy: "agents/treasury/policy.json",
+    },
+  },
+
+  /**
    * Affiliate partners — set enabled:true + url with YOUR tracking ID after signup.
    * Apply links live on /resources/affiliates/
    * Never invent commission claims; disclose on every page.

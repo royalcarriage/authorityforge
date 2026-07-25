@@ -72,7 +72,7 @@
       "id": "agent-pipelines-for-content",
       "slug": "agent-pipelines-for-content-ops",
       "title": "Agent Pipelines for Content Ops (Without Index Spam)",
-      "description": "How to run audit → design → publish with agents while keeping quality bars high.",
+      "description": "How to run audit \u2192 design \u2192 publish with agents while keeping quality bars high.",
       "tags": [
         "ai-productivity",
         "agents",
@@ -94,7 +94,7 @@
       "id": "best-ai-writers-for-seo-2026",
       "slug": "best-ai-writers-for-seo-2026",
       "title": "Best AI Writers for SEO Operators (Criteria-First)",
-      "description": "How to pick AI writing tools for SEO without thin content — criteria, workflow, and affiliate-ready comparisons.",
+      "description": "How to pick AI writing tools for SEO without thin content \u2014 criteria, workflow, and affiliate-ready comparisons.",
       "tags": [
         "ai-writing",
         "affiliates",
@@ -244,8 +244,11 @@
         "Examples from AuthorityForge",
         "Metrics that matter"
       ],
-      "status": "queued",
-      "source": "full-radius-autonomous"
+      "status": "published",
+      "source": "full-radius-autonomous",
+      "published_at": "2026-07-25",
+      "published_path": "content/posts/internal-link-silos-for-affiliate-clusters.md",
+      "llm_provider": "ollama"
     },
     {
       "id": "best-of-comparison-pages-that-convert",
@@ -265,8 +268,11 @@
         "CTA after value",
         "What not to do"
       ],
-      "status": "queued",
-      "source": "full-radius-autonomous"
+      "status": "published",
+      "source": "full-radius-autonomous",
+      "published_at": "2026-07-25",
+      "published_path": "content/posts/best-of-comparison-pages-that-convert.md",
+      "llm_provider": "ollama"
     },
     {
       "id": "auto-2026-07-25-cluster-audit",
@@ -279,7 +285,7 @@
         "ops"
       ],
       "hub": "/systems/topical-clusters/",
-      "status": "queued",
+      "status": "published",
       "outline": [
         "Export index coverage",
         "Map hub ownership",
@@ -287,7 +293,10 @@
         "Add one commercial spoke",
         "Measure impressions"
       ],
-      "source": "af-ceo"
+      "source": "af-ceo",
+      "published_at": "2026-07-25",
+      "published_path": "content/posts/weekly-cluster-audit-20260725.md",
+      "llm_provider": "ollama"
     },
     {
       "id": "auto-2026-07-25-affiliate-stack",
@@ -300,7 +309,7 @@
         "monetization"
       ],
       "hub": "/guide/affiliate-monetization/",
-      "status": "queued",
+      "status": "published",
       "outline": [
         "Criteria before links",
         "Disclosure placement",
@@ -308,7 +317,93 @@
         "What not to promote",
         "Weekly revenue review"
       ],
-      "source": "af-ceo"
+      "source": "af-ceo",
+      "published_at": "2026-07-25",
+      "published_path": "content/posts/affiliate-stack-for-seo-operators-20260725.md",
+      "llm_provider": "ollama"
+    },
+    {
+      "id": "money-os-for-content-sites",
+      "slug": "money-os-for-content-sites",
+      "title": "Money OS for Content Sites: Affiliates Before Ads",
+      "description": "How to wire affiliates, AdSense readiness, and treasury rules without dark patterns.",
+      "tags": [
+        "monetization",
+        "affiliates",
+        "adsense"
+      ],
+      "hub": "/systems/money/",
+      "status": "queued",
+      "outline": [
+        "Revenue streams map",
+        "Affiliate enable checklist",
+        "AdSense pending reality",
+        "Treasury hard rules",
+        "Weekly loop"
+      ],
+      "source": "money-scaffold"
+    },
+    {
+      "id": "client-seo-systems-delivery",
+      "slug": "client-seo-systems-delivery-playbook",
+      "title": "Client SEO Systems Delivery Playbook",
+      "description": "How to sell and ship hub/spoke authority systems for client brands.",
+      "tags": [
+        "clients",
+        "agency",
+        "seo"
+      ],
+      "hub": "/clients/",
+      "status": "queued",
+      "outline": [
+        "Discovery questions",
+        "Architecture deliverable",
+        "Page build order",
+        "Handoff runbook",
+        "Pricing bands"
+      ],
+      "source": "money-scaffold"
+    },
+    {
+      "id": "productized-templates-for-affiliates",
+      "slug": "productized-templates-for-affiliate-sites",
+      "title": "Productized Templates That Feed Affiliate Revenue",
+      "description": "Turn free packs into commercial traffic for tool affiliates.",
+      "tags": [
+        "products",
+        "affiliates"
+      ],
+      "hub": "/products/",
+      "status": "queued",
+      "outline": [
+        "Lead magnet design",
+        "CTA after value",
+        "Disclosure placement",
+        "Measurement",
+        "What not to sell"
+      ],
+      "source": "money-scaffold"
+    },
+    {
+      "id": "compare-pages-revenue",
+      "slug": "comparison-pages-that-earn",
+      "title": "Comparison Pages That Earn (Without Fake Rankings)",
+      "description": "Structure vs pages that convert with disclosed affiliates and real criteria.",
+      "tags": [
+        "compare",
+        "affiliates",
+        "conversion"
+      ],
+      "hub": "/compare/",
+      "status": "queued",
+      "outline": [
+        "Criteria first",
+        "Table layout",
+        "Partner CTAs",
+        "Internal links",
+        "GSC feedback"
+      ],
+      "source": "money-scaffold"
     }
   ]
 }

@@ -116,10 +116,10 @@ export function pageShell({ title, description, path: p, body, schema }) {
   const nav = [
     ["/", "Home"],
     ["/systems/", "Systems"],
-    ["/guide/", "Guide"],
+    ["/systems/money/", "Money"],
+    ["/clients/", "Clients"],
     ["/blog/", "Blog"],
     ["/resources/", "Resources"],
-    ["/about/", "About"],
   ]
     .map(([href, label]) => {
       const active =
@@ -186,13 +186,20 @@ ${body}
       </div>
       <div>
         <h3>Monetization</h3>
-        <p class="muted">Phase 1 affiliates · Phase 2 AdSense. <a href="${BASE}/legal/monetization/">Structure</a>.</p>
+        <ul class="footer-links">
+          <li><a href="${BASE}/systems/money/">Money OS</a></li>
+          <li><a href="${BASE}/resources/affiliates/">Affiliates</a></li>
+          <li><a href="${BASE}/products/">Products</a></li>
+          <li><a href="${BASE}/legal/monetization/">Structure</a></li>
+        </ul>
       </div>
       <div>
-        <h3>Legal</h3>
+        <h3>Clients &amp; legal</h3>
         <ul class="footer-links">
-          <li><a href="${BASE}/legal/affiliate-disclosure/">Affiliate disclosure</a></li>
-          <li><a href="${BASE}/legal/monetization/">Monetization</a></li>
+          <li><a href="${BASE}/clients/">Client systems</a></li>
+          <li><a href="${BASE}/legal/affiliate-disclosure/">Disclosure</a></li>
+          <li><a href="${BASE}/legal/privacy/">Privacy</a></li>
+          <li><a href="${BASE}/contact/">Contact</a></li>
         </ul>
       </div>
     </div>

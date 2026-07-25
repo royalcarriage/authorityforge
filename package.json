@@ -21,6 +21,7 @@
     "email:check": "node scripts/email-inbox-check.mjs",
     "publish:next:free": "AF_ZERO_COST=1 AF_USE_LLM=1 node scripts/publish-next.mjs",
     "system:check": "AF_ZERO_COST=1 node scripts/system-check.mjs",
+    "scaffold:money": "node scripts/scaffold-money-client.mjs",
     "agent:full": "AF_ZERO_COST=1 AF_CEO_PUBLISH=1 AF_USE_LLM=1 node scripts/agent-autonomous.mjs"
   },
   "engines": {

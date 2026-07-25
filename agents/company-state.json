@@ -23,10 +23,18 @@
     "phase": 2,
     "streams": [
       "affiliates",
-      "adsense"
+      "adsense",
+      "client_systems",
+      "products"
     ],
     "adsenseClient": "ca-pub-1959018852581373",
-    "affiliateConfig": "js/config.js"
+    "affiliateConfig": "js/config.js",
+    "pages": {
+      "moneyOs": "/systems/money/",
+      "clients": "/clients/",
+      "products": "/products/",
+      "dashboard": "/resources/money-dashboard/"
+    }
   },
   "orgChart": {
     "ceo": "af-ceo",
@@ -41,10 +49,12 @@
     ]
   },
   "kpis": {
-    "indexedPagesTarget": 80,
+    "indexedPagesTarget": 100,
     "queuedPostsMin": 5,
     "affiliateProgramsEnabledMin": 3,
-    "weeklyPublishes": 2
+    "weeklyPublishes": 2,
+    "clientOfferLive": true,
+    "moneyOsLive": true
   },
   "lastCycle": {
     "at": "2026-07-25T15:25:41.923Z",
@@ -106,8 +116,8 @@
     "liveTotal": 11,
     "gaps": [
       "Optional: AI_GATEWAY_API_KEY in GH secrets + Vercel (free models only after card unlock)",
-      "Vercel env missing GEMINI_API_KEY — CEO LLM briefing stays null",
-      "No Stripe revenue yet (expected) — affiliates/AdSense human gates"
+      "Vercel env missing GEMINI_API_KEY \u2014 CEO LLM briefing stays null",
+      "No Stripe revenue yet (expected) \u2014 affiliates/AdSense human gates"
     ],
     "ghSecrets": [
       "GEMINI_API_KEY"

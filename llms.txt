@@ -3,23 +3,27 @@
 > Market: AI productivity tools + practical SEO systems.
 
 ## Primary
-- https://authorityforge-tau.vercel.app/
-- https://authorityforge-tau.vercel.app/guide/search-authority-playbook/
-- https://authorityforge-tau.vercel.app/systems/
-- https://authorityforge-tau.vercel.app/blog/
+- https://royalcarriage.github.io/authorityforge/
+- https://royalcarriage.github.io/authorityforge/guide/search-authority-playbook/
+- https://royalcarriage.github.io/authorityforge/systems/
+- https://royalcarriage.github.io/authorityforge/blog/
 
 ## Blog posts
-- https://authorityforge-tau.vercel.app/blog/affiliate-disclosure-that-ranks/
-- https://authorityforge-tau.vercel.app/blog/agent-pipelines-for-content-ops/
-- https://authorityforge-tau.vercel.app/blog/ai-productivity-seo-stack/
-- https://authorityforge-tau.vercel.app/blog/best-ai-writers-for-seo-2026/
-- https://authorityforge-tau.vercel.app/blog/build-programmatic-seo-without-spam/
-- https://authorityforge-tau.vercel.app/blog/ctr-rewrites-from-search-console/
-- https://authorityforge-tau.vercel.app/blog/entity-seo-for-ai-tools/
-- https://authorityforge-tau.vercel.app/blog/feedback-loops-rankings/
-- https://authorityforge-tau.vercel.app/blog/how-to-pass-adsense-review-content-sites/
-- https://authorityforge-tau.vercel.app/blog/internal-links-that-rank/
-- https://authorityforge-tau.vercel.app/blog/schema-product-review-for-tool-pages/
-- https://authorityforge-tau.vercel.app/blog/semrush-vs-ahrefs-for-content-sites/
-- https://authorityforge-tau.vercel.app/blog/topical-maps-for-saas/
-- https://authorityforge-tau.vercel.app/blog/what-is-search-authority/
+- https://royalcarriage.github.io/authorityforge/blog/affiliate-disclosure-that-ranks/
+- https://royalcarriage.github.io/authorityforge/blog/affiliate-stack-for-seo-operators-20260725/
+- https://royalcarriage.github.io/authorityforge/blog/agent-pipelines-for-content-ops/
+- https://royalcarriage.github.io/authorityforge/blog/ai-productivity-seo-stack/
+- https://royalcarriage.github.io/authorityforge/blog/best-ai-writers-for-seo-2026/
+- https://royalcarriage.github.io/authorityforge/blog/best-of-comparison-pages-that-convert/
+- https://royalcarriage.github.io/authorityforge/blog/build-programmatic-seo-without-spam/
+- https://royalcarriage.github.io/authorityforge/blog/ctr-rewrites-from-search-console/
+- https://royalcarriage.github.io/authorityforge/blog/entity-seo-for-ai-tools/
+- https://royalcarriage.github.io/authorityforge/blog/feedback-loops-rankings/
+- https://royalcarriage.github.io/authorityforge/blog/how-to-pass-adsense-review-content-sites/
+- https://royalcarriage.github.io/authorityforge/blog/internal-link-silos-for-affiliate-clusters/
+- https://royalcarriage.github.io/authorityforge/blog/internal-links-that-rank/
+- https://royalcarriage.github.io/authorityforge/blog/schema-product-review-for-tool-pages/
+- https://royalcarriage.github.io/authorityforge/blog/semrush-vs-ahrefs-for-content-sites/
+- https://royalcarriage.github.io/authorityforge/blog/topical-maps-for-saas/
+- https://royalcarriage.github.io/authorityforge/blog/weekly-cluster-audit-20260725/
+- https://royalcarriage.github.io/authorityforge/blog/what-is-search-authority/
