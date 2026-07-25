@@ -56,3 +56,11 @@ Do **not** set `OPENAI_API_KEY` for AF pipelines until treasury says revenue > 0
 3. Raise treasury `maxAutoSpendCents` only for capped tool spend  
 
 Until then: **cost target = $0**.
+
+## Vercel AI Gateway (free models only)
+
+See [VERCEL-AI-GATEWAY-FREE.md](./VERCEL-AI-GATEWAY-FREE.md).
+
+- Env: `AI_GATEWAY_API_KEY`
+- Only `$0/$0` / `*-free` models
+- Order on Vercel: gateway free → Gemini free → template

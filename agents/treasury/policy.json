@@ -33,19 +33,49 @@
     "canRead": true,
     "canSend": false,
     "sendRequires": "AF_EMAIL_SEND=1 and recipient allowlist",
-    "allowlist": ["royalcarriagelimollc@gmail.com"]
+    "allowlist": [
+      "royalcarriagelimollc@gmail.com"
+    ]
   },
   "costPolicy": {
     "untilFirstRevenueUsd": 1,
     "llm": {
       "mode": "free_only",
       "AF_ZERO_COST_default": true,
-      "allowed": ["ollama_local", "gemini_free_tier", "opencode_free", "template_fallback"],
-      "forbiddenUntilRevenue": ["openai_paid", "anthropic_paid", "vercel_ai_paid", "any_paid_token"]
+      "allowed": [
+        "ollama_local",
+        "gemini_free_tier",
+        "vercel_ai_gateway_free_models_only",
+        "opencode_free",
+        "template_fallback"
+      ],
+      "vercelGateway": {
+        "env": "AI_GATEWAY_API_KEY",
+        "baseUrl": "https://ai-gateway.vercel.sh/v1",
+        "freeModelsOnly": true,
+        "models": [
+          "inclusionai/ling-3.0-flash-free",
+          "poolside/laguna-s-2.1-free",
+          "zai/glm-4.6v-flash"
+        ],
+        "note": "Card may be required to unlock free tier; still $0 if only free models used"
+      },
+      "forbiddenUntilRevenue": [
+        "openai_paid",
+        "anthropic_paid",
+        "vercel_gateway_paid_models",
+        "any_paid_token"
+      ]
     },
     "hosting": {
-      "allowed": ["vercel_hobby_free", "github_pages_free"],
-      "forbiddenUntilRevenue": ["paid_addons", "pro_upgrades_without_approval"]
+      "allowed": [
+        "vercel_hobby_free",
+        "github_pages_free"
+      ],
+      "forbiddenUntilRevenue": [
+        "paid_addons",
+        "pro_upgrades_without_approval"
+      ]
     }
   },
   "autonomy": {
