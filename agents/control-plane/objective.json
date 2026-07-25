@@ -40,13 +40,31 @@
       "metric": "AF_ZERO_COST until revenue_cents > 0",
       "target": true,
       "why": "Survive until self-funded"
+    },
+    {
+      "id": "money_os_pages",
+      "metric": "money/clients/products pages live",
+      "target": true,
+      "why": "Client + revenue surfaces"
+    },
+    {
+      "id": "client_offer",
+      "metric": "clients/ page + contact path",
+      "target": true,
+      "why": "High-ticket systems delivery"
+    },
+    {
+      "id": "commercial_compares",
+      "metric": "semrush-vs-ahrefs + jasper-vs-copy compare pages",
+      "target": true,
+      "why": "Affiliate intent URLs"
     }
   ],
   "operatingLoop": [
     "Sense health + queue + KPIs",
     "Plan with free LLM (Gemini / Gateway free / Ollama)",
     "Act: seed content, publish, docs, agent state",
-    "Ship: git push → Vercel deploy",
+    "Ship: git push \u2192 Vercel deploy",
     "Learn: research-log + kpi-latest.json"
   ],
   "humanGates": [
@@ -55,6 +73,8 @@
     "GSC property verification",
     "Vercel env secrets",
     "Money movement / email send",
-    "Credit card unlock for AI Gateway free tier"
+    "Credit card unlock for AI Gateway free tier",
+    "Client project intake replies",
+    "Affiliate enable after program approval"
   ]
 }
