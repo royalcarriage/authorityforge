@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "period": "monthly",
+  "allocationsPct": {
+    "content_llm": 25,
+    "seo_tools": 20,
+    "infra_hosting": 10,
+    "distribution_outreach_drafts": 15,
+    "product_dev": 20,
+    "reserve": 10
+  },
+  "openPurchaseOrders": [],
+  "history": []
+}
