@@ -1,4 +1,4 @@
-import { cors, json, companySnapshot } from "../lib/runtime.mjs";
+import { cors, json, companySnapshot } from "./lib/runtime.mjs";
 
 /** Lightweight health — no outbound fetches (avoids FUNCTION_INVOCATION_FAILED) */
 export default async function handler(req, res) {
