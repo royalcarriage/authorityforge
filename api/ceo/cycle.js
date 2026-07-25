@@ -1,3 +1,5 @@
+export const config = { runtime: "nodejs", maxDuration: 60 };
+
 import { cors, json, requireAgentAuth, runCeoCycle } from "../lib/runtime.mjs";
 
 /**

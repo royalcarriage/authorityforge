@@ -1,3 +1,5 @@
+export const config = { runtime: "nodejs", maxDuration: 60 };
+
 import { cors, json, requireAgentAuth } from "../lib/runtime.mjs";
 import { runAutonomousCycle } from "../lib/autonomous.mjs";
 

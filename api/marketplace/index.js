@@ -1,3 +1,5 @@
+export const config = { runtime: "nodejs", maxDuration: 60 };
+
 import { cors, json, readJson } from "../lib/runtime.mjs";
 
 export default async function handler(req, res) {

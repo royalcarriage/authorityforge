@@ -1,3 +1,5 @@
+export const config = { runtime: "nodejs", maxDuration: 60 };
+
 import { cors, json, companySnapshot } from "./lib/runtime.mjs";
 
 /** Lightweight health — no recursive fetches that can 500 the function */

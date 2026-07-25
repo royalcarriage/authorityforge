@@ -1,3 +1,5 @@
+export const config = { runtime: "nodejs", maxDuration: 60 };
+
 import { cors, json, readJson, requireAgentAuth } from "../lib/runtime.mjs";
 import * as gh from "../lib/github.mjs";
 

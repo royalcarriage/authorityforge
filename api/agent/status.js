@@ -1,3 +1,5 @@
+export const config = { runtime: "nodejs", maxDuration: 60 };
+
 import { cors, json, companySnapshot } from "../lib/runtime.mjs";
 import { githubConfigured } from "../lib/github.mjs";
 import { vercelConfigured } from "../lib/vercel-api.mjs";

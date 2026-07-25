@@ -1,3 +1,5 @@
+export const config = { runtime: "nodejs", maxDuration: 60 };
+
 import { cors, json, requireAgentAuth, freeGemini } from "../lib/runtime.mjs";
 
 /** Free Gemini complete — paid models refused */
