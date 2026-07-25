@@ -124,3 +124,8 @@ Here are 5 concrete improvements for AuthorityForge, tailored to its niche of AI
 *   **Enhance the "AI Article Rewriter & Spinner" with "Affiliate Link Integration Logic":** Currently, rewriters might just rephrase text. This improvement would train the AI to intelligently identify opportunities within the rewritten content to naturally and contextually insert affiliate links. It would also be able to suggest relevant affiliate products or services based on the content's topic, and even generate persuasive calls-to-action for those links, all while maintaining a high degree of readability and avoiding duplicate content penalties.
 
 *   **Create a "Niche-Specific AI Content Calendar Generator":** Instead of generic content ideas, this feature would use AI to analyze the user's chosen niche and identify seasonal trends, upcoming events, or recurring popular topics relevant to affiliate marketing and AdSense monetization. It would then generate a dynamic, actionable content calendar with suggested article titles, target keywords, and content formats (e.g., reviews, comparisons, tutorials) specifically designed to capture traffic and revenue during these peak periods.
+
+### Cycle 6 — 2026-07-25
+- KPI: queued=3, affiliates~0, health_ok=true
+- Experiment idea: ship one high-intent comparison page targeting a paid tool query; disclose affiliates; measure GSC 28d.
+- Agent hire: keep research-chief scanning competitor monetization pages weekly.
