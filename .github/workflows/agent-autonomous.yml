@@ -1,0 +1,32 @@
+name: Autonomous agent (zero-cost)
+
+on:
+  schedule:
+    - cron: "0 15 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  autonomous:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Autonomous cycle
+        env:
+          AF_ZERO_COST: "1"
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          AF_PRIMARY_URL: https://authorityforge-tau.vercel.app
+        run: node scripts/agent-autonomous.mjs
+      - name: Commit agent state
+        run: |
+          git config user.name "af-autonomous-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add agents/ content/queue.json || true
+          if git diff --staged --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "agent(autonomous): cycle $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
