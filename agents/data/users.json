@@ -1,6 +1,71 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-25T00:00:00.000Z",
-  "users": [],
-  "projects": []
+  "updatedAt": "2026-07-25T18:58:35.538Z",
+  "users": [
+    {
+      "id": "e1f3ea13-6f18-424d-8d86-77c14ad1c864",
+      "email": "persist-1785005915-3@example.com",
+      "name": "Persist3",
+      "role": "customer",
+      "plan": "free",
+      "salt": "7e0c49497df484f13dd1ec1248150ed4",
+      "hash": "13b724a7a549b27a08b535e74bc45c8433a750833f8d615f3910739d15a49d12",
+      "createdAt": "2026-07-25T18:58:35.536Z",
+      "projectIds": [
+        "00ab970e-66de-423a-8402-56dafaa14b1a"
+      ],
+      "services": {
+        "clusterBuilder": true,
+        "moneyWiring": false,
+        "agentOps": false
+      },
+      "revenue": {
+        "affiliateEnabled": false,
+        "adsenseReady": false,
+        "estimatedMonthlyUsd": 0
+      }
+    }
+  ],
+  "projects": [
+    {
+      "id": "00ab970e-66de-423a-8402-56dafaa14b1a",
+      "ownerId": "e1f3ea13-6f18-424d-8d86-77c14ad1c864",
+      "name": "Persist3's first forge",
+      "status": "active",
+      "type": "authority_cluster",
+      "createdAt": "2026-07-25T18:58:35.538Z",
+      "metrics": {
+        "pages": 0,
+        "spokesPlanned": 12,
+        "revenueUsd": 0
+      },
+      "checklist": [
+        {
+          "id": "niche",
+          "label": "Define niche + money keywords",
+          "done": false
+        },
+        {
+          "id": "hub",
+          "label": "Ship hub page",
+          "done": false
+        },
+        {
+          "id": "spokes",
+          "label": "Ship 6–12 commercial spokes",
+          "done": false
+        },
+        {
+          "id": "affiliates",
+          "label": "Enable 1+ affiliate IDs",
+          "done": false
+        },
+        {
+          "id": "adsense",
+          "label": "AdSense site ready",
+          "done": false
+        }
+      ]
+    }
+  ]
 }
