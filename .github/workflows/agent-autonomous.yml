@@ -16,17 +16,21 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Autonomous cycle
+      - name: Full-radius autonomous cycle
         env:
           AF_ZERO_COST: "1"
+          AF_CEO_PUBLISH: "1"
+          AF_USE_LLM: "1"
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           AF_PRIMARY_URL: https://authorityforge-tau.vercel.app
+          SITE_URL: https://authorityforge-tau.vercel.app
+          BASE_PATH: ""
         run: node scripts/agent-autonomous.mjs
-      - name: Commit agent state
+      - name: Commit agent state + content
         run: |
           git config user.name "af-autonomous-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add agents/ content/queue.json || true
+          git add agents/ content/ blog/ sitemap.xml llms.txt || true
           if git diff --staged --quiet; then echo "No changes"; exit 0; fi
-          git commit -m "agent(autonomous): cycle $(date -u +%Y-%m-%dT%H:%MZ)"
+          git commit -m "agent(full-radius): cycle $(date -u +%Y-%m-%dT%H:%MZ)"
           git push

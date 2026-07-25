@@ -1,0 +1,16 @@
+{
+  "at": "2026-07-25T12:28:31.869Z",
+  "cycle": 3,
+  "health": {
+    "/": "200",
+    "/ads.txt": "200",
+    "/company/": "200",
+    "/css/styles.css": "200",
+    "/api/company/status": "200",
+    "/api/health": "500"
+  },
+  "queued": 7,
+  "publishedCount": 5,
+  "zeroCost": true,
+  "primary": "https://authorityforge-tau.vercel.app"
+}

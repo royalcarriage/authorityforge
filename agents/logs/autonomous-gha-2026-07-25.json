@@ -1,12 +1,35 @@
 {
-  "at": "2026-07-25T12:19:23.834Z",
+  "at": "2026-07-25T12:28:31.869Z",
   "health": {
     "/": "200",
     "/ads.txt": "200",
     "/company/": "200",
-    "/css/styles.css": "200"
+    "/css/styles.css": "200",
+    "/api/company/status": "200",
+    "/api/health": "500"
   },
-  "planText": "Here are 5 concrete improvements for a content SEO affiliate site, focusing on zero paid APIs and leveraging the provided health status:\n\n*   **Implement Schema Markup for Product Reviews:** Enhance search engine understanding of your affiliate product reviews by adding structured data. This includes `Product` schema for the item being reviewed and `Review` schema to highlight ratings, author, and the review itself. This can significantly improve rich snippet visibility in search results, leading to higher click-through rates.\n\n*   **Optimize Internal Linking for Content Silos:** Analyze your most popular and high-converting affiliate posts. Strategically link from these \"pillar\" pages to related, supporting content (e.g., linking from a \"Best Budget Laptops\" review to individual laptop reviews or guides on \"How to Choose a Laptop\"). This builds topical authority and guides users and search engines through your content, improving crawlability and ranking potential for related keywords.\n\n*   **Develop Comprehensive \"Best Of\" and Comparison Guides:** Create in-depth articles that compare multiple affiliate products within a specific niche. These guides should offer detailed pros and cons, feature comparisons, and clear recommendations. This type of content often ranks well for broad, high-intent keywords and can capture users further down the purchase funnel.\n\n*   **Enhance User Experience with Optimized Image Alt Text and Lazy Loading:** Ensure all images on your affiliate pages have descriptive `alt` text that includes relevant keywords. This aids accessibility and provides SEO benefits. Furthermore, implement lazy loading for images, especially on pages with many product visuals, to improve page load speed, a crucial ranking factor and a key component of user experience.\n\n*   **Create Engaging Video Content Showcasing Products:** Supplement your written reviews with short, informative videos demonstrating the features and benefits of affiliate products. Embed these videos within your review articles. This caters to different user preferences, increases time on page, and can lead to higher conversion rates, while also offering opportunities for YouTube SEO if videos are optimized and uploaded to that platform.",
-  "cycleCount": 1,
-  "zeroCost": true
+  "planText": "Here are 5 concrete improvements for AuthorityForge, focusing on AI productivity and SEO systems for affiliates/AdSense, keeping in mind your current health status and niche:\n\n*   **Implement a \"Smart Content Refresh\" AI Module:** This module would proactively identify underperforming content (based on AdSense revenue, affiliate click-through rates, and organic traffic trends) and suggest specific AI-driven improvements. This could include:\n    *   **Keyword Opportunity Identification:** Analyzing search trends and competitor content to suggest new relevant keywords to integrate.\n    *   **Content Expansion/Deepening Prompts:** Generating AI prompts for users to expand existing articles with more detail, answer related questions, or add new sections based on emerging topics.\n    *   **Internal Linking Suggestions:** Automatically recommending relevant internal links to boost SEO and user engagement.\n    *   **Call-to-Action (CTA) Optimization:** Suggesting AI-powered variations of affiliate or AdSense CTAs for better conversion rates.\n\n*   **Develop an AI-Powered \"AdSense Performance Predictor\":** This feature would leverage historical AdSense data and current content performance to provide users with AI-generated projections of potential AdSense revenue for new or updated content. This would involve:\n    *   **Analyzing Keyword Difficulty & Search Volume:** Integrating with SEO data to estimate traffic potential.\n    *   **Predicting CTR & CPC:** Using historical data and industry benchmarks to forecast click-through rates and cost-per-click.\n    *   **Content Quality Scoring:** An AI model that assesses content for readability, engagement potential, and adherence to AdSense policies, influencing revenue predictions.\n\n*   **Integrate an AI-Driven \"Affiliate Program Discovery & Optimization\" Tool:** Beyond just content creation, this would help affiliates find and maximize their earnings from affiliate programs. This could include:\n    *   **Niche-Specific Affiliate Program Recommendations:** AI analyzing the user's website niche and suggesting relevant, high-paying affiliate programs.\n    *   **Competitor Affiliate Strategy Analysis:** AI scanning competitor sites to identify which affiliate programs they are promoting and how they are integrating them.\n    *   **AI-Generated Affiliate Link Placement Prompts:** Suggesting optimal locations and phrasing for affiliate links within content for maximum visibility and conversion.\n\n*   **Automate AI Content Auditing for AdSense Policy Compliance:** To address potential issues like the `/api/health` returning a 500 error (which could indicate backend issues or content policy violations), implement an AI auditor that scans published and draft content for:\n    *   **Prohibited Content Types:** Identifying content that violates AdSense policies (e.g., adult content, hate speech, dangerous content).\n    *   **Misleading Information:** Flagging content that might be factually inaccurate or deceptive.\n    *   **Keyword Stuffing & Unnatural Language:** Detecting SEO tactics that could be penalized by search engines and AdSense.\n    *   **Automated Reporting:** Generating reports of potential violations with suggestions for correction.\n\n*   **Implement an \"AI-Assisted SEO Strategy Dashboard\" with Real-time Feedback:** This would go beyond basic analytics and provide actionable AI insights for SEO.\n    *   **Personalized SEO Recommendations:** AI analyzing the user's entire site and suggesting specific, prioritized SEO tasks (e.g., optimizing meta descriptions, improving site speed, building backlinks).\n    *   **Competitor SEO Gap Analysis:** AI identifying areas where competitors are outperforming the user and suggesting strategies to close those gaps.\n    *   **AI-Generated SERP Feature Opportunities:** Identifying opportunities to rank for featured snippets, \"people also ask\" boxes, and other SERP features.\n    *   **Proactive Error Detection & Resolution:** Monitoring site health (like the `/api/health` endpoint) and providing AI-driven diagnostics and suggested fixes.",
+  "actions": [
+    {
+      "step": "plan",
+      "ok": true
+    },
+    {
+      "step": "research_log",
+      "ok": true
+    },
+    {
+      "step": "seed_queue",
+      "ok": true,
+      "seeded": 3
+    },
+    {
+      "step": "publish_next",
+      "ok": true,
+      "detail": "{\n  \"published\": \"best-ai-writers-for-seo-2026\",\n  \"path\": \"content/posts/best-ai-writers-for-seo-2026.md\",\n  \"llm\": {\n    \"provider\": \"ollama\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 7\n}"
+    }
+  ],
+  "cycleCount": 3,
+  "zeroCost": true,
+  "published": "{\n  \"published\": \"best-ai-writers-for-seo-2026\",\n  \"path\": \"content/posts/best-ai-writers-for-seo-2026.md\",\n  \"llm\": {\n    \"provider\": \"ollama\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 7\n}"
 }

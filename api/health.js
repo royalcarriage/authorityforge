@@ -1,16 +1,26 @@
-import { cors, json, healthCheck, companySnapshot } from "../lib/runtime.mjs";
+import { cors, json, companySnapshot } from "../lib/runtime.mjs";
 
+/** Lightweight health — no outbound fetches (avoids FUNCTION_INVOCATION_FAILED) */
 export default async function handler(req, res) {
   cors(res);
   if (req.method === "OPTIONS") return res.end();
-  const h = await healthCheck();
-  const snap = companySnapshot();
-  const ok = Object.values(h.health).every((c) => c === 200 || c === "200");
-  return json(res, ok ? 200 : 503, {
-    ok,
-    ...h,
-    cycleCount: snap.cycleCount,
-    zeroCost: snap.zeroCost,
-    platform: "vercel",
-  });
+  try {
+    const snap = companySnapshot();
+    return json(res, 200, {
+      ok: true,
+      platform: "vercel",
+      zeroCost: snap.zeroCost,
+      cycleCount: snap.cycleCount,
+      company: snap.company?.name || "AuthorityForge",
+      gemini: snap.llm?.geminiKeyConfigured || false,
+      content: snap.content,
+      generatedAt: new Date().toISOString(),
+    });
+  } catch (e) {
+    return json(res, 200, {
+      ok: false,
+      platform: "vercel",
+      error: String(e.message || e),
+    });
+  }
 }

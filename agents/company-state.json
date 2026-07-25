@@ -47,17 +47,21 @@
     "weeklyPublishes": 2
   },
   "lastCycle": {
-    "at": "2026-07-25T12:19:23.834Z",
-    "platform": "github-actions",
+    "at": "2026-07-25T12:28:31.869Z",
+    "platform": "full-radius",
     "health": {
       "/": "200",
       "/ads.txt": "200",
       "/company/": "200",
-      "/css/styles.css": "200"
+      "/css/styles.css": "200",
+      "/api/company/status": "200",
+      "/api/health": "500"
     },
-    "queued": 5
+    "queued": 7,
+    "actions": 4,
+    "published": true
   },
-  "cycleCount": 1,
+  "cycleCount": 3,
   "llm": {
     "mode": "free_only",
     "providers": [
@@ -81,7 +85,8 @@
     "host": "vercel+github-actions",
     "primaryUrl": "https://authorityforge-tau.vercel.app",
     "autonomous": "scripts/agent-autonomous.mjs",
-    "zeroCost": true
+    "zeroCost": true,
+    "lastFullRadiusAt": "2026-07-25T12:28:31.869Z"
   },
   "controlPlane": {
     "host": "vercel",
