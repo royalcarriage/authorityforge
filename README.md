@@ -1,22 +1,22 @@
 # AuthorityForge
 
-Self-optimizing systems for search authority & rankings.
+**Live:** https://authorityforge-tau.vercel.app  
 
-- **Live (public):** https://authorityforge-tau.vercel.app
-- **Repo:** https://github.com/royalcarriage/authorityforge
-- **Market:** AI Productivity Tools + Practical SEO Systems (affiliates → AdSense)
+Self-optimizing systems for **search authority & rankings**.  
+Primary market: **AI Productivity Tools + Practical SEO Systems**.  
+Monetization: **affiliates first → AdSense later**.
 
-## Status
+## Stack
+Static HTML/CSS/JS on Vercel. Schema (JSON-LD), `sitemap.xml`, `robots.txt`, `llms.txt`.
 
-| Item | Status |
-|------|--------|
-| Live public site | ✅ Vercel |
-| Core messaging + market | ✅ |
-| CLI write (`royalcarriage`) | ✅ |
-| Grok GitHub connector write | ⏳ Owner: grant app access — see [docs/GITHUB-WRITE-PATH.md](docs/GITHUB-WRITE-PATH.md) |
-| Full multipage content | ⏳ Push after connector/agent path ready |
-| Autonomous content pipeline | 🟡 Activate after multipage is on `main` |
+## Local
+Open `index.html` or `npx serve .`
 
 ## Deploy
+Push to `main` → Vercel production (connect this repo in Vercel project settings).
 
-Connect Vercel → this repo → production branch `main`.
+## Structure
+- `/systems/*` — engines
+- `/guide/*` — playbooks
+- `/blog/*` — cluster spokes
+- `/resources/*` — checklists & templates
