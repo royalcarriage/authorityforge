@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-25T19:11:45.013Z",
+  "updatedAt": "2026-07-25T19:14:08.910Z",
   "users": [
     {
       "id": "3cffde52-7772-4bd0-99b3-e78859114d8d",
@@ -175,6 +175,29 @@
       "projectIds": [
         "9b9e3c18-1247-4874-ab12-3581ef5e435f",
         "f14e3474-f8e3-4d3c-9215-6cc04f3544e7"
+      ],
+      "services": {
+        "clusterBuilder": true,
+        "moneyWiring": false,
+        "agentOps": false
+      },
+      "revenue": {
+        "affiliateEnabled": false,
+        "adsenseReady": false,
+        "estimatedMonthlyUsd": 0
+      }
+    },
+    {
+      "id": "87dcbc5c-aaa7-469a-90ac-0efd0120b699",
+      "email": "final-1785006848@example.com",
+      "name": "Final",
+      "role": "customer",
+      "plan": "free",
+      "salt": "7829786015779eeadca344e91d31f1fe",
+      "hash": "3f19139e6e11e22e7333346c59e5200549c0360feff1c2c7dffec7a5e4aff0f9",
+      "createdAt": "2026-07-25T19:14:08.910Z",
+      "projectIds": [
+        "5c358455-5259-458a-bddf-34bf1d135a7a"
       ],
       "services": {
         "clusterBuilder": true,
@@ -516,6 +539,46 @@
       "status": "active",
       "type": "authority_cluster",
       "createdAt": "2026-07-25T19:11:45.013Z",
+      "metrics": {
+        "pages": 0,
+        "spokesPlanned": 12,
+        "revenueUsd": 0
+      },
+      "checklist": [
+        {
+          "id": "niche",
+          "label": "Define niche + money keywords",
+          "done": false
+        },
+        {
+          "id": "hub",
+          "label": "Ship hub page",
+          "done": false
+        },
+        {
+          "id": "spokes",
+          "label": "Ship 6–12 commercial spokes",
+          "done": false
+        },
+        {
+          "id": "affiliates",
+          "label": "Enable 1+ affiliate IDs",
+          "done": false
+        },
+        {
+          "id": "adsense",
+          "label": "AdSense site ready",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "5c358455-5259-458a-bddf-34bf1d135a7a",
+      "ownerId": "87dcbc5c-aaa7-469a-90ac-0efd0120b699",
+      "name": "Final's first forge",
+      "status": "active",
+      "type": "authority_cluster",
+      "createdAt": "2026-07-25T19:14:08.910Z",
       "metrics": {
         "pages": 0,
         "spokesPlanned": 12,
