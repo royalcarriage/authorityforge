@@ -3,19 +3,8 @@
   "buildCommand": "node scripts/prepare-vercel.mjs",
   "outputDirectory": "dist",
   "installCommand": "echo 'no npm install required'",
-  "framework": null,
   "cleanUrls": true,
   "trailingSlash": true,
-  "crons": [
-    {
-      "path": "/api/ceo/cycle",
-      "schedule": "0 14 * * *"
-    },
-    {
-      "path": "/api/agent-autonomous",
-      "schedule": "0 15 * * *"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
