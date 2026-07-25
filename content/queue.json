@@ -244,8 +244,11 @@
         "Examples from AuthorityForge",
         "Metrics that matter"
       ],
-      "status": "queued",
-      "source": "full-radius-autonomous"
+      "status": "published",
+      "source": "full-radius-autonomous",
+      "published_at": "2026-07-25",
+      "published_path": "content/posts/internal-link-silos-for-affiliate-clusters.md",
+      "llm_provider": "gemini"
     },
     {
       "id": "best-of-comparison-pages-that-convert",

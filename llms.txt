@@ -18,6 +18,7 @@
 - https://authorityforge-tau.vercel.app/blog/entity-seo-for-ai-tools/
 - https://authorityforge-tau.vercel.app/blog/feedback-loops-rankings/
 - https://authorityforge-tau.vercel.app/blog/how-to-pass-adsense-review-content-sites/
+- https://authorityforge-tau.vercel.app/blog/internal-link-silos-for-affiliate-clusters/
 - https://authorityforge-tau.vercel.app/blog/internal-links-that-rank/
 - https://authorityforge-tau.vercel.app/blog/schema-product-review-for-tool-pages/
 - https://authorityforge-tau.vercel.app/blog/semrush-vs-ahrefs-for-content-sites/
