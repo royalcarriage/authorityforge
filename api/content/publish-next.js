@@ -1,6 +1,4 @@
-export const config = { runtime: "nodejs" };
-
-import { cors, json, requireAgentAuth, freeGemini, readJson, ROOT } from "../lib/runtime.js";
+import { cors, json, requireAgentAuth, freeGemini, readJson, ROOT } from "../lib/runtime.mjs";
 import fs from "node:fs";
 import path from "node:path";
 

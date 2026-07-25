@@ -1,6 +1,4 @@
-export const config = { runtime: "nodejs" };
-
-import { cors, json, requireAgentAuth, freeGemini } from "../lib/runtime.js";
+import { cors, json, requireAgentAuth, freeGemini } from "../lib/runtime.mjs";
 
 /** Free Gemini complete — paid models refused */
 export default async function handler(req, res) {

@@ -12,16 +12,12 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const ROOT = path.resolve(__dirname, "../..");
 
 export function readJson(rel, fallback = null) {
-  const candidates = [
-    path.join(ROOT, rel),
-    path.join(ROOT, "api/_bundle", rel.replace(/\//g, "__")),
-  ];
-  for (const p of candidates) {
-    try {
-      return JSON.parse(fs.readFileSync(p, "utf8"));
-    } catch { /* next */ }
+  const p = path.join(ROOT, rel);
+  try {
+    return JSON.parse(fs.readFileSync(p, "utf8"));
+  } catch {
+    return fallback;
   }
-  return fallback;
 }
 
 export function readText(rel, fallback = "") {
@@ -200,14 +196,11 @@ export function companySnapshot() {
       status: "/api/company/status",
       health: "/api/health",
       ceoCycle: "/api/ceo/cycle",
-      autonomous: "/api/agent-autonomous",
-      agentStatus: "/api/agent-status",
       publish: "/api/content/publish-next",
       llm: "/api/llm/complete",
       agents: "/api/agents",
       marketplace: "/api/marketplace",
       org: "/api/company/org",
-      projects: "/api/projects",
     },
     generatedAt: new Date().toISOString(),
   };

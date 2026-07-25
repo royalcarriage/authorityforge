@@ -1,7 +1,4 @@
-export const config = { runtime: "nodejs" };
-
-import { cors, json, requireAgentAuth, runCeoCycle } from "../lib/runtime.js";
-import { runAutonomousCycle } from "../lib/autonomous.js";
+import { cors, json, requireAgentAuth, runCeoCycle } from "../lib/runtime.mjs";
 
 /**
  * Vercel Cron + manual trigger.
@@ -23,13 +20,8 @@ export default async function handler(req, res) {
 
   try {
     const withLlm = req.query?.llm !== "0";
-    const mode = req.query?.mode || "ceo";
-    if (mode === "auto" || mode === "autonomous") {
-      const report = await runAutonomousCycle({ maxSteps: 3 });
-      return json(res, 200, { ok: true, mode: "autonomous", report });
-    }
     const report = await runCeoCycle({ withLlm });
-    return json(res, 200, { ok: true, mode: "ceo", report });
+    return json(res, 200, { ok: true, report });
   } catch (e) {
     return json(res, 500, { ok: false, error: String(e.message || e) });
   }

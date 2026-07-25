@@ -1,6 +1,4 @@
-export const config = { runtime: "nodejs" };
-
-import { cors, json, companySnapshot } from "../lib/runtime.js";
+import { cors, json, companySnapshot } from "../lib/runtime.mjs";
 
 export default async function handler(req, res) {
   cors(res);
