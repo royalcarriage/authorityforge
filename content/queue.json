@@ -191,13 +191,16 @@
         "seo"
       ],
       "hub": "/systems/topical-clusters/",
-      "status": "queued",
+      "status": "published",
       "outline": [
         "Uniqueness bar",
         "Template variables that matter",
         "Quality gates",
         "Measurement"
-      ]
+      ],
+      "published_at": "2026-07-25",
+      "published_path": "content/posts/build-programmatic-seo-without-spam.md",
+      "llm_provider": "gemini"
     },
     {
       "id": "schema-product-review-for-tool-pages",

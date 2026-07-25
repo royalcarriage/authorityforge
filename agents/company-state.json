@@ -47,7 +47,7 @@
     "weeklyPublishes": 2
   },
   "lastCycle": {
-    "at": "2026-07-25T12:36:13.288Z",
+    "at": "2026-07-25T12:47:36.124Z",
     "platform": "full-radius",
     "health": {
       "/": "200",
@@ -57,11 +57,11 @@
       "/api/company/status": "200",
       "/api/health": "200"
     },
-    "queued": 4,
-    "actions": 2,
-    "published": false
+    "queued": 3,
+    "actions": 3,
+    "published": true
   },
-  "cycleCount": 4,
+  "cycleCount": 5,
   "llm": {
     "mode": "free_only",
     "providers": [
@@ -86,7 +86,7 @@
     "primaryUrl": "https://authorityforge-tau.vercel.app",
     "autonomous": "scripts/agent-autonomous.mjs",
     "zeroCost": true,
-    "lastFullRadiusAt": "2026-07-25T12:36:13.288Z"
+    "lastFullRadiusAt": "2026-07-25T12:47:36.124Z"
   },
   "controlPlane": {
     "host": "vercel",
