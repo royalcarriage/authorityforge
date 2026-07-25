@@ -129,3 +129,21 @@ Here are 5 concrete improvements for AuthorityForge, tailored to its niche of AI
 - KPI: queued=3, affiliates~0, health_ok=true
 - Experiment idea: ship one high-intent comparison page targeting a paid tool query; disclose affiliates; measure GSC 28d.
 - Agent hire: keep research-chief scanning competitor monetization pages weekly.
+
+### Full-radius cycle 2026-07-25T15:25:41.923Z
+- health: {"/":"200","/ads.txt":"200","/company/":"200","/css/styles.css":"200","/api/company/status":"200","/api/health":"200"}
+- queued: 5
+- zeroCost: true
+- publish: true
+- plan:
+Here are 5 concrete improvements for AuthorityForge, focusing on AI productivity and SEO systems for affiliates/AdSense, keeping in mind the "zero paid APIs" constraint:
+
+*   **AI-Powered Content Refinement & Uniqueness Scoring:** Implement an internal AI model (trained on publicly available, non-copyrighted text data) that analyzes generated content for stylistic repetition, overused phrases, and potential similarity to existing online content. This model would provide a "Uniqueness Score" for each piece, guiding users to further refine their articles for better SEO performance and to avoid duplicate content penalties. This would be an on-device or server-side processing feature, not relying on external paid APIs.
+
+*   **Automated Keyword Opportunity Identification from SERP Analysis (Organic Data Only):** Develop an AI module that scrapes and analyzes the *organic* search results pages (SERPs) for target keywords. Instead of paying for keyword research tools, AuthorityForge would identify common themes, related questions, and emerging trends within the top-ranking content. This would then suggest relevant long-tail keywords, content gaps, and topic clusters that affiliates can target for AdSense revenue. This would involve sophisticated scraping and natural language processing of publicly visible SERP data.
+
+*   **Intelligent Internal Linking Strategy Generator:** Create an AI system that analyzes the user's published content library. Based on keyword relevance, topic clusters, and user-defined primary/secondary keywords, the AI would automatically suggest optimal internal linking opportunities. This would go beyond simple keyword matching by understanding semantic relationships between articles, aiming to improve user navigation, dwell time, and SEO authority flow across the site.
+
+*   **AdSense Performance Prediction & Optimization Suggestions (Based on Historical Data):** Leverage the platform's own historical data (if anonymized and aggregated) or allow users to input anonymized AdSense performance metrics for their AuthorityForge-generated sites. The AI would then analyze patterns between content characteristics (topic, keyword density, article length, engagement metrics) and AdSense revenue. It would then provide actionable, data-driven suggestions for content creation and optimization to maximize AdSense earnings, without relying on external paid analytics APIs.
+
+*   **AI-Driven "Content Refresh" Recommendations for Stale Pages:** Implement an AI that periodically reviews published content based on factors like: declining organic traffic (if traffic data is available through integrated, free analytics like Google Analytics if the user connects it), outdated information (identified through semantic analysis comparing to current web knowledge), or low user engagement. The AI would then suggest specific sections to update, new keywords to incorporate, or even prompt for a complete content rewrite to maintain SEO relevance and AdSense revenue potential.
