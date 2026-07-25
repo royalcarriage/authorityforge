@@ -89,6 +89,30 @@
       "status": "planned",
       "cost": "free_tier",
       "description": "Optional Vercel KV/Blob when state outgrows git JSON."
+    },
+    {
+      "id": "app-auth",
+      "name": "Customer + Operator App",
+      "status": "active",
+      "cost": "free",
+      "endpoint": "/api/auth/signup",
+      "description": "Signup/login JWT, customer dashboard, operator HQ; users in agents/data/users.json via AF_GITHUB_TOKEN."
+    },
+    {
+      "id": "customer-dashboard",
+      "name": "Customer Money Dashboard",
+      "status": "active",
+      "cost": "free",
+      "endpoint": "/app/dashboard/",
+      "description": "Projects, revenue checklists, free AI briefs, plan upgrades."
+    },
+    {
+      "id": "operator-hq",
+      "name": "Operator HQ Dashboard",
+      "status": "active",
+      "cost": "free",
+      "endpoint": "/app/admin/",
+      "description": "Signups, plans, live company snapshot for AF owner."
     }
   ]
 }

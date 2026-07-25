@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Log in — AuthorityForge App</title>
+  <meta name="description" content="Log in to your AuthorityForge dashboard — customer money OS or operator HQ." />
+  <link rel="canonical" href="https://royalcarriage.github.io/authorityforge/app/login/" />
+  <meta name="robots" content="noindex,follow" />
+  <meta name="theme-color" content="#0b0d10" />
+  <link rel="stylesheet" href="/authorityforge/css/styles.css" />
+  <link rel="stylesheet" href="/authorityforge/css/app.css" />
+</head>
+<body class="app-body">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="/authorityforge/">AuthorityForge<span class="logo-mark">⚡</span></a>
+      <nav class="nav"><a class="nav-link" href="/authorityforge/app/signup/">Start free</a></nav>
+      <a class="btn btn-sm" href="/authorityforge/app/signup/">Start free</a>
+    </div>
+  </header>
+  <main id="main" class="auth-layout auth-layout-single">
+    <section class="auth-card">
+      <h1>Log in</h1>
+      <p class="muted">Customer dashboard or operator HQ — same door.</p>
+      <form id="login-form" class="auth-form">
+        <label>Email
+          <input name="email" type="email" autocomplete="email" required />
+        </label>
+        <label>Password
+          <input name="password" type="password" autocomplete="current-password" required />
+        </label>
+        <button class="btn" type="submit" id="login-btn">Log in</button>
+        <p class="form-msg muted" id="login-msg" role="status"></p>
+      </form>
+      <p class="muted">New here? <a href="/authorityforge/app/signup/">Create free account</a></p>
+    </section>
+  </main>
+  <script src="/authorityforge/js/config.js"></script>
+  <script src="/authorityforge/js/app-auth.js"></script>
+  <script>
+  (function () {
+    var form = document.getElementById("login-form");
+    var msg = document.getElementById("login-msg");
+    var btn = document.getElementById("login-btn");
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      msg.textContent = "Signing in…";
+      btn.disabled = true;
+      var fd = new FormData(form);
+      var r = await AF_APP.login(fd.get("email"), fd.get("password"));
+      if (!r.ok) {
+        msg.textContent = r.error || "Login failed";
+        btn.disabled = false;
+        return;
+      }
+      var params = new URLSearchParams(location.search);
+      var next = params.get("next");
+      location.href = next || r.next || "/authorityforge/app/dashboard/";
+    });
+  })();
+  </script>
+</body>
+</html>

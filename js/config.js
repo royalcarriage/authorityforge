@@ -8,6 +8,8 @@ window.AF_CONFIG = {
   githubPagesUrl: "https://royalcarriage.github.io/authorityforge",
   githubRepo: "https://github.com/royalcarriage/authorityforge",
   basePath: "/authorityforge",
+  /** App API host — auth/dashboard always hit Vercel (GH Pages has no serverless). */
+  apiBase: "https://authorityforge-tau.vercel.app",
 
   /** Google AdSense */
   ADSENSE_CLIENT: "ca-pub-1959018852581373",

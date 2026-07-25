@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Customer Dashboard — AuthorityForge</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#0b0d10" />
+  <link rel="stylesheet" href="/authorityforge/css/styles.css" />
+  <link rel="stylesheet" href="/authorityforge/css/app.css" />
+</head>
+<body class="app-body">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="/authorityforge/">AuthorityForge<span class="logo-mark">⚡</span></a>
+      <nav class="nav">
+        <a class="nav-link" href="/authorityforge/systems/money/">Money OS</a>
+        <a class="nav-link" href="/authorityforge/pricing/">Pricing</a>
+      </nav>
+      <button class="btn btn-sm btn-outline" type="button" id="logout-btn">Log out</button>
+    </div>
+  </header>
+  <div class="app-shell">
+    <div class="app-top">
+      <div>
+        <h1>Your forge</h1>
+        <p class="app-user" id="user-line">Loading…</p>
+      </div>
+      <a class="btn btn-sm" href="/authorityforge/pricing/">Upgrade for revenue tools</a>
+    </div>
+    <div class="money-bar" id="money-bar">
+      <div><span class="muted">Projected checklist value</span><br /><strong id="rev-est">$0</strong></div>
+      <div class="muted">Complete revenue steps → unlock affiliate + AdSense paths. Real cash needs your program IDs.</div>
+    </div>
+    <div class="app-grid">
+      <nav class="app-nav" aria-label="App">
+        <a href="#projects" class="is-active">Projects</a>
+        <a href="#money">Make money</a>
+        <a href="#brief">AI brief</a>
+        <a href="#plans">Plans</a>
+        <a href="/authorityforge/systems/money/">Money OS ↗</a>
+        <a href="/authorityforge/clients/" id="admin-link" hidden>Client services ↗</a>
+        <a href="/authorityforge/app/admin/" id="ops-link" hidden>Operator HQ ↗</a>
+      </nav>
+      <div class="app-main">
+        <section class="panel" id="projects">
+          <h2>Projects</h2>
+          <div id="projects-list" class="muted">Loading projects…</div>
+          <form class="inline-form" id="new-project-form">
+            <input class="dash-input" name="name" placeholder="New project name" required />
+            <button class="btn btn-sm" type="submit">Create project</button>
+          </form>
+          <p class="form-msg muted" id="project-msg"></p>
+        </section>
+        <section class="panel" id="money">
+          <h2>Money path (this week)</h2>
+          <ol class="pitch-list" style="list-style:decimal;padding-left:1.25rem">
+            <li>Finish project checklist items below — each ticks revenue readiness.</li>
+            <li>Apply affiliates → paste IDs when approved (<a href="/authorityforge/resources/affiliates/">programs</a>).</li>
+            <li>Keep AdSense code live; wait for <em>Ready</em> in Google (no clicking own ads).</li>
+            <li>Optional: sell client OS installs from <a href="/authorityforge/clients/">/clients/</a>.</li>
+          </ol>
+        </section>
+        <section class="panel" id="brief">
+          <h2>Free AI money brief</h2>
+          <p class="muted">Gemini free tier when configured. Zero paid tokens.</p>
+          <form class="inline-form" id="brief-form">
+            <input class="dash-input" name="topic" placeholder="e.g. AI writing tools for SEO operators" required />
+            <button class="btn btn-sm" type="submit">Generate</button>
+          </form>
+          <pre class="brief-out" id="brief-out" hidden></pre>
+          <p class="form-msg muted" id="brief-msg"></p>
+        </section>
+        <section class="panel" id="plans">
+          <h2>Plans that produce money</h2>
+          <div class="plan-grid" id="plans-grid"></div>
+          <p class="muted" style="margin-top:0.75rem">Paid upgrades: set <code>AF_STRIPE_PAYMENT_LINK_FORGE</code> / <code>AGENCY</code> on Vercel, or email for invoice. Never uses Royal Carriage limo Stripe.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="/authorityforge/js/config.js"></script>
+  <script src="/authorityforge/js/app-auth.js"></script>
+  <script>
+  (function () {
+    var state = { me: null };
+
+    function esc(s) {
+      return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");
+    }
+
+    function renderProjects(projects) {
+      var el = document.getElementById("projects-list");
+      if (!projects || !projects.length) {
+        el.innerHTML = "<p>No projects yet — create one to start the revenue checklist.</p>";
+        return;
+      }
+      var rev = 0;
+      el.innerHTML = projects.map(function (p) {
+        rev += (p.metrics && p.metrics.revenueUsd) || 0;
+        var checks = (p.checklist || []).map(function (c) {
+          return (
+            '<li><input type="checkbox" data-pid="' + esc(p.id) + '" data-cid="' + esc(c.id) + '"' +
+            (c.done ? " checked" : "") + " /> <span>" + esc(c.label) + "</span></li>"
+          );
+        }).join("");
+        return (
+          '<article class="project-card panel" style="background:var(--bg);margin:0 0 .75rem">' +
+          "<h3>" + esc(p.name) + "</h3>" +
+          '<p class="muted">Status: ' + esc(p.status) + " · type: " + esc(p.type) + "</p>" +
+          '<ul class="checklist">' + checks + "</ul></article>"
+        );
+      }).join("");
+      document.getElementById("rev-est").textContent = "$" + rev.toFixed(0);
+      el.querySelectorAll('input[type="checkbox"]').forEach(function (box) {
+        box.addEventListener("change", async function () {
+          var r = await AF_APP.toggleChecklist(box.getAttribute("data-pid"), box.getAttribute("data-cid"), box.checked);
+          if (r.ok) load();
+        });
+      });
+    }
+
+    function renderPlans(plans, current) {
+      var order = ["free", "forge", "agency"];
+      document.getElementById("plans-grid").innerHTML = order.map(function (k) {
+        var p = plans[k];
+        if (!p) return "";
+        var cur = current === k || (current === "operator" && k === "agency");
+        return (
+          '<div class="plan' + (cur ? " is-current" : "") + '">' +
+          "<strong>" + esc(p.name) + "</strong>" +
+          '<div class="price">$' + p.priceUsd + "<span class=\"muted\" style=\"font-size:.85rem\">/mo</span></div>" +
+          "<ul class=\"muted\" style=\"padding-left:1.1rem;font-size:.88rem\">" +
+          (p.features || []).map(function (f) { return "<li>" + esc(f) + "</li>"; }).join("") +
+          "</ul>" +
+          (cur ? '<p class="meta">Current</p>' : '<a class="btn btn-sm btn-outline" href="mailto:royalcarriagelimollc@gmail.com?subject=Upgrade%20' + encodeURIComponent(p.name) + '">Request upgrade</a>') +
+          "</div>"
+        );
+      }).join("");
+    }
+
+    async function load() {
+      var m = await AF_APP.requireAuth();
+      if (!m) return;
+      state.me = m;
+      document.getElementById("user-line").textContent =
+        m.user.name + " · " + m.user.email + " · plan: " + m.user.plan + " · role: " + m.user.role;
+      if (m.user.role === "operator") {
+        document.getElementById("ops-link").hidden = false;
+        document.getElementById("admin-link").hidden = false;
+      }
+      renderProjects(m.projects);
+      renderPlans(m.plans, m.user.plan);
+    }
+
+    document.getElementById("logout-btn").onclick = async function () {
+      await AF_APP.logout();
+      location.href = "/authorityforge/";
+    };
+    document.getElementById("new-project-form").onsubmit = async function (e) {
+      e.preventDefault();
+      var name = new FormData(e.target).get("name");
+      var r = await AF_APP.createProject(name);
+      var msg = document.getElementById("project-msg");
+      if (!r.ok) {
+        msg.textContent = r.error || "Failed";
+        if (r.upgrade) msg.textContent += " — see Plans.";
+        return;
+      }
+      e.target.reset();
+      msg.textContent = "Created.";
+      load();
+    };
+    document.getElementById("brief-form").onsubmit = async function (e) {
+      e.preventDefault();
+      var topic = new FormData(e.target).get("topic");
+      document.getElementById("brief-msg").textContent = "Generating…";
+      var r = await AF_APP.brief(topic);
+      if (!r.ok) {
+        document.getElementById("brief-msg").textContent = r.error || "Failed";
+        return;
+      }
+      var out = document.getElementById("brief-out");
+      out.hidden = false;
+      out.textContent = r.text + "\n\n— provider: " + r.provider + " · $" + (r.costUsd || 0);
+      document.getElementById("brief-msg").textContent = "Done (free tier).";
+    };
+
+    load();
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Start free — AuthorityForge App</title>
+  <meta name="description" content="Create a free AuthorityForge account. Build ranking systems, wire money paths, and run your content OS from one dashboard." />
+  <link rel="canonical" href="https://royalcarriage.github.io/authorityforge/app/signup/" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0b0d10" />
+  <link rel="stylesheet" href="/authorityforge/css/styles.css" />
+  <link rel="stylesheet" href="/authorityforge/css/app.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1959018852581373" crossorigin="anonymous"></script>
+</head>
+<body class="app-body">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="/authorityforge/">AuthorityForge<span class="logo-mark">⚡</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="/authorityforge/start/">Why join</a>
+        <a class="nav-link" href="/authorityforge/pricing/">Pricing</a>
+        <a class="nav-link" href="/authorityforge/app/login/">Log in</a>
+      </nav>
+      <a class="btn btn-sm" href="/authorityforge/app/signup/">Start free</a>
+    </div>
+  </header>
+  <main id="main" class="auth-layout">
+    <section class="auth-pitch">
+      <p class="kicker">Free account · 2 minutes</p>
+      <h1>Stop reading systems. <em>Run</em> one.</h1>
+      <p class="lede">AuthorityForge is the living OS for search authority + monetization. Sign up free, open your dashboard, and ship money-ready clusters — not another tab of theory.</p>
+      <ul class="pitch-list">
+        <li><strong>Customer dashboard</strong> — projects, checklists, AI briefs, upgrade path</li>
+        <li><strong>Money wiring</strong> — affiliates → AdSense → client delivery map</li>
+        <li><strong>Operator HQ</strong> — if you’re the owner, auto-promoted admin tools</li>
+        <li><strong>$0 until you upgrade</strong> — free Gemini briefs, free hosting</li>
+      </ul>
+      <p class="muted">Already have an account? <a href="/authorityforge/app/login/">Log in</a></p>
+    </section>
+    <section class="auth-card">
+      <h2>Create your free forge</h2>
+      <form id="signup-form" class="auth-form" novalidate>
+        <label>Name
+          <input name="name" type="text" autocomplete="name" placeholder="Operator name" required />
+        </label>
+        <label>Email
+          <input name="email" type="email" autocomplete="email" placeholder="you@company.com" required />
+        </label>
+        <label>Password (8+ chars)
+          <input name="password" type="password" autocomplete="new-password" minlength="8" required />
+        </label>
+        <button class="btn" type="submit" id="signup-btn">Create free account</button>
+        <p class="form-msg muted" id="signup-msg" role="status"></p>
+      </form>
+      <p class="legal-note muted">By signing up you agree to disclosed affiliates, no fake rankings, and no clicking your own ads. We never auto-send email or move money.</p>
+    </section>
+  </main>
+  <script src="/authorityforge/js/config.js"></script>
+  <script src="/authorityforge/js/app-auth.js"></script>
+  <script>
+  (function () {
+    var form = document.getElementById("signup-form");
+    var msg = document.getElementById("signup-msg");
+    var btn = document.getElementById("signup-btn");
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      msg.textContent = "Creating account…";
+      btn.disabled = true;
+      var fd = new FormData(form);
+      var r = await AF_APP.signup(fd.get("email"), fd.get("password"), fd.get("name"));
+      if (!r.ok) {
+        msg.textContent = r.error || "Signup failed";
+        btn.disabled = false;
+        return;
+      }
+      msg.textContent = "Welcome — opening dashboard…";
+      location.href = r.next || "/authorityforge/app/dashboard/";
+    });
+  })();
+  </script>
+</body>
+</html>

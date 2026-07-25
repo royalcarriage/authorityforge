@@ -9,7 +9,7 @@
   "functions": {
     "api/**/*.js": {
       "maxDuration": 60,
-      "includeFiles": "{agents/**,content/queue.json,js/config.js,api/lib/**}"
+      "includeFiles": "{agents/**,content/queue.json,js/config.js,api/lib/**,api/lib/auth.mjs}"
     }
   },
   "crons": [

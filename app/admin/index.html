@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Operator HQ — AuthorityForge</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#0b0d10" />
+  <link rel="stylesheet" href="/authorityforge/css/styles.css" />
+  <link rel="stylesheet" href="/authorityforge/css/app.css" />
+</head>
+<body class="app-body">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="/authorityforge/">AuthorityForge<span class="logo-mark">⚡</span></a>
+      <nav class="nav">
+        <a class="nav-link" href="/authorityforge/app/dashboard/">Customer view</a>
+        <a class="nav-link" href="/authorityforge/company/">Public HQ</a>
+      </nav>
+      <button class="btn btn-sm btn-outline" type="button" id="logout-btn">Log out</button>
+    </div>
+  </header>
+  <div class="app-shell">
+    <div class="app-top">
+      <div>
+        <h1>Operator HQ</h1>
+        <p class="app-user" id="user-line">Verifying operator access…</p>
+      </div>
+      <a class="btn btn-sm" href="/authorityforge/resources/money-dashboard/">Money status</a>
+    </div>
+    <div class="stat-row" id="stats"></div>
+    <div class="app-grid" style="margin-top:1rem">
+      <nav class="app-nav">
+        <a href="#users" class="is-active">Users</a>
+        <a href="#live">Live company</a>
+        <a href="#money">Money rules</a>
+        <a href="/authorityforge/app/dashboard/">Customer dash ↗</a>
+      </nav>
+      <div class="app-main">
+        <section class="panel" id="users">
+          <h2>Recent signups</h2>
+          <div class="table-wrap">
+            <table class="table-users">
+              <thead><tr><th>User</th><th>Role</th><th>Plan</th><th>Joined</th></tr></thead>
+              <tbody id="users-body"><tr><td colspan="4" class="muted">Loading…</td></tr></tbody>
+            </table>
+          </div>
+        </section>
+        <section class="panel" id="live">
+          <h2>Live company snapshot</h2>
+          <pre class="brief-out" id="live-pre">…</pre>
+        </section>
+        <section class="panel" id="money">
+          <h2>Money production rules</h2>
+          <ul>
+            <li>Customer dashboards drive checklist completion → affiliate readiness.</li>
+            <li>Paid plans: Forge $49 / Agency $199 — invoice or Stripe AF account only.</li>
+            <li>AdSense + affiliates = passive; client OS = high ticket.</li>
+            <li><strong>Never</strong> auto-wire money or auto-email. Approval-queue only.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="/authorityforge/js/config.js"></script>
+  <script src="/authorityforge/js/app-auth.js"></script>
+  <script>
+  (function () {
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+    }
+    document.getElementById("logout-btn").onclick = async function () {
+      await AF_APP.logout();
+      location.href = "/authorityforge/";
+    };
+    (async function () {
+      var m = await AF_APP.requireAuth({ operator: true });
+      if (!m) return;
+      document.getElementById("user-line").textContent =
+        m.user.name + " · operator · " + m.user.email;
+      var a = await AF_APP.admin();
+      if (!a.ok) {
+        document.getElementById("users-body").innerHTML =
+          '<tr><td colspan="4">' + esc(a.error) + "</td></tr>";
+        return;
+      }
+      var ad = a.admin || {};
+      document.getElementById("stats").innerHTML = [
+        ["Users", ad.users],
+        ["Customers", ad.customers],
+        ["Projects", ad.projects],
+        ["Operators", ad.operators],
+      ]
+        .map(function (x) {
+          return '<div class="stat"><strong>' + esc(x[1]) + "</strong><span>" + esc(x[0]) + "</span></div>";
+        })
+        .join("");
+      document.getElementById("users-body").innerHTML = (ad.recentUsers || [])
+        .map(function (u) {
+          return (
+            "<tr><td>" + esc(u.name) + "<br><span class=muted>" + esc(u.email) + "</span></td>" +
+            '<td><span class="badge-role">' + esc(u.role) + "</span></td>" +
+            "<td>" + esc(u.plan) + "</td>" +
+            "<td class=muted>" + esc((u.createdAt || "").slice(0, 10)) + "</td></tr>"
+          );
+        })
+        .join("") || '<tr><td colspan="4" class="muted">No users yet — share /app/signup/</td></tr>';
+      document.getElementById("live-pre").textContent = JSON.stringify(
+        { live: a.live, money: a.money, plans: ad.plans, treasury: ad.treasury },
+        null,
+        2
+      );
+    })();
+  })();
+  </script>
+</body>
+</html>
