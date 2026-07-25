@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-25T19:03:45.244Z",
+  "updatedAt": "2026-07-25T19:04:54.495Z",
   "users": [
     {
       "id": "3cffde52-7772-4bd0-99b3-e78859114d8d",
@@ -105,6 +105,29 @@
       "createdAt": "2026-07-25T19:03:45.244Z",
       "projectIds": [
         "f092bfc1-cf61-4b0f-a982-600cae1f4bcb"
+      ],
+      "services": {
+        "clusterBuilder": true,
+        "moneyWiring": false,
+        "agentOps": false
+      },
+      "revenue": {
+        "affiliateEnabled": false,
+        "adsenseReady": false,
+        "estimatedMonthlyUsd": 0
+      }
+    },
+    {
+      "id": "aaca5775-cf80-426f-83cf-7dacf8bb3573",
+      "email": "liveui-1785006287@example.com",
+      "name": "Live UI Tester",
+      "role": "customer",
+      "plan": "free",
+      "salt": "3cd78508da3abc5af3ae6e3d99c73435",
+      "hash": "ab8561e16027a39df2ad74fbb701aa47618d35cc5473939aefd792336476b195",
+      "createdAt": "2026-07-25T19:04:54.495Z",
+      "projectIds": [
+        "bdf83ab1-ad25-40d2-9441-6f55745ad569"
       ],
       "services": {
         "clusterBuilder": true,
@@ -286,6 +309,46 @@
       "status": "active",
       "type": "authority_cluster",
       "createdAt": "2026-07-25T19:03:45.244Z",
+      "metrics": {
+        "pages": 0,
+        "spokesPlanned": 12,
+        "revenueUsd": 0
+      },
+      "checklist": [
+        {
+          "id": "niche",
+          "label": "Define niche + money keywords",
+          "done": false
+        },
+        {
+          "id": "hub",
+          "label": "Ship hub page",
+          "done": false
+        },
+        {
+          "id": "spokes",
+          "label": "Ship 6–12 commercial spokes",
+          "done": false
+        },
+        {
+          "id": "affiliates",
+          "label": "Enable 1+ affiliate IDs",
+          "done": false
+        },
+        {
+          "id": "adsense",
+          "label": "AdSense site ready",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "bdf83ab1-ad25-40d2-9441-6f55745ad569",
+      "ownerId": "aaca5775-cf80-426f-83cf-7dacf8bb3573",
+      "name": "Live UI Tester's first forge",
+      "status": "active",
+      "type": "authority_cluster",
+      "createdAt": "2026-07-25T19:04:54.495Z",
       "metrics": {
         "pages": 0,
         "spokesPlanned": 12,
