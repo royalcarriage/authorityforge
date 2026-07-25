@@ -39,8 +39,8 @@
         <a href="#brief">AI brief</a>
         <a href="#plans">Plans</a>
         <a href="/authorityforge/systems/money/">Money OS ↗</a>
-        <a href="/authorityforge/clients/" id="admin-link" hidden>Client services ↗</a>
-        <a href="/authorityforge/app/admin/" id="ops-link" hidden>Operator HQ ↗</a>
+        <a href="/authorityforge/clients/" id="admin-link" class="ops-only" hidden style="display:none">Client services ↗</a>
+        <a href="/authorityforge/app/admin/" id="ops-link" class="ops-only" hidden style="display:none">Operator HQ ↗</a>
       </nav>
       <div class="app-main">
         <section class="panel" id="projects">
@@ -146,8 +146,12 @@
       document.getElementById("user-line").textContent =
         m.user.name + " · " + m.user.email + " · plan: " + m.user.plan + " · role: " + m.user.role;
       if (m.user.role === "operator") {
-        document.getElementById("ops-link").hidden = false;
-        document.getElementById("admin-link").hidden = false;
+        ["ops-link", "admin-link"].forEach(function (id) {
+          var el = document.getElementById(id);
+          if (!el) return;
+          el.hidden = false;
+          el.style.display = "";
+        });
       }
       renderProjects(m.projects);
       renderPlans(m.plans, m.user.plan);
