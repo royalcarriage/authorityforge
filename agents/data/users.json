@@ -1,18 +1,18 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-25T18:58:35.538Z",
+  "updatedAt": "2026-07-25T18:58:44.429Z",
   "users": [
     {
-      "id": "e1f3ea13-6f18-424d-8d86-77c14ad1c864",
-      "email": "persist-1785005915-3@example.com",
-      "name": "Persist3",
+      "id": "3cffde52-7772-4bd0-99b3-e78859114d8d",
+      "email": "verify-1785005924@example.com",
+      "name": "Verify",
       "role": "customer",
       "plan": "free",
-      "salt": "7e0c49497df484f13dd1ec1248150ed4",
-      "hash": "13b724a7a549b27a08b535e74bc45c8433a750833f8d615f3910739d15a49d12",
-      "createdAt": "2026-07-25T18:58:35.536Z",
+      "salt": "2c48c1bbc98ae54afde43a975bcf3f26",
+      "hash": "4d9de053383a2ff300d8d199b293e6d3b10dbdc2d7b3ab69638057ffb9761078",
+      "createdAt": "2026-07-25T18:58:44.429Z",
       "projectIds": [
-        "00ab970e-66de-423a-8402-56dafaa14b1a"
+        "7fc9d5dc-f499-4340-86d0-b7bcb0366511"
       ],
       "services": {
         "clusterBuilder": true,
@@ -28,12 +28,12 @@
   ],
   "projects": [
     {
-      "id": "00ab970e-66de-423a-8402-56dafaa14b1a",
-      "ownerId": "e1f3ea13-6f18-424d-8d86-77c14ad1c864",
-      "name": "Persist3's first forge",
+      "id": "7fc9d5dc-f499-4340-86d0-b7bcb0366511",
+      "ownerId": "3cffde52-7772-4bd0-99b3-e78859114d8d",
+      "name": "Verify's first forge",
       "status": "active",
       "type": "authority_cluster",
-      "createdAt": "2026-07-25T18:58:35.538Z",
+      "createdAt": "2026-07-25T18:58:44.429Z",
       "metrics": {
         "pages": 0,
         "spokesPlanned": 12,
