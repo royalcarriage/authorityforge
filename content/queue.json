@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "description": "Topics waiting for automatic publish. Pipeline takes the first status=queued item.",
+  "posts": [
+    {
+      "id": "entity-seo-for-ai-tools",
+      "slug": "entity-seo-for-ai-tools",
+      "title": "Entity SEO for AI Tools: How Brands Become the Answer",
+      "description": "How AI tool companies build entity clarity so search and AI answers cite them consistently.",
+      "tags": [
+        "seo",
+        "entities",
+        "ai-tools"
+      ],
+      "hub": "/systems/eeat/",
+      "status": "published",
+      "outline": [
+        "Define entity SEO in plain language",
+        "On-site signals: about, sameAs, consistent naming",
+        "Off-site signals: profiles, docs, citations",
+        "Common mistakes for SaaS and AI products",
+        "Weekly checklist"
+      ],
+      "published_at": "2026-07-25",
+      "published_path": "content/posts/entity-seo-for-ai-tools.md"
+    },
+    {
+      "id": "internal-links-that-rank",
+      "slug": "internal-links-that-rank",
+      "title": "Internal Links That Actually Move Rankings",
+      "description": "A practical internal linking system for hubs, spokes, and blog clusters without spam.",
+      "tags": [
+        "seo",
+        "internal-links",
+        "clusters"
+      ],
+      "hub": "/systems/topical-clusters/",
+      "status": "queued",
+      "outline": [
+        "Why anchors beat raw link volume",
+        "Hub to spoke patterns",
+        "When to nofollow vs prune",
+        "Audit process with a spreadsheet",
+        "AuthorityForge example map"
+      ]
+    },
+    {
+      "id": "ctr-rewrites-from-gsc",
+      "slug": "ctr-rewrites-from-search-console",
+      "title": "CTR Rewrites from Search Console in Under an Hour",
+      "description": "A weekly workflow to turn high-impression low-CTR queries into better titles and H1s.",
+      "tags": [
+        "seo",
+        "ctr",
+        "measurement"
+      ],
+      "hub": "/systems/measurement-loops/",
+      "status": "queued",
+      "outline": [
+        "Export the right GSC view",
+        "Filter high impr low CTR",
+        "Title formulas that win clicks",
+        "Match H1 to SERP promise",
+        "Verify after re-crawl"
+      ]
+    },
+    {
+      "id": "agent-pipelines-for-content",
+      "slug": "agent-pipelines-for-content-ops",
+      "title": "Agent Pipelines for Content Ops (Without Index Spam)",
+      "description": "How to run audit → design → publish with agents while keeping quality bars high.",
+      "tags": [
+        "ai-productivity",
+        "agents",
+        "content-ops"
+      ],
+      "hub": "/guide/search-authority-playbook/",
+      "status": "queued",
+      "outline": [
+        "Split local workers vs cloud review",
+        "Artifact format between stages",
+        "Human gates that matter",
+        "What never to automate",
+        "Sample weekly schedule"
+      ]
+    }
+  ]
+}

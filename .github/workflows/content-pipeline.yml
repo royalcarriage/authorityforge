@@ -1,0 +1,60 @@
+name: Content pipeline
+
+on:
+  schedule:
+    # Tuesdays 15:00 UTC (~10:00 America/Chicago)
+    - cron: "0 15 * * 2"
+  workflow_dispatch:
+    inputs:
+      use_llm:
+        description: "Use OPENAI_API_KEY if configured (AF_USE_LLM=1)"
+        type: boolean
+        default: false
+      dry_run:
+        description: "Build only; do not publish next queue item"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Publish next queued post
+        if: ${{ inputs.dry_run != true }}
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          AF_USE_LLM: ${{ inputs.use_llm == true && '1' || '0' }}
+          SITE_URL: https://authorityforge-tau.vercel.app
+        run: node scripts/publish-next.mjs
+
+      - name: Build blog + sitemap
+        env:
+          SITE_URL: https://authorityforge-tau.vercel.app
+        run: |
+          node scripts/build-blog.mjs
+          node scripts/build-sitemap.mjs
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "authorityforge-pipeline"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/ blog/ sitemap.xml llms.txt
+          if git diff --staged --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "content(pipeline): publish next post + rebuild blog $(date -u +%Y-%m-%d)"
+          git push origin HEAD:main

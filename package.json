@@ -1,0 +1,17 @@
+{
+  "name": "authorityforge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AuthorityForge static site + content pipeline",
+  "scripts": {
+    "build:blog": "node scripts/build-blog.mjs",
+    "build:sitemap": "node scripts/build-sitemap.mjs",
+    "build": "node scripts/build-blog.mjs && node scripts/build-sitemap.mjs",
+    "new:post": "node scripts/new-post.mjs",
+    "publish:next": "node scripts/publish-next.mjs",
+    "pipeline": "node scripts/publish-next.mjs && node scripts/build-blog.mjs && node scripts/build-sitemap.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

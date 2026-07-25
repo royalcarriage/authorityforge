@@ -1,14 +1,16 @@
 # AuthorityForge
 > Self-optimizing systems for search authority and rankings.
 > Market: AI productivity tools + practical SEO systems.
-> Monetization: affiliates first, AdSense later.
 
-## Primary pages
+## Primary
 - https://authorityforge-tau.vercel.app/
 - https://authorityforge-tau.vercel.app/guide/search-authority-playbook/
 - https://authorityforge-tau.vercel.app/systems/
 - https://authorityforge-tau.vercel.app/blog/
 
-## Optional
-- https://authorityforge-tau.vercel.app/resources/checklists/
-- https://authorityforge-tau.vercel.app/llms.txt
+## Blog posts
+- https://authorityforge-tau.vercel.app/blog/ai-productivity-seo-stack/
+- https://authorityforge-tau.vercel.app/blog/entity-seo-for-ai-tools/
+- https://authorityforge-tau.vercel.app/blog/feedback-loops-rankings/
+- https://authorityforge-tau.vercel.app/blog/topical-maps-for-saas/
+- https://authorityforge-tau.vercel.app/blog/what-is-search-authority/

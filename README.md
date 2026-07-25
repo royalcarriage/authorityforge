@@ -20,3 +20,16 @@ Push to `main` → Vercel production (connect this repo in Vercel project settin
 - `/guide/*` — playbooks
 - `/blog/*` — cluster spokes
 - `/resources/*` — checklists & templates
+
+
+## Content pipeline
+
+- Queue: `content/queue.json`
+- Posts: `content/posts/*.md`
+- Build: `npm run build`
+- Auto: GitHub Action **Content pipeline** (Tuesdays + manual)
+- Docs: [docs/CONTENT-PIPELINE.md](docs/CONTENT-PIPELINE.md)
+
+```bash
+npm run pipeline   # publish next + rebuild
+```
