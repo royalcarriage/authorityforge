@@ -1,21 +1,22 @@
 # AuthorityForge
 
-Self-optimizing systems demo for **search authority & rankings**.
+Self-optimizing systems for search authority & rankings.
 
-- **Live:** https://authorityforge-tau.vercel.app
-- **Owner account:** `royalcarriage` (write access verified 2026-07-25)
-- **Market:** AI productivity tools + practical SEO systems
-- **Monetization (later):** affiliates + AdSense
+- **Live (public):** https://authorityforge-tau.vercel.app
+- **Repo:** https://github.com/royalcarriage/authorityforge
+- **Market:** AI Productivity Tools + Practical SEO Systems (affiliates → AdSense)
 
 ## Status
 
-| Item | State |
+| Item | Status |
 |------|--------|
-| Core messaging + market decision | ✅ Included (product decision) |
-| GitHub write (`royalcarriage`) | ✅ Working (push verified) |
-| Full multi-page content (guide, blog cluster, resources) | ⏳ Not yet in repo — stub on Vercel |
-| Other agents / other GitHub accounts | ❌ May be blocked — use `royalcarriage` or grant collaborator |
+| Live public site | ✅ Vercel |
+| Core messaging + market | ✅ |
+| CLI write (`royalcarriage`) | ✅ |
+| Grok GitHub connector write | ⏳ Owner: grant app access — see [docs/GITHUB-WRITE-PATH.md](docs/GITHUB-WRITE-PATH.md) |
+| Full multipage content | ⏳ Push after connector/agent path ready |
+| Autonomous content pipeline | 🟡 Activate after multipage is on `main` |
 
 ## Deploy
 
-Connected to Vercel project `authorityforge-tau`. Push to `main` triggers rebuild when project is linked to this repo.
+Connect Vercel → this repo → production branch `main`.
