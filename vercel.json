@@ -9,13 +9,17 @@
   "functions": {
     "api/**/*.js": {
       "maxDuration": 60,
-      "includeFiles": "{agents/**,content/queue.json,js/config.js,api/lib/**}"
+      "includeFiles": "{agents/**,api/lib/**,content/queue.json,js/config.js,api/lib/**}"
     }
   },
   "crons": [
     {
       "path": "/api/ceo/cycle",
       "schedule": "0 14 * * *"
+    },
+    {
+      "path": "/api/agent/autonomous",
+      "schedule": "0 15 * * *"
     }
   ],
   "headers": [

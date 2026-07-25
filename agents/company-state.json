@@ -72,6 +72,19 @@
     "primaryUrl": "https://authorityforge-tau.vercel.app",
     "apis": true,
     "cron": "0 14 * * * /api/ceo/cycle",
+    "zeroCost": true,
+    "autonomousCron": "0 15 * * *",
+    "ceoCron": "0 14 * * *"
+  },
+  "controlPlane": {
+    "host": "vercel",
+    "autonomousEndpoint": "/api/agent/autonomous",
+    "requires": [
+      "GEMINI_API_KEY",
+      "AF_GITHUB_TOKEN",
+      "AF_AGENT_SECRET"
+    ],
+    "autonomyDefault": "pr",
     "zeroCost": true
   }
 }

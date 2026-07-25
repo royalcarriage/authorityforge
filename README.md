@@ -58,3 +58,13 @@ Plus systems, guides, blog, legal, resources.
 4. On-site page: **/resources/grok-browser/**
 
 Starter prompt is in that doc.
+
+## Vercel agentic company OS
+
+Production: https://authorityforge-tau.vercel.app/company/
+
+- Autonomous improve: `GET /api/agent/autonomous` (needs `AF_GITHUB_TOKEN` + `GEMINI_API_KEY`)
+- Status: `/api/agent/status`
+- Docs: [docs/AUTONOMOUS-VERCEL-CONTROL-PLANE.md](docs/AUTONOMOUS-VERCEL-CONTROL-PLANE.md)
+
+Zero-cost LLMs only until self-funded.
