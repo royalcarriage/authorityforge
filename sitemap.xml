@@ -283,6 +283,24 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://authorityforge-tau.vercel.app/legal/privacy/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://authorityforge-tau.vercel.app/resources/adsense-apply/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://authorityforge-tau.vercel.app/resources/grok-browser/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://authorityforge-tau.vercel.app/blog/ai-productivity-seo-stack/</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>

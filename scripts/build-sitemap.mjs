@@ -52,6 +52,9 @@ const staticUrls = [
   "/legal/",
   "/legal/affiliate-disclosure/",
   "/legal/monetization/",
+  "/legal/privacy/",
+  "/resources/adsense-apply/",
+  "/resources/grok-browser/",
 ];
 
 const posts = listPostFiles()
