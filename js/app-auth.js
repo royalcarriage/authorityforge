@@ -56,32 +56,32 @@
     token: token,
     setToken: setToken,
     async me() {
-      return api("/api/auth/me");
+      return api("/api/auth");
     },
     async signup(email, password, name) {
-      return api("/api/auth/signup", {
+      return api("/api/auth", {
         method: "POST",
-        body: { email: email, password: password, name: name },
+        body: { action: "signup", email: email, password: password, name: name },
       });
     },
     async login(email, password) {
-      return api("/api/auth/login", {
+      return api("/api/auth", {
         method: "POST",
-        body: { email: email, password: password },
+        body: { action: "login", email: email, password: password },
       });
     },
     async logout() {
       setToken("");
-      return api("/api/auth/logout", { method: "POST", body: {} });
+      return api("/api/auth", { method: "POST", body: { action: "logout" } });
     },
     async createProject(name) {
-      return api("/api/app/projects", {
+      return api("/api/app", {
         method: "POST",
-        body: { name: name },
+        body: { action: "projects", name: name },
       });
     },
     async toggleChecklist(projectId, itemId, done) {
-      return api("/api/app/projects", {
+      return api("/api/app", {
         method: "POST",
         body: {
           action: "checklist",
@@ -92,10 +92,13 @@
       });
     },
     async brief(topic) {
-      return api("/api/app/brief", { method: "POST", body: { topic: topic } });
+      return api("/api/app", {
+        method: "POST",
+        body: { action: "brief", topic: topic },
+      });
     },
     async admin() {
-      return api("/api/app/admin");
+      return api("/api/app", { method: "POST", body: { action: "admin" } });
     },
     requireAuth: async function (opts) {
       opts = opts || {};

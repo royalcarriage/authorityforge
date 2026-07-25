@@ -15,15 +15,11 @@ Static systems pages educate. **Accounts + dashboards** make people return, comp
 | Customer dashboard | `/app/dashboard/` |
 | Operator HQ | `/app/admin/` |
 
-APIs (Vercel):
+APIs (Vercel) — consolidated for Hobby 12-function limit:
 
-- `POST /api/auth/signup`
-- `POST /api/auth/login`
-- `POST /api/auth/logout`
-- `GET /api/auth/me`
-- `GET|POST /api/app/projects`
-- `POST /api/app/brief`
-- `GET /api/app/admin` (operator only)
+- `GET /api/auth` — current user (me)
+- `POST /api/auth` `{ action: "signup"|"login"|"logout", ... }`
+- `GET|POST /api/app` `{ action: "projects"|"checklist"|"brief"|"admin", ... }`
 
 ## Env (Vercel)
 
