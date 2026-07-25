@@ -3,8 +3,21 @@
   "buildCommand": "node scripts/prepare-vercel.mjs",
   "outputDirectory": "dist",
   "installCommand": "echo 'no npm install required'",
+  "framework": null,
   "cleanUrls": true,
   "trailingSlash": true,
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 60,
+      "includeFiles": "api/_bundle/**"
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/ceo/cycle",
+      "schedule": "0 14 * * *"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -16,6 +29,23 @@
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
+    },
+    {
+      "source": "/ads.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300"
         }
       ]
     },
@@ -27,6 +57,16 @@
           "value": "no-store"
         }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/privacy",
+      "destination": "/legal/privacy/"
+    },
+    {
+      "source": "/privacy/",
+      "destination": "/legal/privacy/"
     }
   ]
 }
