@@ -36,7 +36,8 @@
       "monetization-chief",
       "devops-chief",
       "research-chief",
-      "legal-gate"
+      "legal-gate",
+      "vercel-chief"
     ]
   },
   "kpis": {
@@ -65,5 +66,12 @@
       "AF_USE_LLM": "1 to try free models",
       "AF_LLM_PROVIDER": "auto|ollama|gemini|opencode|none"
     }
+  },
+  "runtime": {
+    "host": "vercel",
+    "primaryUrl": "https://authorityforge-tau.vercel.app",
+    "apis": true,
+    "cron": "0 14 * * * /api/ceo/cycle",
+    "zeroCost": true
   }
 }

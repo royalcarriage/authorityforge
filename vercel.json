@@ -2,10 +2,22 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "node scripts/prepare-vercel.mjs",
   "outputDirectory": "dist",
-  "installCommand": "echo 'static site — no install'",
+  "installCommand": "echo 'no npm install required'",
   "framework": null,
   "cleanUrls": true,
   "trailingSlash": true,
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 60,
+      "includeFiles": "{agents/**,content/queue.json,js/config.js,api/lib/**}"
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/ceo/cycle",
+      "schedule": "0 14 * * *"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -34,6 +46,15 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=300"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
         }
       ]
     }

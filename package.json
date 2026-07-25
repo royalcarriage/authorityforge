@@ -2,7 +2,7 @@
   "name": "authorityforge",
   "version": "1.0.0",
   "private": true,
-  "description": "AuthorityForge static site + content pipeline",
+  "description": "AuthorityForge — static site + Vercel agentic company OS",
   "scripts": {
     "build:blog": "node scripts/build-blog.mjs",
     "build:sitemap": "node scripts/build-sitemap.mjs",
@@ -23,5 +23,6 @@
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "type": "module"
 }

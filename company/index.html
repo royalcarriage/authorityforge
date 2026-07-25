@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Company HQ | AuthorityForge AI OS</title>
+  <meta name="description" content="Live company OS on Vercel — CEO agent, roles, marketplace, treasury, APIs." />
+  <link rel="canonical" href="https://royalcarriage.github.io/authorityforge/company/" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#0b0d10" />
+  <link rel="stylesheet" href="/authorityforge/css/styles.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1959018852581373" crossorigin="anonymous"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="/authorityforge/">AuthorityForge<span class="logo-mark">⚡</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/authorityforge/" class="nav-link">Home</a>
+        <a href="/authorityforge/company/" class="nav-link">Company</a>
+        <a href="/authorityforge/systems/" class="nav-link">Systems</a>
+        <a href="/authorityforge/blog/" class="nav-link">Blog</a>
+        <a href="/authorityforge/resources/" class="nav-link">Resources</a>
+      </nav>
+      <a class="btn btn-sm" href="/authorityforge/company/">HQ</a>
+    </div>
+  </header>
+  <aside class="disclosure-bar" role="note"><div class="wrap">
+    <strong>Affiliate disclosure:</strong> Some links may be affiliate links.
+    <a href="/authorityforge/legal/affiliate-disclosure/">Full disclosure</a>
+  </div></aside>
+  <main id="main">
+  <header class="page-hero"><div class="wrap prose">
+    <p class="kicker">Vercel · Agentic company</p>
+    <h1>AuthorityForge Company HQ</h1>
+    <p><strong>Direct answer:</strong> The company runs on <strong>Vercel</strong> as a static site + serverless agent APIs + daily CEO cron. Zero paid LLM until self-funded (Gemini free only).</p>
+  </div></header>
+  <section class="section"><div class="wrap">
+    <div id="live-status" class="card" style="padding:1.25rem;margin-bottom:1.5rem">
+      <p class="muted">Loading live status from <code>/api/company/status</code>…</p>
+    </div>
+    <div class="grid-3">
+      <a class="card" href="/api/company/status"><h3>Status API</h3><p>JSON snapshot of org, KPIs, treasury, marketplace.</p><div class="meta">GET →</div></a>
+      <a class="card" href="/api/agents"><h3>Agents</h3><p>CEO + role agents and open tasks.</p><div class="meta">GET →</div></a>
+      <a class="card" href="/api/marketplace"><h3>Marketplace</h3><p>Plugins and systems the company can run.</p><div class="meta">GET →</div></a>
+      <a class="card" href="/api/health"><h3>Health</h3><p>Production path probes.</p><div class="meta">GET →</div></a>
+      <a class="card" href="/api/company/org"><h3>Org chart</h3><p>Roles + hard rules.</p><div class="meta">GET →</div></a>
+      <a class="card" href="/systems/agent-company/"><h3>Agent company system</h3><p>How the OS works.</p><div class="meta">Guide →</div></a>
+    </div>
+    <div class="prose" style="margin-top:2rem">
+      <h2>Endpoints (all on Vercel)</h2>
+      <ul>
+        <li><code>GET /api/company/status</code> — public dashboard data</li>
+        <li><code>GET /api/ceo/cycle</code> — CEO cycle (cron 14:00 UTC; protect with AF_AGENT_SECRET)</li>
+        <li><code>GET|POST /api/content/publish-next</code> — free LLM publish draft</li>
+        <li><code>POST /api/llm/complete</code> — free Gemini complete</li>
+      </ul>
+      <h2>Secrets on Vercel (project settings)</h2>
+      <ul>
+        <li><code>GEMINI_API_KEY</code> — free tier LLM</li>
+        <li><code>AF_AGENT_SECRET</code> or <code>CRON_SECRET</code> — protect mutations</li>
+        <li><code>AF_GITHUB_TOKEN</code> — optional: persist cycle logs to git</li>
+        <li><code>AF_ZERO_COST=1</code> — default paid LLM block</li>
+      </ul>
+    </div>
+  </div></section>
+  <script>
+  (async function(){
+    var el = document.getElementById('live-status');
+    try {
+      var r = await fetch('/api/company/status');
+      var j = await r.json();
+      el.innerHTML = '<h3 style="margin:0 0 .75rem">Live · ' + (j.platform||'?') + '</h3>' +
+        '<p><strong>' + (j.company&&j.company.name||'AF') + '</strong> · cycles: ' + (j.cycleCount||0) +
+        ' · queued posts: ' + (j.content&&j.content.queued) +
+        ' · open tasks: ' + j.openTasks +
+        ' · zero-cost: ' + j.zeroCost + '</p>' +
+        '<p class="muted">Gemini key: ' + (j.llm&&j.llm.geminiKeyConfigured?'configured':'not set on Vercel') +
+        ' · plugins: ' + (j.marketplace&&j.marketplace.pluginCount) + '</p>' +
+        '<pre style="overflow:auto;max-height:220px;font-size:.75rem;background:#0a0c10;padding:1rem;border-radius:8px">' +
+        JSON.stringify({org:j.orgChart,treasury:j.treasury,lastCycle:j.lastCycle},null,2) + '</pre>';
+    } catch(e) {
+      el.innerHTML = '<p>Status API not reachable yet (deploy may still be rolling). ' + e.message + '</p>';
+    }
+  })();
+  </script></main>
+  <div class="af-ad af-ad-auto wrap" aria-hidden="true" style="min-height:0;margin:1rem auto;max-width:728px"></div>
+  <footer class="site-footer"><div class="wrap footer-bottom">
+    <span>© 2026 AuthorityForge</span>
+    <a href="/authorityforge/company/">Company HQ</a>
+    <a href="/authorityforge/legal/privacy/">Privacy</a>
+  </div></footer>
+  <script src="/authorityforge/js/config.js"></script>
+  <script src="/authorityforge/js/affiliates.js" defer></script>
+  <script src="/authorityforge/js/ads.js" defer></script>
+  <script src="/authorityforge/js/main.js" defer></script>
+</body>
+</html>

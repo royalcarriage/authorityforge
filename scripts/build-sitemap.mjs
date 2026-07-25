@@ -6,6 +6,9 @@ import { ROOT, SITE, listPostFiles, parsePost, write } from "./lib.mjs";
 const staticUrls = [
   "/",
   "/about/",
+  "/company/",
+  "/systems/agent-company/",
+  "/resources/ceo-desk/",
   "/systems/",
   "/systems/topical-clusters/",
   "/systems/eeat/",

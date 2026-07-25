@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CEO Desk | AuthorityForge</title>
+  <meta name="description" content="Operator desk for the Vercel CEO agent — triggers, secrets, approvals." />
+  <link rel="canonical" href="https://royalcarriage.github.io/authorityforge/resources/ceo-desk/" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#0b0d10" />
+  <link rel="stylesheet" href="/authorityforge/css/styles.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1959018852581373" crossorigin="anonymous"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="/authorityforge/">AuthorityForge<span class="logo-mark">⚡</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/authorityforge/" class="nav-link">Home</a>
+        <a href="/authorityforge/company/" class="nav-link">Company</a>
+        <a href="/authorityforge/systems/" class="nav-link">Systems</a>
+        <a href="/authorityforge/blog/" class="nav-link">Blog</a>
+        <a href="/authorityforge/resources/" class="nav-link">Resources</a>
+      </nav>
+      <a class="btn btn-sm" href="/authorityforge/company/">HQ</a>
+    </div>
+  </header>
+  <aside class="disclosure-bar" role="note"><div class="wrap">
+    <strong>Affiliate disclosure:</strong> Some links may be affiliate links.
+    <a href="/authorityforge/legal/affiliate-disclosure/">Full disclosure</a>
+  </div></aside>
+  <main id="main">
+  <header class="page-hero"><div class="wrap prose">
+    <p class="kicker">Resources</p>
+    <h1>CEO desk</h1>
+    <p>Operator controls for the cloud company. Production host: Vercel.</p>
+  </div></header>
+  <section class="section"><div class="wrap prose">
+    <h2>Manual CEO cycle</h2>
+    <p>After you set <code>AF_AGENT_SECRET</code> on Vercel:</p>
+    <pre>curl -sS -H "Authorization: Bearer $AF_AGENT_SECRET" \
+  "https://authorityforge-tau.vercel.app/api/ceo/cycle"</pre>
+    <h2>Cron</h2>
+    <p>Daily 14:00 UTC via <code>vercel.json</code> crons → <code>/api/ceo/cycle</code>.</p>
+    <h2>Approvals</h2>
+    <p>Money, email, paid tools stay in git <code>agents/approval-queue/</code> / human review. Agent proposes; you approve.</p>
+    <p><a href="/company/">Company HQ live status →</a></p>
+  </div></section></main>
+  <div class="af-ad af-ad-auto wrap" aria-hidden="true" style="min-height:0;margin:1rem auto;max-width:728px"></div>
+  <footer class="site-footer"><div class="wrap footer-bottom">
+    <span>© 2026 AuthorityForge</span>
+    <a href="/authorityforge/company/">Company HQ</a>
+    <a href="/authorityforge/legal/privacy/">Privacy</a>
+  </div></footer>
+  <script src="/authorityforge/js/config.js"></script>
+  <script src="/authorityforge/js/affiliates.js" defer></script>
+  <script src="/authorityforge/js/ads.js" defer></script>
+  <script src="/authorityforge/js/main.js" defer></script>
+</body>
+</html>
