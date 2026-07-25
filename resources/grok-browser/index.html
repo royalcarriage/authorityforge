@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Use Grok in the Browser | AuthorityForge</title>
+  <meta name="description" content="How to use Grok (browser) with the AuthorityForge GitHub repo, content pipeline, and Vercel deploy." />
+  <link rel="canonical" href="https://authorityforge-tau.vercel.app/resources/grok-browser/" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0b0d10" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Use Grok in the browser with AuthorityForge","step":[{"@type":"HowToStep","name":"Open Grok","text":"Go to grok.com and sign in."},{"@type":"HowToStep","name":"Connect GitHub","text":"Grant write access to royalcarriage/authorityforge."},{"@type":"HowToStep","name":"Run pipeline prompts","text":"Paste repo context and publish or expand pages."}]}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="/">AuthorityForge<span class="logo-mark">⚡</span></a>
+      <nav class="nav" aria-label="Primary">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/tools/" class="nav-link">Tools</a>
+          <a href="/systems/" class="nav-link">Systems</a>
+          <a href="/guide/" class="nav-link">Guide</a>
+          <a href="/blog/" class="nav-link">Blog</a>
+          <a href="/resources/" class="nav-link is-active">Resources</a>
+      </nav>
+      <a class="btn btn-sm" href="https://grok.com" rel="noopener">Open Grok</a>
+    </div>
+  </header>
+  <aside class="disclosure-bar" role="note">
+    <div class="wrap">
+      <strong>Affiliate disclosure:</strong> Some links may be affiliate links.
+      <a href="/legal/affiliate-disclosure/">Full disclosure</a>
+      · <a href="/legal/monetization/">How we monetize</a>
+    </div>
+  </aside>
+  <main id="main">
+  <header class="page-hero"><div class="wrap prose">
+    <p class="kicker">Resources · Grok</p>
+    <h1>Use Grok in the browser</h1>
+    <p>Drive AuthorityForge updates from <a href="https://grok.com" rel="noopener">grok.com</a> with GitHub write access to this project.</p>
+  </div></header>
+  <section class="section"><div class="wrap prose">
+    <p><strong>Direct answer:</strong> Open Grok in the browser, connect GitHub with write access to <code>royalcarriage/authorityforge</code>, paste the repo context prompt, then ask Grok to edit content, run the pipeline, or expand commercial pages—and push to <code>main</code> so Vercel can deploy.</p>
+
+    <h2 id="steps">Steps</h2>
+    <ol>
+      <li>Go to <a href="https://grok.com" rel="noopener"><strong>https://grok.com</strong></a> and sign in.</li>
+      <li>Connect <strong>GitHub</strong> → allow <strong>royalcarriage/authorityforge</strong> (Contents: read/write).</li>
+      <li>Start a chat with the starter prompt below.</li>
+      <li>Ask for a concrete action (publish next queue post, new tool page, audit).</li>
+      <li>Confirm Vercel is linked to the same repo, then open the live URL to verify.</li>
+    </ol>
+
+    <h2 id="starter">Starter prompt (copy/paste into Grok)</h2>
+    <pre><code>Repo: https://github.com/royalcarriage/authorityforge
+Live: https://authorityforge-tau.vercel.app
+Stack: static HTML; posts in content/posts; queue in content/queue.json; npm run build; push main.
+
+Rules: no fake stats/ratings schema; keep affiliate disclosure; commercial pages need direct-answer + internal links to hubs.
+
+Task: [describe what you want]
+</code></pre>
+
+    <h2 id="prompts">Useful tasks</h2>
+    <ul>
+      <li><strong>Pipeline:</strong> “Publish next item from content/queue.json, rebuild blog + sitemap, push main.”</li>
+      <li><strong>Expand cluster:</strong> “Add a /tools/ page for [topic] with FAQ schema and disclosure bar.”</li>
+      <li><strong>AdSense gate:</strong> “Count commercial pages and list thin ones before AdSense.”</li>
+    </ul>
+
+    <h2 id="links">Links</h2>
+    <ul>
+      <li><a href="https://grok.com" rel="noopener">Grok browser</a></li>
+      <li><a href="https://github.com/royalcarriage/authorityforge" rel="noopener">GitHub repo</a></li>
+      <li><a href="https://github.com/royalcarriage/authorityforge/blob/main/docs/GROK-BROWSER-USAGE.md" rel="noopener">Full Grok browser doc</a></li>
+      <li><a href="/legal/affiliate-disclosure/">Affiliate disclosure</a></li>
+    </ul>
+  </div></section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-bottom">
+      <span>© 2026 AuthorityForge</span>
+      <a href="/resources/">Resources</a>
+      <a href="/legal/affiliate-disclosure/">Affiliate disclosure</a>
+    </div>
+  </footer>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

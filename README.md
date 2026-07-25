@@ -48,3 +48,13 @@ Shipped clusters on `main`:
 Plus systems, guides, blog, legal, resources.
 
 **Live Vercel:** reconnect Git to this repo so production serves the full cluster (not the stub).
+
+
+## Use Grok in the browser
+
+1. Open **https://grok.com**
+2. Connect GitHub → **royalcarriage/authorityforge** (write)
+3. Follow **[docs/GROK-BROWSER-USAGE.md](docs/GROK-BROWSER-USAGE.md)**
+4. On-site page: **/resources/grok-browser/**
+
+Starter prompt is in that doc.

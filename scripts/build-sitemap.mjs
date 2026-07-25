@@ -19,6 +19,7 @@ const staticUrls = [
   "/resources/",
   "/resources/checklists/",
   "/resources/templates/",
+  "/resources/grok-browser/",
   "/contact/",
   "/tools/",
   "/tools/ai-writing-assistants/",
