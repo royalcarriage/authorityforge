@@ -404,6 +404,89 @@
         "GSC feedback"
       ],
       "source": "money-scaffold"
+    },
+    {
+      "id": "dashboard-tour-first-7-days",
+      "slug": "dashboard-tour-first-7-days-in-the-forge",
+      "title": "Your First 7 Days in the Forge Dashboard",
+      "description": "Activation guide: signup to first project, checklist, AI brief, and money path without drowning in SEO theory.",
+      "tags": [
+        "product",
+        "activation",
+        "onboarding"
+      ],
+      "hub": "/app/signup/",
+      "status": "queued",
+      "outline": [
+        "Day 0 signup",
+        "Create project",
+        "Three checklist items",
+        "First AI brief",
+        "Affiliate path preview",
+        "When to upgrade"
+      ],
+      "source": "ceo-playbook"
+    },
+    {
+      "id": "free-vs-pro-vs-agency",
+      "slug": "free-vs-pro-vs-agency-who-should-pay",
+      "title": "Free vs Pro vs Agency: Who Should Pay for AuthorityForge",
+      "description": "Honest SKU guide so operators self-select Free, Pro, or Agency OS \u2014 and sales can close without hype.",
+      "tags": [
+        "pricing",
+        "sales",
+        "product"
+      ],
+      "hub": "/pricing/",
+      "status": "queued",
+      "outline": [
+        "Jobs to be done",
+        "Free limits",
+        "Pro velocity",
+        "Agency white-label",
+        "Install vs software"
+      ],
+      "source": "ceo-playbook"
+    },
+    {
+      "id": "referral-operators",
+      "slug": "refer-operators-grow-your-forge",
+      "title": "Refer Operators: How AuthorityForge Referrals Should Work",
+      "description": "Design of a referral loop that rewards activation not empty signups.",
+      "tags": [
+        "referrals",
+        "growth"
+      ],
+      "hub": "/start/",
+      "status": "queued",
+      "outline": [
+        "Why activation only",
+        "Credit design",
+        "Agency backlinks",
+        "Anti-spam rules"
+      ],
+      "source": "ceo-playbook"
+    },
+    {
+      "id": "weekly-measurement-45-min",
+      "slug": "weekly-measurement-loop-45-minutes",
+      "title": "The 45-Minute Weekly Measurement Loop",
+      "description": "GSC to CTR rewrites to next publish \u2014 the ritual that makes customers return.",
+      "tags": [
+        "measurement",
+        "retention",
+        "seo"
+      ],
+      "hub": "/systems/measurement-loops/",
+      "status": "queued",
+      "outline": [
+        "Export",
+        "Filter",
+        "Rewrite",
+        "Ship",
+        "Log win"
+      ],
+      "source": "ceo-playbook"
     }
   ]
 }
