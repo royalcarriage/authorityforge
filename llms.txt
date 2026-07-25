@@ -9,12 +9,15 @@
 - https://authorityforge-tau.vercel.app/blog/
 
 ## Blog posts
+- https://authorityforge-tau.vercel.app/blog/affiliate-disclosure-that-ranks/
 - https://authorityforge-tau.vercel.app/blog/agent-pipelines-for-content-ops/
 - https://authorityforge-tau.vercel.app/blog/ai-productivity-seo-stack/
 - https://authorityforge-tau.vercel.app/blog/best-ai-writers-for-seo-2026/
 - https://authorityforge-tau.vercel.app/blog/ctr-rewrites-from-search-console/
 - https://authorityforge-tau.vercel.app/blog/entity-seo-for-ai-tools/
 - https://authorityforge-tau.vercel.app/blog/feedback-loops-rankings/
+- https://authorityforge-tau.vercel.app/blog/how-to-pass-adsense-review-content-sites/
 - https://authorityforge-tau.vercel.app/blog/internal-links-that-rank/
+- https://authorityforge-tau.vercel.app/blog/semrush-vs-ahrefs-for-content-sites/
 - https://authorityforge-tau.vercel.app/blog/topical-maps-for-saas/
 - https://authorityforge-tau.vercel.app/blog/what-is-search-authority/

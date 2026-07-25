@@ -124,14 +124,17 @@
         "affiliates"
       ],
       "hub": "/tools/keyword-research-tools/",
-      "status": "queued",
+      "status": "published",
       "outline": [
         "Jobs to be done",
         "Keyword research",
         "Backlinks",
         "Content workflows",
         "Pick one primary"
-      ]
+      ],
+      "published_at": "2026-07-25",
+      "published_path": "content/posts/semrush-vs-ahrefs-for-content-sites.md",
+      "llm_provider": "ollama"
     },
     {
       "id": "how-to-pass-adsense-review-content-sites",
@@ -143,14 +146,17 @@
         "monetization"
       ],
       "hub": "/legal/monetization/",
-      "status": "queued",
+      "status": "published",
       "outline": [
         "What reviewers look for",
         "Page count myth",
         "Policy pages",
         "ads.txt",
         "After approval"
-      ]
+      ],
+      "published_at": "2026-07-25",
+      "published_path": "content/posts/how-to-pass-adsense-review-content-sites.md",
+      "llm_provider": "ollama"
     },
     {
       "id": "affiliate-disclosure-that-ranks",
@@ -163,13 +169,16 @@
         "eeat"
       ],
       "hub": "/legal/affiliate-disclosure/",
-      "status": "queued",
+      "status": "published",
       "outline": [
         "Why disclosure is ranking-adjacent",
         "Placement patterns",
         "Wording",
         "Common mistakes"
-      ]
+      ],
+      "published_at": "2026-07-25",
+      "published_path": "content/posts/affiliate-disclosure-that-ranks.md",
+      "llm_provider": "ollama"
     },
     {
       "id": "build-programmatic-seo-without-spam",

@@ -88,3 +88,21 @@ Here are 5 concrete improvements for AuthorityForge, focusing on AI productivity
     *   **Competitor SEO Gap Analysis:** AI identifying areas where competitors are outperforming the user and suggesting strategies to close those gaps.
     *   **AI-Generated SERP Feature Opportunities:** Identifying opportunities to rank for featured snippets, "people also ask" boxes, and other SERP features.
     *   **Proactive Error Detection & Resolution:** Monitoring site health (like the `/api/health` endpoint) and providing AI-driven diagnostics and suggested fixes.
+
+### Full-radius cycle 2026-07-25T12:36:13.288Z
+- health: {"/":"200","/ads.txt":"200","/company/":"200","/css/styles.css":"200","/api/company/status":"200","/api/health":"200"}
+- queued: 4
+- zeroCost: true
+- publish: false
+- plan:
+Here are 5 concrete improvements for AuthorityForge, focusing on AI productivity and SEO systems for affiliates/AdSense, with zero paid API usage:
+
+*   **AI-Powered Content Outline Generation with Keyword Integration:** Implement a feature where users can input a primary keyword and a brief topic description. The AI would then generate a detailed, SEO-optimized content outline. This outline should include suggested H2, H3, and H4 tags, incorporating related keywords and long-tail variations identified through internal keyword analysis (without external API calls). The output would be directly editable within the AuthorityForge editor, streamlining the content creation process for affiliate articles.
+
+*   **Automated Internal Linking Suggestion Engine:** Develop an AI model that analyzes existing published content within a user's AuthorityForge projects. Based on the content of the current draft being edited, the AI would suggest relevant internal links to other relevant articles already on the user's site. This suggestion would consider keyword relevance and the potential for improving user engagement and SEO authority, all processed internally within the platform.
+
+*   **On-Page SEO Scorecard with Actionable AI Recommendations:** Beyond basic checks, create an AI-driven on-page SEO scorecard. This scorecard would go beyond keyword density and analyze factors like readability, sentence structure variation, the presence of LSI keywords (identified through internal analysis of existing content), and the logical flow of information. For each identified weakness, the AI would provide specific, actionable recommendations directly within the editor, such as "Consider rephrasing this sentence for better clarity" or "Add a sub-heading here to break up the text."
+
+*   **AI-Assisted Meta Description and Title Tag Optimization:** Integrate an AI that analyzes the generated content and suggests compelling, click-worthy meta descriptions and title tags. This AI would be trained on best practices for affiliate/AdSense content, focusing on CTR optimization and keyword inclusion. It would also provide a "click-through rate potential" estimate based on internal data and analysis of successful titles/descriptions within the user's projects.
+
+*   **Automated Content Refresh/Update Suggestions for SEO:** Implement an AI that periodically scans published content for signs of staleness or declining SEO performance. This could involve analyzing internal metrics like bounce rate, time on page, and rankings for target keywords (if tracked internally). The AI would then flag articles that could benefit from an update and suggest specific content areas to improve, such as adding new information, updating statistics, or re-optimizing keywords, thereby proactively boosting the SEO of existing affiliate assets.
