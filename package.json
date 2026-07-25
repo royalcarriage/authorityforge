@@ -9,9 +9,17 @@
     "build": "node scripts/build-blog.mjs && node scripts/build-sitemap.mjs",
     "new:post": "node scripts/new-post.mjs",
     "publish:next": "node scripts/publish-next.mjs",
-    "pipeline": "node scripts/publish-next.mjs && node scripts/build-blog.mjs && node scripts/build-sitemap.mjs",
+    "pipeline": "AF_ZERO_COST=1 node scripts/publish-next.mjs && node scripts/build-blog.mjs && node scripts/build-sitemap.mjs",
     "build:vercel": "node scripts/prepare-vercel.mjs",
-    "vercel-build": "node scripts/prepare-vercel.mjs"
+    "vercel-build": "node scripts/prepare-vercel.mjs",
+    "llm:free": "node scripts/free-llm.mjs",
+    "llm:test": "node scripts/free-llm.mjs \"One sentence: free SEO agents.\"",
+    "ceo": "node scripts/ceo-run.mjs",
+    "ceo:publish": "AF_CEO_PUBLISH=1 AF_ZERO_COST=1 node scripts/ceo-run.mjs",
+    "treasury:sync": "node scripts/treasury-sync.mjs",
+    "treasury:propose": "node scripts/treasury-propose.mjs",
+    "email:check": "node scripts/email-inbox-check.mjs",
+    "publish:next:free": "AF_ZERO_COST=1 AF_USE_LLM=1 node scripts/publish-next.mjs"
   },
   "engines": {
     "node": ">=18"

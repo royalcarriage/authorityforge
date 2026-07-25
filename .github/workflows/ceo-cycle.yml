@@ -1,0 +1,46 @@
+name: CEO agent cycle
+
+on:
+  schedule:
+    # Daily 14:00 UTC (~9am Chicago)
+    - cron: "0 14 * * *"
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "Also publish next queued post (AF_CEO_PUBLISH=1)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  ceo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run CEO cycle
+        env:
+          AF_ZERO_COST: "1"
+          AF_CEO_PUBLISH: ${{ inputs.publish == true && '1' || '0' }}
+          SITE_URL: https://authorityforge-tau.vercel.app
+        run: node scripts/ceo-run.mjs
+
+      - name: Commit agent state / queue / logs
+        run: |
+          git config user.name "af-ceo-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add agents/ content/queue.json content/posts/ blog/ sitemap.xml llms.txt || true
+          if git diff --staged --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "agent(ceo): daily cycle $(date -u +%Y-%m-%d)"
+          git push origin HEAD:main

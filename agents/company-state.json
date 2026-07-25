@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "company": {
+    "name": "AuthorityForge",
+    "mission": "Build self-optimizing AI + SEO systems that compound rankings and passive revenue.",
+    "legalEntity": "operator-owned (human)",
+    "primaryUrl": "https://authorityforge-tau.vercel.app",
+    "githubPagesUrl": "https://royalcarriage.github.io/authorityforge",
+    "repo": "https://github.com/royalcarriage/authorityforge",
+    "ownerEmail": "royalcarriagelimollc@gmail.com",
+    "ceoAgent": "af-ceo-v1"
+  },
+  "hardRules": {
+    "neverSendEmailOrSmsWithoutApproval": true,
+    "neverMoveMoneyWithoutApproval": true,
+    "neverClickOwnAds": true,
+    "disclosureAlwaysOn": true,
+    "humanIsLegalCeo": true,
+    "zeroCostUntilSelfFunded": true,
+    "neverPaidLlmUntilRevenue": true
+  },
+  "monetization": {
+    "phase": 2,
+    "streams": [
+      "affiliates",
+      "adsense"
+    ],
+    "adsenseClient": "ca-pub-1959018852581373",
+    "affiliateConfig": "js/config.js"
+  },
+  "orgChart": {
+    "ceo": "af-ceo",
+    "reports": [
+      "content-chief",
+      "seo-chief",
+      "monetization-chief",
+      "devops-chief",
+      "research-chief",
+      "legal-gate"
+    ]
+  },
+  "kpis": {
+    "indexedPagesTarget": 80,
+    "queuedPostsMin": 5,
+    "affiliateProgramsEnabledMin": 3,
+    "weeklyPublishes": 2
+  },
+  "lastCycle": null,
+  "cycleCount": 0,
+  "llm": {
+    "mode": "free_only",
+    "providers": [
+      "ollama",
+      "gemini_free",
+      "opencode",
+      "template"
+    ],
+    "forbid": [
+      "openai",
+      "anthropic",
+      "paid_vercel_ai"
+    ],
+    "env": {
+      "AF_ZERO_COST": "1 (default)",
+      "AF_USE_LLM": "1 to try free models",
+      "AF_LLM_PROVIDER": "auto|ollama|gemini|opencode|none"
+    }
+  }
+}

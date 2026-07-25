@@ -1,11 +1,16 @@
 #!/usr/bin/env node
 /**
  * Publish the next queued topic from content/queue.json into content/posts/.
- * Uses template generation by default. If OPENAI_API_KEY is set, can expand body (optional).
+ *
+ * LLM policy (zero-cost by default):
+ *   - Uses scripts/free-llm.mjs (Ollama → Gemini free → OpenCode → template)
+ *   - NEVER calls OpenAI/Anthropic while AF_ZERO_COST≠0 (default)
+ *   - AF_USE_LLM=0 forces template only
  */
 import fs from "node:fs";
 import path from "node:path";
 import { ROOT, today, slugify, write } from "./lib.mjs";
+import { freeComplete, zeroCostMode } from "./free-llm.mjs";
 
 const queuePath = path.join(ROOT, "content/queue.json");
 const queue = JSON.parse(fs.readFileSync(queuePath, "utf8"));
@@ -21,10 +26,13 @@ const date = today();
 const outline = next.outline || ["Introduction", "Key steps", "Common mistakes", "Next actions"];
 
 let body;
-if (process.env.OPENAI_API_KEY && process.env.AF_USE_LLM === "1") {
-  body = await generateWithLlm(next, outline);
-} else {
+let llmMeta = { provider: "template", costUsd: 0 };
+if (process.env.AF_USE_LLM === "0") {
   body = generateTemplate(next, outline);
+} else {
+  const result = await generateWithFreeLlm(next, outline);
+  body = result.body;
+  llmMeta = result.meta;
 }
 
 const md = `---
@@ -36,6 +44,9 @@ tags: [${(next.tags || []).map((t) => `"${t}"`).join(", ")}]
 hub: "${next.hub || "/blog/"}"
 status: published
 source: content-pipeline
+llm_provider: "${llmMeta.provider}"
+llm_cost_usd: ${llmMeta.costUsd || 0}
+zero_cost_mode: ${zeroCostMode()}
 ---
 
 ${body}
@@ -48,13 +59,25 @@ if (fs.existsSync(path.join(ROOT, outRel))) {
 }
 write(outRel, md);
 
-// mark queue item published
 next.status = "published";
 next.published_at = date;
 next.published_path = outRel;
+next.llm_provider = llmMeta.provider;
 fs.writeFileSync(queuePath, JSON.stringify(queue, null, 2) + "\n");
 
-console.log(JSON.stringify({ published: slug, path: outRel, remaining: queue.posts.filter((p) => p.status === "queued").length }, null, 2));
+console.log(
+  JSON.stringify(
+    {
+      published: slug,
+      path: outRel,
+      llm: llmMeta,
+      zeroCost: zeroCostMode(),
+      remaining: queue.posts.filter((p) => p.status === "queued").length,
+    },
+    null,
+    2
+  )
+);
 
 function generateTemplate(item, outline) {
   const lines = [];
@@ -81,43 +104,40 @@ function generateTemplate(item, outline) {
   );
   lines.push("");
   lines.push(
-    `*Published by the AuthorityForge content pipeline from queue id \`${item.id || slugify(item.title)}\`.*`
+    `*Published by the AuthorityForge content pipeline (zero-cost template path) from queue id \`${item.id || slugify(item.title)}\`.*`
   );
   return lines.join("\n");
 }
 
-async function generateWithLlm(item, outline) {
-  // Optional: only when AF_USE_LLM=1 and OPENAI_API_KEY set
+async function generateWithFreeLlm(item, outline) {
+  const prompt = `Write a markdown article for AuthorityForge.
+
+Title: ${item.title}
+Description: ${item.description || ""}
+Outline sections:
+${outline.map((o) => `- ${o}`).join("\n")}
+Hub path: ${item.hub || "/blog/"}
+
+Rules:
+- Start with **Direct answer:** one paragraph
+- Use ## for each outline section
+- Practical, no fake stats, no hype
+- End with Next step linking hub + /legal/affiliate-disclosure/ + /blog/
+- 600–900 words max`;
+
   try {
-    const res = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: process.env.AF_LLM_MODEL || "gpt-4o-mini",
-        temperature: 0.5,
-        messages: [
-          {
-            role: "system",
-            content:
-              "You write practical SEO/AI productivity articles for AuthorityForge. Use markdown. Start with a bold Direct answer paragraph. No fake stats. No hype. Link style: [label](/path/).",
-          },
-          {
-            role: "user",
-            content: `Title: ${item.title}\nDescription: ${item.description}\nOutline:\n${outline.map((o) => `- ${o}`).join("\n")}\nHub: ${item.hub || "/blog/"}`,
-          },
-        ],
-      }),
-    });
-    if (!res.ok) throw new Error(`LLM HTTP ${res.status}`);
-    const data = await res.json();
-    return data.choices?.[0]?.message?.content?.trim() || generateTemplate(item, outline);
+    const r = await freeComplete(prompt, { maxTokens: 1600 });
+    if (r.text && r.text.length > 200) {
+      return {
+        body: r.text,
+        meta: { provider: r.provider, costUsd: 0 },
+      };
+    }
+    console.warn("Free LLM empty/short; using template. errors=", r.errors || []);
   } catch (e) {
-    console.warn("LLM failed, using template:", e.message);
-    return generateTemplate(item, outline);
+    console.warn("Free LLM failed; using template:", e.message);
   }
+  return { body: generateTemplate(item, outline), meta: { provider: "template", costUsd: 0 } };
 }
 
 function escapeYaml(s) {

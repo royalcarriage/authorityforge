@@ -2,14 +2,14 @@ name: Content pipeline
 
 on:
   schedule:
-    # Tuesdays 15:00 UTC (~10:00 America/Chicago)
+    # Tuesdays + Fridays 15:00 UTC
     - cron: "0 15 * * 2,5"
   workflow_dispatch:
     inputs:
-      use_llm:
-        description: "Use OPENAI_API_KEY if configured (AF_USE_LLM=1)"
+      use_free_llm:
+        description: "Use free LLM (Gemini free / template). Never paid OpenAI."
         type: boolean
-        default: false
+        default: true
       dry_run:
         description: "Build only; do not publish next queue item"
         type: boolean
@@ -32,19 +32,22 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Publish next queued post
+      - name: Publish next queued post (zero-cost)
         if: ${{ inputs.dry_run != true }}
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          AF_USE_LLM: ${{ inputs.use_llm == true && '1' || '0' }}
-          SITE_URL: https://royalcarriage.github.io/authorityforge
-          BASE_PATH: /authorityforge
+          AF_ZERO_COST: "1"
+          AF_USE_LLM: ${{ inputs.use_free_llm != false && '1' || '0' }}
+          AF_LLM_PROVIDER: auto
+          # Free-tier Gemini only — do NOT set OPENAI_API_KEY here
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SITE_URL: https://authorityforge-tau.vercel.app
+          BASE_PATH: ""
         run: node scripts/publish-next.mjs
 
       - name: Build blog + sitemap
         env:
-          SITE_URL: https://royalcarriage.github.io/authorityforge
-          BASE_PATH: /authorityforge
+          SITE_URL: https://authorityforge-tau.vercel.app
+          BASE_PATH: ""
         run: |
           node scripts/build-blog.mjs
           node scripts/build-sitemap.mjs
@@ -58,5 +61,5 @@ jobs:
             echo "No changes"
             exit 0
           fi
-          git commit -m "content(pipeline): publish next post + rebuild blog $(date -u +%Y-%m-%d)"
+          git commit -m "content(pipeline): free-LLM publish + rebuild $(date -u +%Y-%m-%d)"
           git push origin HEAD:main
