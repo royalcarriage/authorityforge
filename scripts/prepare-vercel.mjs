@@ -25,8 +25,6 @@ const SKIP = new Set([
   "scripts",
   "content",
   ".github",
-  "api",  // serverless — must stay at project root, not inside outputDirectory
-  "agents", // read via api/_bundle on server; avoid huge static copy
 ]);
 
 function walk(dir, acc = []) {
