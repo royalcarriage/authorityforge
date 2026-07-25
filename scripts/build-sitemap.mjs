@@ -25,6 +25,7 @@ const staticUrls = [
   "/app/onboard/",
   "/help/",
   "/sales/",
+  "/services/tracking/",
   "/guide/",
   "/guide/search-authority-playbook/",
   "/guide/content-cluster-architecture/",
