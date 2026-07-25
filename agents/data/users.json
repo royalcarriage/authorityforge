@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-25T19:14:08.910Z",
+  "updatedAt": "2026-07-25T20:37:38.306Z",
   "users": [
     {
       "id": "3cffde52-7772-4bd0-99b3-e78859114d8d",
@@ -198,6 +198,29 @@
       "createdAt": "2026-07-25T19:14:08.910Z",
       "projectIds": [
         "5c358455-5259-458a-bddf-34bf1d135a7a"
+      ],
+      "services": {
+        "clusterBuilder": true,
+        "moneyWiring": false,
+        "agentOps": false
+      },
+      "revenue": {
+        "affiliateEnabled": false,
+        "adsenseReady": false,
+        "estimatedMonthlyUsd": 0
+      }
+    },
+    {
+      "id": "4d7465f3-5c61-4e04-9864-c65864556787",
+      "email": "customer-sim-1785011857@example.com",
+      "name": "Indie Operator",
+      "role": "customer",
+      "plan": "free",
+      "salt": "0e1d0925cd15a6310e49771c4807ed98",
+      "hash": "5c16141fd1470ef9e0a6646734d85f483f7dffe589d9ace907d919042130e973",
+      "createdAt": "2026-07-25T20:37:38.306Z",
+      "projectIds": [
+        "ba4836ef-9c12-4013-b942-d61e8ff6d37a"
       ],
       "services": {
         "clusterBuilder": true,
@@ -579,6 +602,46 @@
       "status": "active",
       "type": "authority_cluster",
       "createdAt": "2026-07-25T19:14:08.910Z",
+      "metrics": {
+        "pages": 0,
+        "spokesPlanned": 12,
+        "revenueUsd": 0
+      },
+      "checklist": [
+        {
+          "id": "niche",
+          "label": "Define niche + money keywords",
+          "done": false
+        },
+        {
+          "id": "hub",
+          "label": "Ship hub page",
+          "done": false
+        },
+        {
+          "id": "spokes",
+          "label": "Ship 6–12 commercial spokes",
+          "done": false
+        },
+        {
+          "id": "affiliates",
+          "label": "Enable 1+ affiliate IDs",
+          "done": false
+        },
+        {
+          "id": "adsense",
+          "label": "AdSense site ready",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "ba4836ef-9c12-4013-b942-d61e8ff6d37a",
+      "ownerId": "4d7465f3-5c61-4e04-9864-c65864556787",
+      "name": "Indie Operator's first forge",
+      "status": "active",
+      "type": "authority_cluster",
+      "createdAt": "2026-07-25T20:37:38.306Z",
       "metrics": {
         "pages": 0,
         "spokesPlanned": 12,
