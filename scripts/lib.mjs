@@ -157,6 +157,13 @@ export function pageShell({ title, description, path: p, body, schema }) {
       <a class="btn btn-sm" href="/guide/search-authority-playbook/">Start playbook</a>
     </div>
   </header>
+  <aside class="disclosure-bar" role="note">
+    <div class="wrap">
+      <strong>Affiliate disclosure:</strong> Some links may be affiliate links. We may earn a commission at no extra cost to you.
+      <a href="/legal/affiliate-disclosure/">Full disclosure</a>
+      · <a href="/legal/monetization/">How we monetize</a>
+    </div>
+  </aside>
   <main id="main">
 ${body}
   </main>
@@ -176,12 +183,20 @@ ${body}
         </ul>
       </div>
       <div>
-        <h3>Pipeline</h3>
-        <p class="muted">New posts ship from <code>content/queue.json</code> via GitHub Actions.</p>
+        <h3>Monetization</h3>
+        <p class="muted">Phase 1 affiliates · Phase 2 AdSense. <a href="/legal/monetization/">Structure</a>.</p>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul class="footer-links">
+          <li><a href="/legal/affiliate-disclosure/">Affiliate disclosure</a></li>
+          <li><a href="/legal/monetization/">Monetization</a></li>
+        </ul>
       </div>
     </div>
     <div class="wrap footer-bottom">
       <span>© ${new Date().getFullYear()} ${NAME}</span>
+      <a href="/legal/affiliate-disclosure/">Affiliate disclosure</a>
       <a href="/sitemap.xml">Sitemap</a>
       <a href="/llms.txt">llms.txt</a>
     </div>

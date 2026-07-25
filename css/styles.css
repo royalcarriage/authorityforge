@@ -196,3 +196,24 @@ th { color: var(--muted); font-weight: 600; font-size: .8rem; text-transform: up
   .header-inner .btn-sm { display: none; }
   .nav { order: 3; width: 100%; }
 }
+
+/* Affiliate / monetization */
+.disclosure-bar {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: rgba(240,162,2,0.06);
+  padding: 0.65rem 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.disclosure-bar strong { color: var(--text); }
+.disclosure-bar a { margin-left: 0.25rem; }
+.money-table th { white-space: nowrap; }
+.phase {
+  border-left: 3px solid var(--accent);
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  background: var(--bg-card);
+  border-radius: 0 12px 12px 0;
+}
+.phase h3 { margin: 0 0 0.35rem; }

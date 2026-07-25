@@ -20,6 +20,9 @@ const staticUrls = [
   "/resources/checklists/",
   "/resources/templates/",
   "/contact/",
+  "/legal/",
+  "/legal/affiliate-disclosure/",
+  "/legal/monetization/",
 ];
 
 const posts = listPostFiles()

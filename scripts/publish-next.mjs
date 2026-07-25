@@ -77,7 +77,7 @@ function generateTemplate(item, outline) {
   lines.push("## Next step");
   lines.push("");
   lines.push(
-    `Return to the [Search Authority Playbook](/guide/search-authority-playbook/) or browse the [blog cluster](/blog/).`
+    `See [affiliate disclosure](/legal/affiliate-disclosure/) when recommending tools. Return to the [Search Authority Playbook](/guide/search-authority-playbook/) or browse the [blog cluster](/blog/).`
   );
   lines.push("");
   lines.push(
