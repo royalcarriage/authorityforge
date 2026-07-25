@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-25T19:04:54.495Z",
+  "updatedAt": "2026-07-25T19:11:27.960Z",
   "users": [
     {
       "id": "3cffde52-7772-4bd0-99b3-e78859114d8d",
@@ -128,6 +128,29 @@
       "createdAt": "2026-07-25T19:04:54.495Z",
       "projectIds": [
         "bdf83ab1-ad25-40d2-9441-6f55745ad569"
+      ],
+      "services": {
+        "clusterBuilder": true,
+        "moneyWiring": false,
+        "agentOps": false
+      },
+      "revenue": {
+        "affiliateEnabled": false,
+        "adsenseReady": false,
+        "estimatedMonthlyUsd": 0
+      }
+    },
+    {
+      "id": "aaa987cc-1d84-4f04-8923-db9fead74002",
+      "email": "sell-1785006687@example.com",
+      "name": "Sell Ready",
+      "role": "customer",
+      "plan": "free",
+      "salt": "88e53a6518091f754de70b90a1ce13a3",
+      "hash": "1d98f6bcde9575c4f97797ba643e12b6df9c0ead3b20be58881e6e6ae1a78aa3",
+      "createdAt": "2026-07-25T19:11:27.960Z",
+      "projectIds": [
+        "a9527ee3-2ad0-4a8b-bd93-7c7c5f295eb5"
       ],
       "services": {
         "clusterBuilder": true,
@@ -349,6 +372,46 @@
       "status": "active",
       "type": "authority_cluster",
       "createdAt": "2026-07-25T19:04:54.495Z",
+      "metrics": {
+        "pages": 0,
+        "spokesPlanned": 12,
+        "revenueUsd": 0
+      },
+      "checklist": [
+        {
+          "id": "niche",
+          "label": "Define niche + money keywords",
+          "done": false
+        },
+        {
+          "id": "hub",
+          "label": "Ship hub page",
+          "done": false
+        },
+        {
+          "id": "spokes",
+          "label": "Ship 6–12 commercial spokes",
+          "done": false
+        },
+        {
+          "id": "affiliates",
+          "label": "Enable 1+ affiliate IDs",
+          "done": false
+        },
+        {
+          "id": "adsense",
+          "label": "AdSense site ready",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "a9527ee3-2ad0-4a8b-bd93-7c7c5f295eb5",
+      "ownerId": "aaa987cc-1d84-4f04-8923-db9fead74002",
+      "name": "Sell Ready's first forge",
+      "status": "active",
+      "type": "authority_cluster",
+      "createdAt": "2026-07-25T19:11:27.960Z",
       "metrics": {
         "pages": 0,
         "spokesPlanned": 12,
