@@ -9,7 +9,7 @@
   "functions": {
     "api/**/*.js": {
       "maxDuration": 60,
-      "includeFiles": "{agents/**,api/lib/**,content/queue.json,js/config.js,api/lib/**}"
+      "includeFiles": "{agents/**,api/_bundle/**,api/lib/**}"
     }
   },
   "crons": [
@@ -18,7 +18,7 @@
       "schedule": "0 14 * * *"
     },
     {
-      "path": "/api/agent/autonomous",
+      "path": "/api/agent-autonomous",
       "schedule": "0 15 * * *"
     }
   ],
@@ -26,51 +26,18 @@
     {
       "source": "/(.*)",
       "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        }
-      ]
-    },
-    {
-      "source": "/ads.txt",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/plain; charset=utf-8"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=300"
-        }
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "DENY" }
       ]
     },
     {
       "source": "/api/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-store"
-        }
-      ]
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }]
     }
   ],
   "rewrites": [
-    {
-      "source": "/privacy",
-      "destination": "/legal/privacy/"
-    },
-    {
-      "source": "/privacy/",
-      "destination": "/legal/privacy/"
-    }
+    { "source": "/privacy", "destination": "/legal/privacy/" },
+    { "source": "/privacy/", "destination": "/legal/privacy/" }
   ]
 }

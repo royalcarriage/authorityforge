@@ -8,7 +8,7 @@ Vercel **cannot** keep a forever-running process on the free/hobby sandbox. The 
 |------|---------------------|
 | Brain / planning | Serverless + **Gemini free** |
 | Durable memory & code edits | **GitHub** as source of truth (Contents API) |
-| Schedule | **Vercel Cron** hits `/api/agent/autonomous` |
+| Schedule | **Vercel Cron** hits `/api/agent-autonomous` |
 | Deploy | Push/PR to `main` → Vercel auto-deploy |
 | Multi-project | `projects.json` registry + token scopes |
 | Long multi-step | Multiple cron ticks / maxSteps per invoke |
@@ -42,8 +42,8 @@ Without this token the agent **plans** on Vercel but **cannot upgrade the repo**
 
 | URL | Role |
 |-----|------|
-| `/api/agent/status` | Readiness checklist |
-| `/api/agent/autonomous` | Full improve cycle (cron 15:00 UTC) |
+| `/api/agent-status` | Readiness checklist |
+| `/api/agent-autonomous` | Full improve cycle (cron 15:00 UTC) |
 | `/api/ceo/cycle` | CEO sense/plan (cron 14:00 UTC) |
 | `/api/company/status` | Public HQ JSON |
 | `/api/projects` | Primary + sister projects |
@@ -53,7 +53,7 @@ Without this token the agent **plans** on Vercel but **cannot upgrade the repo**
 ```bash
 export AF_AGENT_SECRET='your-secret'
 curl -sS -H "Authorization: Bearer $AF_AGENT_SECRET" \
-  "https://authorityforge-tau.vercel.app/api/agent/autonomous"
+  "https://authorityforge-tau.vercel.app/api/agent-autonomous"
 ```
 
 ## Sister projects
@@ -67,7 +67,7 @@ Primary agent learns playbooks from `agents/control-plane/`.
 - Write allowlist (content, agents, api, docs, site pages — not secrets)
 
 ## After env is set
-1. Open `/api/agent/status` — all checklist greens  
-2. Hit `/api/agent/autonomous` once  
+1. Open `/api/agent-status` — all checklist greens  
+2. Hit `/api/agent-autonomous` once  
 3. See PR under github.com/royalcarriage/authorityforge/pulls **or** commits on main if `full`  
 4. Cron keeps improving daily  

@@ -1,0 +1,26 @@
+export const config = { runtime: "nodejs", maxDuration: 60 };
+import { cors, json, companySnapshot } from "./lib/runtime.mjs";
+
+/** Lightweight health — no recursive fetches that can 500 the function */
+export default async function handler(req, res) {
+  cors(res);
+  if (req.method === "OPTIONS") return res.end();
+  try {
+    const snap = companySnapshot();
+    return json(res, 200, {
+      ok: true,
+      platform: "vercel",
+      zeroCost: snap.zeroCost,
+      cycleCount: snap.cycleCount,
+      company: snap.company?.name,
+      gemini: snap.llm?.geminiKeyConfigured,
+      generatedAt: new Date().toISOString(),
+    });
+  } catch (e) {
+    return json(res, 200, {
+      ok: false,
+      platform: "vercel",
+      error: String(e.message || e),
+    });
+  }
+}

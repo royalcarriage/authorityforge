@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "name": "AuthorityForge Treasury Policy",
+  "currency": "USD",
+  "description": "How the company reinvests real revenue into growth. Legal owner remains human; agent executes only inside policy.",
+  "accounts": {
+    "stripe": {
+      "purpose": "Primary merchant account for AF digital revenue (templates, future products, optional donations).",
+      "envSecret": "AF_STRIPE_SECRET_KEY",
+      "publishableEnv": "AF_STRIPE_PUBLISHABLE_KEY",
+      "webhookSecretEnv": "AF_STRIPE_WEBHOOK_SECRET",
+      "accountLabel": "authorityforge-stripe (separate from Royal Carriage acct_1OV50...)",
+      "payoutDestination": "AF business bank or Stripe balance only — never RC operating account"
+    },
+    "adsense": {
+      "purpose": "Display ad revenue; pays to owner bank on Google schedule; agent tracks estimates only until deposit confirmed.",
+      "publisherId": "ca-pub-1959018852581373"
+    },
+    "affiliates": {
+      "purpose": "Network payouts (Impact, etc.) to owner tax ID; record in ledger when paid."
+    },
+    "bitcoin": {
+      "purpose": "Optional cold receive wallet for tips/crypto experiments — NOT auto-spend until policy says so.",
+      "mode": "receive_only_until_enabled",
+      "hotWalletEnabled": false,
+      "envAddress": "AF_BTC_RECEIVE_ADDRESS"
+    }
+  },
+  "email": {
+    "address": "ceo@authorityforge… (set after you create mailbox)",
+    "envImapUrl": "AF_EMAIL_IMAP_URL",
+    "envSmtpUrl": "AF_EMAIL_SMTP_URL",
+    "canRead": true,
+    "canSend": false,
+    "sendRequires": "AF_EMAIL_SEND=1 and recipient allowlist",
+    "allowlist": ["royalcarriagelimollc@gmail.com"]
+  },
+  "costPolicy": {
+    "untilFirstRevenueUsd": 1,
+    "llm": {
+      "mode": "free_only",
+      "AF_ZERO_COST_default": true,
+      "allowed": ["ollama_local", "gemini_free_tier", "opencode_free", "template_fallback"],
+      "forbiddenUntilRevenue": ["openai_paid", "anthropic_paid", "vercel_ai_paid", "any_paid_token"]
+    },
+    "hosting": {
+      "allowed": ["vercel_hobby_free", "github_pages_free"],
+      "forbiddenUntilRevenue": ["paid_addons", "pro_upgrades_without_approval"]
+    }
+  },
+  "autonomy": {
+    "level": 1,
+    "levels": {
+      "0": "Observe only — log revenue, no spend proposals auto-queued",
+      "1": "Propose reinvestment budgets to approval-queue (DEFAULT)",
+      "2": "Auto-approve digital spend under maxAutoSpendCents via Stripe (tools, domains, APIs) — still no bank wires",
+      "3": "Reserved — not implemented (full autonomous vendor pay)"
+    },
+    "maxAutoSpendCents": 0,
+    "maxDailySpendCents": 0,
+    "maxMonthlyReinvestPct": 70,
+    "reservePct": 30,
+    "allowedSpendCategories": [
+      "domain_dns",
+      "hosting_vercel",
+      "seo_tools",
+      "stock_images",
+      "email_mailbox",
+      "content_freelance"
+    ],
+    "forbidden": [
+      "wire_to_unknown",
+      "crypto_hot_send",
+      "gift_cards",
+      "personal_expenses",
+      "royal_carriage_accounts",
+      "click_own_ads",
+      "paid_llm_api_until_revenue"
+    ]
+  },
+  "reinvestmentRules": [
+    {
+      "if": "available_cents >= 5000",
+      "then": "queue_free_llm_infra_only_or_content_ops",
+      "capCents": 0,
+      "note": "Still prefer free LLMs; do not buy API credits until policy flips"
+    },
+    {
+      "if": "available_cents >= 5000",
+      "then": "queue_first_paid_tool_only_after_human_ok",
+      "capCents": 2000
+    },
+    {
+      "if": "available_cents >= 20000",
+      "then": "queue_seo_tool_trial_or_affiliate_boost",
+      "capCents": 10000
+    },
+    {
+      "if": "available_cents >= 50000",
+      "then": "queue_design_or_dev_sprint",
+      "capCents": 25000
+    }
+  ],
+  "killSwitchEnv": "AF_TREASURY_HALT",
+  "updatedAt": "2026-07-25"
+}

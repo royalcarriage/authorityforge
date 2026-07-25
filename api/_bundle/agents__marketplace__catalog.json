@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "description": "AuthorityForge internal plugin marketplace — modules the company OS can enable. All free-tier until revenue.",
+  "plugins": [
+    {
+      "id": "ceo-cycle",
+      "name": "CEO Cycle Runner",
+      "status": "active",
+      "cost": "free",
+      "endpoint": "/api/ceo/cycle",
+      "description": "Sense → plan → act → report. Cron on Vercel."
+    },
+    {
+      "id": "content-pipeline",
+      "name": "Content Pipeline",
+      "status": "active",
+      "cost": "free",
+      "endpoint": "/api/content/publish-next",
+      "description": "Publish next queue item with free Gemini or template."
+    },
+    {
+      "id": "free-llm",
+      "name": "Free LLM Router",
+      "status": "active",
+      "cost": "free",
+      "endpoint": "/api/llm/complete",
+      "description": "Gemini free tier only on Vercel (no paid OpenAI)."
+    },
+    {
+      "id": "treasury-ledger",
+      "name": "Treasury Ledger",
+      "status": "active",
+      "cost": "free",
+      "description": "Track balances; reinvest only after human/policy approval."
+    },
+    {
+      "id": "seo-health",
+      "name": "SEO Health Probe",
+      "status": "active",
+      "cost": "free",
+      "endpoint": "/api/health",
+      "description": "Curl live paths; alert via cycle report."
+    },
+    {
+      "id": "affiliate-stack",
+      "name": "Affiliate Stack",
+      "status": "configured",
+      "cost": "free",
+      "description": "js/config.js AFFILIATES + disclosure; enable IDs when approved."
+    },
+    {
+      "id": "adsense",
+      "name": "Google AdSense",
+      "status": "active",
+      "cost": "free_to_install",
+      "description": "ca-pub-1959018852581373 + CMP for EEA."
+    },
+    {
+      "id": "vercel-hosting",
+      "name": "Vercel Hosting",
+      "status": "active",
+      "cost": "hobby_free",
+      "description": "Static + serverless API + cron."
+    },
+    {
+      "id": "github-persist",
+      "name": "GitHub State Persist",
+      "status": "optional",
+      "cost": "free",
+      "description": "AF_GITHUB_TOKEN commits cycle logs back to repo."
+    },
+    {
+      "id": "stripe-treasury",
+      "name": "Stripe Treasury (AF only)",
+      "status": "planned",
+      "cost": "free_until_volume",
+      "description": "Separate Stripe account after first revenue."
+    },
+    {
+      "id": "email-ceo-inbox",
+      "name": "CEO Inbox",
+      "status": "planned",
+      "cost": "free_tier_mail",
+      "description": "Dedicated mailbox; read/draft only until AF_EMAIL_SEND."
+    },
+    {
+      "id": "db-kv",
+      "name": "Company DB (KV/Blob)",
+      "status": "planned",
+      "cost": "free_tier",
+      "description": "Optional Vercel KV/Blob when state outgrows git JSON."
+    }
+  ]
+}
