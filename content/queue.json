@@ -35,14 +35,16 @@
         "clusters"
       ],
       "hub": "/systems/topical-clusters/",
-      "status": "queued",
+      "status": "published",
       "outline": [
         "Why anchors beat raw link volume",
         "Hub to spoke patterns",
         "When to nofollow vs prune",
         "Audit process with a spreadsheet",
         "AuthorityForge example map"
-      ]
+      ],
+      "published_at": "2026-07-25",
+      "published_path": "content/posts/internal-links-that-rank.md"
     },
     {
       "id": "ctr-rewrites-from-gsc",
@@ -55,14 +57,16 @@
         "measurement"
       ],
       "hub": "/systems/measurement-loops/",
-      "status": "queued",
+      "status": "published",
       "outline": [
         "Export the right GSC view",
         "Filter high impr low CTR",
         "Title formulas that win clicks",
         "Match H1 to SERP promise",
         "Verify after re-crawl"
-      ]
+      ],
+      "published_at": "2026-07-25",
+      "published_path": "content/posts/ctr-rewrites-from-search-console.md"
     },
     {
       "id": "agent-pipelines-for-content",
@@ -75,13 +79,112 @@
         "content-ops"
       ],
       "hub": "/guide/search-authority-playbook/",
-      "status": "queued",
+      "status": "published",
       "outline": [
         "Split local workers vs cloud review",
         "Artifact format between stages",
         "Human gates that matter",
         "What never to automate",
         "Sample weekly schedule"
+      ],
+      "published_at": "2026-07-25",
+      "published_path": "content/posts/agent-pipelines-for-content-ops.md"
+    },
+    {
+      "id": "best-ai-writers-for-seo-2026",
+      "slug": "best-ai-writers-for-seo-2026",
+      "title": "Best AI Writers for SEO Operators (Criteria-First)",
+      "description": "How to pick AI writing tools for SEO without thin content — criteria, workflow, and affiliate-ready comparisons.",
+      "tags": [
+        "ai-writing",
+        "affiliates",
+        "seo"
+      ],
+      "hub": "/tools/ai-writing-assistants/",
+      "status": "queued",
+      "outline": [
+        "Criteria that matter",
+        "Draft vs edit gate",
+        "Tool shortlist",
+        "Where affiliates fit",
+        "Weekly workflow"
+      ]
+    },
+    {
+      "id": "semrush-vs-ahrefs-for-content-sites",
+      "slug": "semrush-vs-ahrefs-for-content-sites",
+      "title": "Semrush vs Ahrefs for Content Sites",
+      "description": "A practical comparison for affiliate and content operators choosing a primary SEO suite.",
+      "tags": [
+        "seo",
+        "compare",
+        "affiliates"
+      ],
+      "hub": "/tools/keyword-research-tools/",
+      "status": "queued",
+      "outline": [
+        "Jobs to be done",
+        "Keyword research",
+        "Backlinks",
+        "Content workflows",
+        "Pick one primary"
+      ]
+    },
+    {
+      "id": "how-to-pass-adsense-review-content-sites",
+      "slug": "how-to-pass-adsense-review-content-sites",
+      "title": "How Content Sites Pass AdSense Review in 2026",
+      "description": "Checklist for multipage content sites: privacy, navigation, value density, ads.txt, and invalid traffic pitfalls.",
+      "tags": [
+        "adsense",
+        "monetization"
+      ],
+      "hub": "/legal/monetization/",
+      "status": "queued",
+      "outline": [
+        "What reviewers look for",
+        "Page count myth",
+        "Policy pages",
+        "ads.txt",
+        "After approval"
+      ]
+    },
+    {
+      "id": "affiliate-disclosure-that-ranks",
+      "slug": "affiliate-disclosure-that-ranks",
+      "title": "Affiliate Disclosure That Protects Trust and Rankings",
+      "description": "Where to put disclosures, what FTC-style clarity looks like, and how not to kill conversion.",
+      "tags": [
+        "affiliates",
+        "legal",
+        "eeat"
+      ],
+      "hub": "/legal/affiliate-disclosure/",
+      "status": "queued",
+      "outline": [
+        "Why disclosure is ranking-adjacent",
+        "Placement patterns",
+        "Wording",
+        "Common mistakes"
+      ]
+    },
+    {
+      "id": "build-programmatic-seo-without-spam",
+      "slug": "build-programmatic-seo-without-spam",
+      "title": "Programmatic SEO Without Index Spam",
+      "description": "How to scale pages with agents while keeping uniqueness, intent ownership, and crawl budget healthy.",
+      "tags": [
+        "programmatic",
+        "agents",
+        "seo"
+      ],
+      "hub": "/systems/topical-clusters/",
+      "status": "queued",
+      "outline": [
+        "Uniqueness bar",
+        "Template variables that matter",
+        "Quality gates",
+        "Measurement"
       ]
     }
   ]

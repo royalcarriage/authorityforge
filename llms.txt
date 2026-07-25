@@ -3,14 +3,17 @@
 > Market: AI productivity tools + practical SEO systems.
 
 ## Primary
-- https://authorityforge-tau.vercel.app/
-- https://authorityforge-tau.vercel.app/guide/search-authority-playbook/
-- https://authorityforge-tau.vercel.app/systems/
-- https://authorityforge-tau.vercel.app/blog/
+- https://royalcarriage.github.io/authorityforge/
+- https://royalcarriage.github.io/authorityforge/guide/search-authority-playbook/
+- https://royalcarriage.github.io/authorityforge/systems/
+- https://royalcarriage.github.io/authorityforge/blog/
 
 ## Blog posts
-- https://authorityforge-tau.vercel.app/blog/ai-productivity-seo-stack/
-- https://authorityforge-tau.vercel.app/blog/entity-seo-for-ai-tools/
-- https://authorityforge-tau.vercel.app/blog/feedback-loops-rankings/
-- https://authorityforge-tau.vercel.app/blog/topical-maps-for-saas/
-- https://authorityforge-tau.vercel.app/blog/what-is-search-authority/
+- https://royalcarriage.github.io/authorityforge/blog/agent-pipelines-for-content-ops/
+- https://royalcarriage.github.io/authorityforge/blog/ai-productivity-seo-stack/
+- https://royalcarriage.github.io/authorityforge/blog/ctr-rewrites-from-search-console/
+- https://royalcarriage.github.io/authorityforge/blog/entity-seo-for-ai-tools/
+- https://royalcarriage.github.io/authorityforge/blog/feedback-loops-rankings/
+- https://royalcarriage.github.io/authorityforge/blog/internal-links-that-rank/
+- https://royalcarriage.github.io/authorityforge/blog/topical-maps-for-saas/
+- https://royalcarriage.github.io/authorityforge/blog/what-is-search-authority/

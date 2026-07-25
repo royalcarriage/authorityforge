@@ -3,7 +3,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-export const SITE = process.env.SITE_URL || "https://authorityforge-tau.vercel.app";
+export const SITE = process.env.SITE_URL || "https://royalcarriage.github.io/authorityforge";
+export const BASE = process.env.BASE_PATH || "/authorityforge";
 export const NAME = "AuthorityForge";
 
 export function read(rel) {
@@ -123,7 +124,7 @@ export function pageShell({ title, description, path: p, body, schema }) {
     .map(([href, label]) => {
       const active =
         href === p || (href !== "/" && p.startsWith(href)) ? " is-active" : "";
-      return `<a href="${href}" class="nav-link${active}">${label}</a>`;
+      return `<a href="${BASE}${href}" class="nav-link${active}">${label}</a>`;
     })
     .join("\n          ");
 
@@ -143,25 +144,26 @@ export function pageShell({ title, description, path: p, body, schema }) {
   <meta property="og:description" content="${esc(description)}" />
   <meta property="og:url" content="${can}" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="${BASE}/css/styles.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1959018852581373" crossorigin="anonymous"></script>
   ${schemaTag}
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="logo" href="/">${NAME}<span class="logo-mark">⚡</span></a>
+      <a class="logo" href="${BASE}/">${NAME}<span class="logo-mark">⚡</span></a>
       <nav class="nav" aria-label="Primary">
           ${nav}
       </nav>
-      <a class="btn btn-sm" href="/guide/search-authority-playbook/">Start playbook</a>
+      <a class="btn btn-sm" href="${BASE}/guide/search-authority-playbook/">Start playbook</a>
     </div>
   </header>
   <aside class="disclosure-bar" role="note">
     <div class="wrap">
       <strong>Affiliate disclosure:</strong> Some links may be affiliate links. We may earn a commission at no extra cost to you.
-      <a href="/legal/affiliate-disclosure/">Full disclosure</a>
-      · <a href="/legal/monetization/">How we monetize</a>
+      <a href="${BASE}/legal/affiliate-disclosure/">Full disclosure</a>
+      · <a href="${BASE}/legal/monetization/">How we monetize</a>
     </div>
   </aside>
   <main id="main">
@@ -176,32 +178,36 @@ ${body}
       <div>
         <h3>Explore</h3>
         <ul class="footer-links">
-          <li><a href="/systems/">Systems</a></li>
-          <li><a href="/guide/">Guides</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/resources/">Resources</a></li>
+          <li><a href="${BASE}/systems/">Systems</a></li>
+          <li><a href="${BASE}/guide/">Guides</a></li>
+          <li><a href="${BASE}/blog/">Blog</a></li>
+          <li><a href="${BASE}/resources/">Resources</a></li>
         </ul>
       </div>
       <div>
         <h3>Monetization</h3>
-        <p class="muted">Phase 1 affiliates · Phase 2 AdSense. <a href="/legal/monetization/">Structure</a>.</p>
+        <p class="muted">Phase 1 affiliates · Phase 2 AdSense. <a href="${BASE}/legal/monetization/">Structure</a>.</p>
       </div>
       <div>
         <h3>Legal</h3>
         <ul class="footer-links">
-          <li><a href="/legal/affiliate-disclosure/">Affiliate disclosure</a></li>
-          <li><a href="/legal/monetization/">Monetization</a></li>
+          <li><a href="${BASE}/legal/affiliate-disclosure/">Affiliate disclosure</a></li>
+          <li><a href="${BASE}/legal/monetization/">Monetization</a></li>
         </ul>
       </div>
     </div>
     <div class="wrap footer-bottom">
       <span>© ${new Date().getFullYear()} ${NAME}</span>
-      <a href="/legal/affiliate-disclosure/">Affiliate disclosure</a>
-      <a href="/sitemap.xml">Sitemap</a>
-      <a href="/llms.txt">llms.txt</a>
+      <a href="${BASE}/legal/affiliate-disclosure/">Affiliate disclosure</a>
+      <a href="${BASE}/sitemap.xml">Sitemap</a>
+      <a href="${BASE}/llms.txt">llms.txt</a>
     </div>
   </footer>
-  <script src="/js/main.js" defer></script>
+  <script src="${BASE}/js/config.js"></script>
+  <script src="${BASE}/js/affiliates.js" defer></script>
+  <script src="${BASE}/js/ads.js" defer></script>
+  <script src="${BASE}/js/main.js" defer></script>
+  <div class="af-ad af-ad-auto wrap" aria-hidden="true" style="min-height:0;margin:1rem auto;max-width:728px"></div>
 </body>
 </html>
 `;
@@ -212,6 +218,13 @@ function esc(s) {
     .replace(/&/g, "&amp;")
     .replace(/"/g, "&quot;")
     .replace(/</g, "&lt;");
+}
+
+export function prefixBodyLinks(html) {
+  return String(html).replace(
+    /(href=")\/(?!\/|authorityforge\/|https?:)/g,
+    `$1${BASE}/`
+  );
 }
 
 export function today() {

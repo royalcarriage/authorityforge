@@ -2,17 +2,16 @@
 /**
  * Build blog index + post HTML from content/posts/*.md
  */
-import fs from "node:fs";
-import path from "node:path";
 import {
-  ROOT,
   SITE,
+  BASE,
   NAME,
   listPostFiles,
   parsePost,
   mdToHtml,
   pageShell,
   write,
+  prefixBodyLinks,
 } from "./lib.mjs";
 
 const posts = listPostFiles()
@@ -25,14 +24,21 @@ if (!posts.length) {
   process.exit(1);
 }
 
-// Individual posts
+function esc(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
 for (const p of posts) {
   const slug = p.meta.slug;
   const title = p.meta.title;
   const description = p.meta.description || title;
   const date = p.meta.date;
   const hub = p.meta.hub || "/blog/";
-  const bodyHtml = mdToHtml(p.body);
+  const bodyHtml = prefixBodyLinks(mdToHtml(p.body));
 
   const html = pageShell({
     title: `${title} | ${NAME}`,
@@ -49,7 +55,7 @@ for (const p of posts) {
       publisher: { "@type": "Organization", name: NAME, url: SITE },
       mainEntityOfPage: `${SITE}/blog/${slug}/`,
     },
-    body: `
+    body: prefixBodyLinks(`
   <header class="page-hero"><div class="wrap prose">
     <p class="kicker">Blog · ${date}</p>
     <h1>${esc(title)}</h1>
@@ -57,15 +63,22 @@ for (const p of posts) {
   </div></header>
   <section class="section"><div class="wrap prose">
     ${bodyHtml}
-    <p><a href="${hub}">Related hub</a> · <a href="/blog/">← All posts</a> · <a href="/guide/search-authority-playbook/">Playbook</a></p>
+    <div class="cta-band partner-cta">
+      <p><strong>Tools we research</strong> (affiliate when live):
+        <a href="#" data-aff="semrush">Semrush</a> ·
+        <a href="#" data-aff="ahrefs">Ahrefs</a> ·
+        <a href="#" data-aff="surfer">Surfer</a> ·
+        <a href="${BASE}/resources/affiliates/">all programs</a>
+      </p>
+    </div>
+    <p><a href="${hub.startsWith(BASE) ? hub : BASE + hub}">Related hub</a> · <a href="${BASE}/blog/">← All posts</a> · <a href="${BASE}/guide/search-authority-playbook/">Playbook</a></p>
   </div></section>
-`,
+`),
   });
   write(`blog/${slug}/index.html`, html);
   console.log("built post", slug);
 }
 
-// Index
 const indexHtml = pageShell({
   title: `Blog | ${NAME} Content Cluster`,
   description:
@@ -87,13 +100,13 @@ const indexHtml = pageShell({
   <header class="page-hero"><div class="wrap">
     <p class="kicker">Blog cluster</p>
     <h1 class="section-title">Ideas that feed the systems</h1>
-    <p class="section-sub">Posts are generated from <code>content/posts/*.md</code>. Queue new topics in <code>content/queue.json</code> — GitHub Actions publishes automatically.</p>
+    <p class="section-sub">Posts ship from <code>content/posts/*.md</code>. Queue topics in <code>content/queue.json</code> — the autonomous pipeline publishes on schedule.</p>
   </div></header>
   <section class="section"><div class="wrap grid-3">
     ${posts
       .map(
         (p) => `
-    <a class="card" href="/blog/${p.meta.slug}/">
+    <a class="card" href="${BASE}/blog/${p.meta.slug}/">
       <h3>${esc(p.meta.title)}</h3>
       <p>${esc(p.meta.description || "")}</p>
       <div class="meta">${p.meta.date} →</div>
@@ -105,11 +118,3 @@ const indexHtml = pageShell({
 });
 write("blog/index.html", indexHtml);
 console.log(`built blog index (${posts.length} posts)`);
-
-function esc(s) {
-  return String(s)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}

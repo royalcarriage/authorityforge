@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://authorityforge-tau.vercel.app/sitemap.xml
+Sitemap: https://royalcarriage.github.io/authorityforge/sitemap.xml

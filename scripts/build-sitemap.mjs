@@ -54,6 +54,7 @@ const staticUrls = [
   "/legal/monetization/",
   "/legal/privacy/",
   "/resources/adsense-apply/",
+  "/resources/affiliates/",
   "/resources/grok-browser/",
 ];
 

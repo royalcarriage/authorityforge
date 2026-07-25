@@ -37,12 +37,12 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           AF_USE_LLM: ${{ inputs.use_llm == true && '1' || '0' }}
-          SITE_URL: https://authorityforge-tau.vercel.app
+          SITE_URL: https://royalcarriage.github.io/authorityforge
         run: node scripts/publish-next.mjs
 
       - name: Build blog + sitemap
         env:
-          SITE_URL: https://authorityforge-tau.vercel.app
+          SITE_URL: https://royalcarriage.github.io/authorityforge
         run: |
           node scripts/build-blog.mjs
           node scripts/build-sitemap.mjs
