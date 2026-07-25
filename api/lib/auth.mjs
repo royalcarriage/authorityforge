@@ -93,52 +93,75 @@ function emptyStore() {
 }
 
 async function loadStore() {
-  // 1) Local / bundled file (read works on Vercel if included)
-  try {
-    if (fs.existsSync(USERS_ABS)) {
-      return JSON.parse(fs.readFileSync(USERS_ABS, "utf8"));
-    }
-  } catch {
-    /* continue */
+  // On Vercel, bundled agents/data/users.json is a STALE snapshot from build.
+  // Always prefer GitHub (durable) + memory (same warm instance) first.
+  const onVercel = Boolean(process.env.VERCEL || process.env.VERCEL_ENV);
+
+  // 0) Warm memory (same lambda) — wins for back-to-back signup→me
+  if (globalThis.__AF_USER_STORE?.users?.length) {
+    return globalThis.__AF_USER_STORE;
   }
-  // 2) GitHub Contents API
+
+  // 1) GitHub Contents API (durable across cold starts)
   const gh = await githubGetJson(USERS_REL);
-  if (gh) return gh;
-  // 3) Env bootstrap
+  if (gh) {
+    globalThis.__AF_USER_STORE = gh;
+    return gh;
+  }
+
+  // 2) Env bootstrap
   if (process.env.AF_USERS_JSON) {
     try {
-      return JSON.parse(process.env.AF_USERS_JSON);
+      const parsed = JSON.parse(process.env.AF_USERS_JSON);
+      globalThis.__AF_USER_STORE = parsed;
+      return parsed;
     } catch {
       /* */
     }
   }
-  // 4) Ephemeral memory (same lambda instance)
+
+  // 3) Local filesystem — only for local/dev/GHA (not Vercel prod)
+  if (!onVercel) {
+    try {
+      if (fs.existsSync(USERS_ABS)) {
+        return JSON.parse(fs.readFileSync(USERS_ABS, "utf8"));
+      }
+    } catch {
+      /* continue */
+    }
+  }
+
+  // 4) Empty memory shell
   if (globalThis.__AF_USER_STORE) return globalThis.__AF_USER_STORE;
   return emptyStore();
 }
 
 async function saveStore(store) {
   store.updatedAt = new Date().toISOString();
+  // Always keep warm memory in sync first (signup → me on same instance)
+  globalThis.__AF_USER_STORE = store;
   const text = JSON.stringify(store, null, 2) + "\n";
-  // Try local write (dev / GHA)
+
+  // Local write (dev / GHA only — fails on Vercel)
   try {
     fs.mkdirSync(path.dirname(USERS_ABS), { recursive: true });
     fs.writeFileSync(USERS_ABS, text);
+    // still try GitHub so remote stays source of truth when token present
+    const ghLocal = await githubPutText(USERS_REL, text, "auth: update users store");
+    if (ghLocal.ok) return { ok: true, via: "fs+github" };
     return { ok: true, via: "fs" };
   } catch {
     /* Vercel read-only */
   }
+
   const gh = await githubPutText(USERS_REL, text, "auth: update users store");
   if (gh.ok) return { ok: true, via: "github" };
 
-  // Ephemeral process memory (last resort) — works for single warm lambda; set AF_GITHUB_TOKEN for real prod
-  if (!globalThis.__AF_USER_STORE) globalThis.__AF_USER_STORE = emptyStore();
-  globalThis.__AF_USER_STORE = store;
   return {
     ok: true,
     via: "memory",
     warning:
-      "Users stored in warm memory only until AF_GITHUB_TOKEN is set on Vercel (repo contents write).",
+      "Users in warm memory only — set AF_GITHUB_TOKEN on Vercel for durable store.",
   };
 }
 
