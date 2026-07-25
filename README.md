@@ -33,3 +33,18 @@ Push to `main` → Vercel production (connect this repo in Vercel project settin
 ```bash
 npm run pipeline   # publish next + rebuild
 ```
+
+## Commercial cluster (AdSense gate)
+
+Target: **15–25 strong commercial pages** before AdSense application.
+
+Shipped clusters on `main`:
+- `/tools/*` (8 categories + hub)
+- `/compare/*`
+- `/stacks/*`
+- `/solutions/*`
+- `/use-cases/*`
+
+Plus systems, guides, blog, legal, resources.
+
+**Live Vercel:** reconnect Git to this repo so production serves the full cluster (not the stub).
