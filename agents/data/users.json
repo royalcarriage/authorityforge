@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-25T20:39:13.613Z",
+  "updatedAt": "2026-07-26T01:39:27.454Z",
   "users": [
     {
       "id": "3cffde52-7772-4bd0-99b3-e78859114d8d",
@@ -244,6 +244,29 @@
       "createdAt": "2026-07-25T20:39:11.288Z",
       "projectIds": [
         "b794bdc9-b319-4d7a-a164-56e798fdf64f"
+      ],
+      "services": {
+        "clusterBuilder": true,
+        "moneyWiring": false,
+        "agentOps": false
+      },
+      "revenue": {
+        "affiliateEnabled": false,
+        "adsenseReady": false,
+        "estimatedMonthlyUsd": 0
+      }
+    },
+    {
+      "id": "4d46d8b7-cbb0-4c24-b7f4-835ff50759ff",
+      "email": "audit-1785029966@example.com",
+      "name": "Audit",
+      "role": "customer",
+      "plan": "free",
+      "salt": "73350affa7ac04a24d21b1d2a97a8509",
+      "hash": "35116dc16a2770258af872209669f293b6b5902894cb9df7ac495096f1792cec",
+      "createdAt": "2026-07-26T01:39:27.454Z",
+      "projectIds": [
+        "c0d54614-4572-4c15-9501-e0e38809940d"
       ],
       "services": {
         "clusterBuilder": true,
@@ -720,6 +743,46 @@
           "id": "hub",
           "label": "Ship hub page",
           "done": true
+        },
+        {
+          "id": "spokes",
+          "label": "Ship 6–12 commercial spokes",
+          "done": false
+        },
+        {
+          "id": "affiliates",
+          "label": "Enable 1+ affiliate IDs",
+          "done": false
+        },
+        {
+          "id": "adsense",
+          "label": "AdSense site ready",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "c0d54614-4572-4c15-9501-e0e38809940d",
+      "ownerId": "4d46d8b7-cbb0-4c24-b7f4-835ff50759ff",
+      "name": "Audit's first forge",
+      "status": "active",
+      "type": "authority_cluster",
+      "createdAt": "2026-07-26T01:39:27.454Z",
+      "metrics": {
+        "pages": 0,
+        "spokesPlanned": 12,
+        "revenueUsd": 0
+      },
+      "checklist": [
+        {
+          "id": "niche",
+          "label": "Define niche + money keywords",
+          "done": false
+        },
+        {
+          "id": "hub",
+          "label": "Ship hub page",
+          "done": false
         },
         {
           "id": "spokes",
