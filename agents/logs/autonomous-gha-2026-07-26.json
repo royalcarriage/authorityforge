@@ -1,5 +1,5 @@
 {
-  "at": "2026-07-26T02:44:26.836Z",
+  "at": "2026-07-26T15:26:24.238Z",
   "health": {
     "/": "200",
     "/ads.txt": "200",
@@ -8,27 +8,27 @@
     "/api/company/status": "200",
     "/api/health": "200"
   },
-  "planText": "As AuthorityForge's autonomous monetization operator, my focus is on immediate cash impact and leveraging existing assets. The P0 gap in affiliates is the most critical and offers the quickest path to revenue.\n\nHere are 6 concrete next actions,",
+  "planText": "Here are 6 concrete next actions for AuthorityForge, ordered by immediate cash impact:\n\n1.  **(Affiliates) Enable 16 Disabled Affiliate Programs** → Immediate commission revenue from existing `dataAffCtas`.",
   "actions": [
     {
       "step": "money_gap_audit",
       "ok": true,
       "summary": {
-        "gapCount": 3,
+        "gapCount": 2,
         "p0": 1,
-        "p1": 2,
+        "p1": 1,
         "p2": 0,
-        "agentOwned": 1,
+        "agentOwned": 0,
         "humanOwned": 2,
         "cashBlocked": true
       },
       "streams": {
         "affiliates": "blocked",
         "adsense": "waiting",
-        "subscriptions": "missing",
+        "subscriptions": "partial",
         "contentFlywheel": "ok"
       },
-      "log": "{\n  \"ok\": true,\n  \"summary\": {\n    \"gapCount\": 3,\n    \"p0\": 1,\n    \"p1\": 2,\n    \"p2\": 0,\n    \"agentOwned\": 1,\n    \"humanOwned\": 2,\n    \"cashBlocked\": true\n  },\n  \"streams\": {\n    \"affiliates\": \"blocked\",\n    \"adsense\": \"waiting\",\n    \"subscriptions\": \"missing\",\n    \"contentFlywheel\": \"ok\"\n  },\n  \"topGaps\": [\n    \"P0:aff-zero-enabled\",\n    \"P1:adsense-not-ready\",\n    \"P1:stripe-not-wired\"\n  ],\n  \"n"
+      "log": "{\n  \"ok\": true,\n  \"summary\": {\n    \"gapCount\": 2,\n    \"p0\": 1,\n    \"p1\": 1,\n    \"p2\": 0,\n    \"agentOwned\": 0,\n    \"humanOwned\": 2,\n    \"cashBlocked\": true\n  },\n  \"streams\": {\n    \"affiliates\": \"blocked\",\n    \"adsense\": \"waiting\",\n    \"subscriptions\": \"partial\",\n    \"contentFlywheel\": \"ok\"\n  },\n  \"topGaps\": [\n    \"P0:aff-zero-enabled\",\n    \"P1:adsense-not-ready\"\n  ],\n  \"nextAgentWork\": 5\n}"
     },
     {
       "step": "plan",
@@ -39,17 +39,12 @@
       "ok": true
     },
     {
-      "step": "seed_queue",
-      "ok": true,
-      "seeded": 3
-    },
-    {
       "step": "publish_next",
       "ok": true,
-      "detail": "{\n  \"published\": \"productized-templates-for-affiliate-sites\",\n  \"path\": \"content/posts/productized-templates-for-affiliate-sites.md\",\n  \"llm\": {\n    \"provider\": \"gemini\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 8\n}"
+      "detail": "{\n  \"published\": \"dashboard-tour-first-7-days-in-the-forge\",\n  \"path\": \"content/posts/dashboard-tour-first-7-days-in-the-forge.md\",\n  \"llm\": {\n    \"provider\": \"gemini\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 6\n}"
     }
   ],
-  "cycleCount": 12,
+  "cycleCount": 14,
   "zeroCost": true,
-  "published": "{\n  \"published\": \"productized-templates-for-affiliate-sites\",\n  \"path\": \"content/posts/productized-templates-for-affiliate-sites.md\",\n  \"llm\": {\n    \"provider\": \"gemini\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 8\n}"
+  "published": "{\n  \"published\": \"dashboard-tour-first-7-days-in-the-forge\",\n  \"path\": \"content/posts/dashboard-tour-first-7-days-in-the-forge.md\",\n  \"llm\": {\n    \"provider\": \"gemini\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 6\n}"
 }

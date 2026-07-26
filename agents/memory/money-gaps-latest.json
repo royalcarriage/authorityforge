@@ -1,5 +1,5 @@
 {
-  "at": "2026-07-26T14:33:37.458Z",
+  "at": "2026-07-26T15:26:26.515Z",
   "summary": {
     "gapCount": 2,
     "p0": 1,
@@ -57,7 +57,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-07-26T14:33:37.458Z"
+      "updatedAt": "2026-07-26T15:26:26.515Z"
     },
     {
       "id": "money-aff-ctas",
@@ -67,7 +67,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-07-26T14:33:37.458Z"
+      "updatedAt": "2026-07-26T15:26:26.515Z"
     },
     {
       "id": "money-signup-paths",
@@ -77,7 +77,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-07-26T14:33:37.458Z"
+      "updatedAt": "2026-07-26T15:26:26.515Z"
     },
     {
       "id": "money-blog-review",
@@ -87,7 +87,7 @@
       "priority": 2,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-07-26T14:33:37.458Z"
+      "updatedAt": "2026-07-26T15:26:26.515Z"
     },
     {
       "id": "money-compare-cluster",
@@ -97,7 +97,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-07-26T14:33:37.458Z"
+      "updatedAt": "2026-07-26T15:26:26.515Z"
     }
   ],
   "humanGates": [

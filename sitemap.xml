@@ -475,6 +475,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://authorityforge-tau.vercel.app/blog/dashboard-tour-first-7-days-in-the-forge/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://authorityforge-tau.vercel.app/blog/entity-seo-for-ai-tools/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>weekly</changefreq>

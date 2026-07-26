@@ -428,7 +428,7 @@
         "onboarding"
       ],
       "hub": "/app/signup/",
-      "status": "queued",
+      "status": "published",
       "outline": [
         "Day 0 signup",
         "Create project",
@@ -437,7 +437,10 @@
         "Affiliate path preview",
         "When to upgrade"
       ],
-      "source": "ceo-playbook"
+      "source": "ceo-playbook",
+      "published_at": "2026-07-26",
+      "published_path": "content/posts/dashboard-tour-first-7-days-in-the-forge.md",
+      "llm_provider": "gemini"
     },
     {
       "id": "free-vs-pro-vs-agency",
