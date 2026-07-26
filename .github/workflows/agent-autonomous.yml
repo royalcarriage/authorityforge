@@ -8,11 +8,19 @@ on:
 permissions:
   contents: write
 
+# Serialize with CEO so both can push agent state without racing
+concurrency:
+  group: af-agent-git-main
+  cancel-in-progress: false
+
 jobs:
   autonomous:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: "24"
@@ -29,9 +37,17 @@ jobs:
         run: node scripts/agent-autonomous.mjs
       - name: Commit agent state + content
         run: |
+          set -euo pipefail
           git config user.name "af-autonomous-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add agents/ content/ blog/ sitemap.xml llms.txt || true
           if git diff --staged --quiet; then echo "No changes"; exit 0; fi
           git commit -m "agent(full-radius): cycle $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push
+          # Survive concurrent main updates (CEO / user store / other jobs)
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            echo "push race attempt $i — retry"
+            sleep $((i * 2))
+          done
+          echo "Failed to push after retries" >&2
+          exit 1
