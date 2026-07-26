@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-26T01:41:21.756Z",
+  "updatedAt": "2026-07-26T07:26:13.953Z",
   "users": [
     {
       "id": "3cffde52-7772-4bd0-99b3-e78859114d8d",
@@ -295,6 +295,29 @@
         "clusterBuilder": true,
         "moneyWiring": false,
         "agentOps": false
+      },
+      "revenue": {
+        "affiliateEnabled": false,
+        "adsenseReady": false,
+        "estimatedMonthlyUsd": 0
+      }
+    },
+    {
+      "id": "460e536c-7d34-4535-b7f0-2983d165d015",
+      "email": "royalcarriagelimollc@gmail.com",
+      "name": "richard sievert",
+      "role": "operator",
+      "plan": "operator",
+      "salt": "5e913b6365773753634a7e69a01ac8b3",
+      "hash": "77b541264c293fe959a170292f337bf3b9438f2972ccf464e2165bfd0e5b0c27",
+      "createdAt": "2026-07-26T07:26:13.953Z",
+      "projectIds": [
+        "f14c269a-7fa6-405d-bf39-94e4f733cfcd"
+      ],
+      "services": {
+        "clusterBuilder": true,
+        "moneyWiring": true,
+        "agentOps": true
       },
       "revenue": {
         "affiliateEnabled": false,
@@ -831,6 +854,46 @@
       "status": "active",
       "type": "authority_cluster",
       "createdAt": "2026-07-26T01:41:21.756Z",
+      "metrics": {
+        "pages": 0,
+        "spokesPlanned": 12,
+        "revenueUsd": 0
+      },
+      "checklist": [
+        {
+          "id": "niche",
+          "label": "Define niche + money keywords",
+          "done": false
+        },
+        {
+          "id": "hub",
+          "label": "Ship hub page",
+          "done": false
+        },
+        {
+          "id": "spokes",
+          "label": "Ship 6–12 commercial spokes",
+          "done": false
+        },
+        {
+          "id": "affiliates",
+          "label": "Enable 1+ affiliate IDs",
+          "done": false
+        },
+        {
+          "id": "adsense",
+          "label": "AdSense site ready",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "f14c269a-7fa6-405d-bf39-94e4f733cfcd",
+      "ownerId": "460e536c-7d34-4535-b7f0-2983d165d015",
+      "name": "richard sievert's first forge",
+      "status": "active",
+      "type": "authority_cluster",
+      "createdAt": "2026-07-26T07:26:13.953Z",
       "metrics": {
         "pages": 0,
         "spokesPlanned": 12,
