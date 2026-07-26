@@ -147,14 +147,23 @@ async function saveStore(store) {
     fs.mkdirSync(path.dirname(USERS_ABS), { recursive: true });
     fs.writeFileSync(USERS_ABS, text);
     // still try GitHub so remote stays source of truth when token present
-    const ghLocal = await githubPutText(USERS_REL, text, "auth: update users store");
+    // [skip ci] — do not thrash Vercel/GH Pages deploys on every signup
+    const ghLocal = await githubPutText(
+      USERS_REL,
+      text,
+      "auth: update users store [skip ci]"
+    );
     if (ghLocal.ok) return { ok: true, via: "fs+github" };
     return { ok: true, via: "fs" };
   } catch {
     /* Vercel read-only */
   }
 
-  const gh = await githubPutText(USERS_REL, text, "auth: update users store");
+  const gh = await githubPutText(
+    USERS_REL,
+    text,
+    "auth: update users store [skip ci]"
+  );
   if (gh.ok) return { ok: true, via: "github" };
 
   return {

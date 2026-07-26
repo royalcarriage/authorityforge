@@ -1,6 +1,9 @@
 /**
  * AuthorityForge site config
- * Canonical host: GitHub Pages (Vercel stub not used until full redeploy)
+ * Dual host:
+ *   - Vercel (authorityforge-tau.vercel.app) = PRIMARY app + APIs + demos
+ *   - GitHub Pages (.../authorityforge/) = static mirror (basePath /authorityforge)
+ * prepare-vercel rewrites siteUrl/basePath for the Vercel build.
  * AdSense client: ca-pub-1959018852581373
  */
 window.AF_CONFIG = {
