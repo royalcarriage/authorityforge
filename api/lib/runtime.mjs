@@ -141,6 +141,7 @@ export function companySnapshot() {
   const marketplace = readJson("agents/marketplace/catalog.json", { plugins: [] });
   const objective = readJson("agents/control-plane/objective.json", null);
   const queue = readJson("content/queue.json", { posts: [] });
+  const moneyGaps = readJson("agents/memory/money-gaps-latest.json", null);
   const posts = queue.posts || [];
   const rolesDir = path.join(ROOT, "agents/roles");
   let roles = [];
@@ -169,6 +170,21 @@ export function companySnapshot() {
       queued: posts.filter((p) => p.status === "queued").length,
       published: posts.filter((p) => p.status === "published").length,
     },
+    money: moneyGaps
+      ? {
+          at: moneyGaps.at,
+          streams: moneyGaps.streams,
+          summary: moneyGaps.summary,
+          metrics: moneyGaps.metrics,
+          topGaps: (moneyGaps.gaps || []).slice(0, 8).map((g) => ({
+            id: g.id,
+            severity: g.severity,
+            owner: g.owner,
+            title: g.title,
+          })),
+          nextAgentWork: (moneyGaps.nextAgentWork || []).slice(0, 8),
+        }
+      : { note: "Run node scripts/money-gap-audit.mjs" },
     treasury: {
       balances: ledger.balances || {},
       autonomyLevel: policy.autonomy?.level ?? 1,

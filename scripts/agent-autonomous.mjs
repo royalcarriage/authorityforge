@@ -92,11 +92,50 @@ let queued = posts.filter((p) => p.status === "queued");
 
 const actions = [];
 
-// 1) Plan (free Gemini)
+// 0) Money gap audit — find what is missing to earn + agent work queue
+let moneyGaps = null;
+try {
+  const out = execSync("node scripts/money-gap-audit.mjs", {
+    cwd: ROOT,
+    encoding: "utf8",
+  });
+  moneyGaps = readJson("agents/memory/money-gaps-latest.json", null);
+  actions.push({
+    step: "money_gap_audit",
+    ok: true,
+    summary: moneyGaps?.summary || null,
+    streams: moneyGaps?.streams || null,
+    log: out.trim().slice(0, 400),
+  });
+} catch (e) {
+  actions.push({
+    step: "money_gap_audit",
+    ok: false,
+    error: String(e.message || e).slice(0, 300),
+  });
+}
+
+// 1) Plan (free Gemini) — money-first
+const gapDigest = moneyGaps
+  ? `Money streams: ${JSON.stringify(moneyGaps.streams)}. P0 gaps: ${(moneyGaps.gaps || [])
+      .filter((g) => g.severity === "P0")
+      .map((g) => g.title)
+      .join("; ") || "none"}. P1: ${(moneyGaps.gaps || [])
+      .filter((g) => g.severity === "P1")
+      .slice(0, 5)
+      .map((g) => g.title)
+      .join("; ")}. Metrics: ${JSON.stringify(moneyGaps.metrics)}.`
+  : "Money gap audit unavailable.";
+
 const planText = await gemini(
-  `AuthorityForge autonomous agent. Zero paid APIs. Niche: AI productivity + SEO systems for affiliates/AdSense.
-Health: ${JSON.stringify(health)}. Queued posts: ${queued.length}. Published: ${posts.filter((p) => p.status === "published").length}.
-List 5 concrete improvements as markdown bullets. Be specific to AuthorityForge (not generic ecommerce).`
+  `You are AuthorityForge's autonomous monetization operator (zero paid APIs).
+Goal: find and execute work that makes money — affiliates, AdSense readiness, free→paid conversion, commercial content.
+Owner does NOT sell or onboard customers. Product + content sell.
+${gapDigest}
+Health: ${JSON.stringify(health)}. Queued: ${queued.length}. Published: ${posts.filter((p) => p.status === "published").length}.
+List 6 concrete next actions as markdown bullets. Order by cash impact.
+Each bullet: (stream) action → expected money effect. Prefer agent-doable work; mark [HUMAN] only for affiliate ID paste or AdSense UI.
+Be specific to AuthorityForge (not generic ecommerce).`
 );
 actions.push({ step: "plan", ok: Boolean(planText) });
 
@@ -108,7 +147,7 @@ fs.appendFileSync(
 );
 actions.push({ step: "research_log", ok: true });
 
-// 3) Seed high-value queue topics from company plan (idempotent)
+// 3) Seed high-value MONEY queue topics (idempotent)
 const seeds = [
   {
     id: "schema-product-review-for-tool-pages",
@@ -116,7 +155,7 @@ const seeds = [
     title: "Product + Review Schema for AI/SEO Tool Pages (Without Fake Stars)",
     description:
       "How AuthorityForge-style commercial pages add Product/Service JSON-LD and FAQ safely for rich results without aggregateRating spam.",
-    tags: ["schema", "seo", "affiliates"],
+    tags: ["schema", "seo", "affiliates", "money"],
     hub: "/systems/eeat/",
     outline: [
       "Why Product/Service not AggregateRating spam",
@@ -132,7 +171,7 @@ const seeds = [
     title: "Internal Link Silos for Affiliate Content Clusters",
     description:
       "Hub-and-spoke linking so commercial tool pages and blog spokes reinforce each other without spam.",
-    tags: ["seo", "internal-links", "clusters"],
+    tags: ["seo", "internal-links", "clusters", "affiliates"],
     hub: "/systems/topical-clusters/",
     outline: [
       "Pillar vs spoke roles",
@@ -148,7 +187,7 @@ const seeds = [
     title: "Best-Of and Comparison Pages That Convert (Disclosed Affiliates)",
     description:
       "How to structure Best-Of / vs pages for AI writing and SEO tools with criteria-first recommendations.",
-    tags: ["affiliates", "compare", "conversion"],
+    tags: ["affiliates", "compare", "conversion", "money"],
     hub: "/compare/",
     outline: [
       "Criteria before rankings",
@@ -156,6 +195,54 @@ const seeds = [
       "Disclosure placement",
       "CTA after value",
       "What not to do",
+    ],
+  },
+  {
+    id: "why-visitors-dont-signup-seo-saas",
+    slug: "why-visitors-dont-signup-seo-saas",
+    title: "Why SEO Tool Visitors Don't Sign Up (And How Free Dashboards Fix It)",
+    description:
+      "Conversion friction map for SEO/AI productivity sites: unclear offer, no product UI, card walls — and AuthorityForge free-forge path.",
+    tags: ["conversion", "saas", "money", "cro"],
+    hub: "/demo/",
+    outline: [
+      "Bounce reasons on tool sites",
+      "Self-serve vs sales call",
+      "Checklist as activation",
+      "Free → paid upgrade timing",
+      "What AuthorityForge ships on homepage/demo",
+    ],
+  },
+  {
+    id: "adsense-for-seo-content-sites-checklist",
+    slug: "adsense-for-seo-content-sites-checklist",
+    title: "AdSense for SEO Content Sites: Inventory Checklist Without Policy Risk",
+    description:
+      "Practical ads.txt, disclosure, content quality, and placement rules for authority content sites waiting on Ready status.",
+    tags: ["adsense", "money", "compliance"],
+    hub: "/systems/money/",
+    outline: [
+      "ads.txt and publisher ID",
+      "Disclosure requirements",
+      "Why thin doorway pages fail review",
+      "Placement that does not kill UX",
+      "AuthorityForge status board",
+    ],
+  },
+  {
+    id: "affiliate-cta-placement-on-compare-pages",
+    slug: "affiliate-cta-placement-on-compare-pages",
+    title: "Where Affiliate CTAs Belong on Compare Pages (Trust First)",
+    description:
+      "Criteria-first layouts, disclosure, and CTA placement so compare pages convert without looking like spam.",
+    tags: ["affiliates", "compare", "conversion", "money"],
+    hub: "/compare/",
+    outline: [
+      "Criteria table before links",
+      "Disclosure above first CTA",
+      "Secondary CTAs after sections",
+      "Fallback when IDs not enabled yet",
+      "Measurement notes",
     ],
   },
 ];
@@ -218,6 +305,15 @@ const kpi = {
   ).length,
   zeroCost: ZERO,
   primary,
+  money: moneyGaps
+    ? {
+        streams: moneyGaps.streams,
+        summary: moneyGaps.summary,
+        affiliatesEnabled: moneyGaps.metrics?.affiliatesEnabled,
+        adsenseStatus: moneyGaps.metrics?.adsenseStatus,
+        stripeWired: moneyGaps.metrics?.stripeCheckoutWired,
+      }
+    : null,
 };
 writeJson("agents/memory/kpi-latest.json", kpi);
 

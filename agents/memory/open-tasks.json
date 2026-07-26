@@ -63,6 +63,69 @@
       "goal": "Commercial compare/stack pages + internal links from blog → signup/demo/affiliates",
       "status": "open",
       "priority": 1
+    },
+    {
+      "id": "money-stripe-not-wired",
+      "role": "monetization-chief",
+      "goal": "Scaffold /api checkout against AF_STRIPE_* env when human creates AF Stripe account; until then price pages stay info-only.",
+      "gapId": "stripe-not-wired",
+      "severity": "P1",
+      "status": "open",
+      "priority": 1,
+      "source": "money-gap-audit",
+      "updatedAt": "2026-07-26T02:44:16.900Z"
+    },
+    {
+      "id": "money-publish-commercial",
+      "role": "content-chief",
+      "goal": "Publish next queued commercial/affiliate post; keep queue ≥5 money topics",
+      "severity": "P1",
+      "priority": 1,
+      "status": "open",
+      "source": "money-gap-audit",
+      "updatedAt": "2026-07-26T02:44:16.900Z"
+    },
+    {
+      "id": "money-aff-ctas",
+      "role": "monetization-chief",
+      "goal": "Grow data-aff CTAs (now ~114) on compare/tools/blog so IDs earn the day they're pasted",
+      "severity": "P1",
+      "priority": 1,
+      "status": "open",
+      "source": "money-gap-audit",
+      "updatedAt": "2026-07-26T02:44:16.900Z"
+    },
+    {
+      "id": "money-signup-paths",
+      "role": "content-chief",
+      "goal": "Add Start free + /demo CTAs from blog and commercial pages (self-serve conversion)",
+      "severity": "P1",
+      "priority": 1,
+      "status": "open",
+      "source": "money-gap-audit",
+      "updatedAt": "2026-07-26T02:44:16.900Z"
+    },
+    {
+      "id": "money-blog-review",
+      "role": "content-chief",
+      "goal": "Review latest 3 published posts for affiliate CTA + money path links; rewrite thin ones",
+      "severity": "P2",
+      "priority": 2,
+      "status": "open",
+      "source": "money-gap-audit",
+      "updatedAt": "2026-07-26T02:44:16.900Z"
+    },
+    {
+      "id": "money-compare-cluster",
+      "role": "seo-chief",
+      "goal": "Expand compare cluster (now 7 pages) for high-intent tool buyers",
+      "severity": "P1",
+      "priority": 1,
+      "status": "open",
+      "source": "money-gap-audit",
+      "updatedAt": "2026-07-26T02:44:16.900Z"
     }
-  ]
+  ],
+  "updatedAt": "2026-07-26T02:44:16.900Z",
+  "moneyGapRunAt": "2026-07-26T02:44:16.900Z"
 }

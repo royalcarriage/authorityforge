@@ -1,0 +1,133 @@
+{
+  "at": "2026-07-26T02:44:16.900Z",
+  "summary": {
+    "gapCount": 3,
+    "p0": 1,
+    "p1": 2,
+    "p2": 0,
+    "agentOwned": 1,
+    "humanOwned": 2,
+    "cashBlocked": true
+  },
+  "metrics": {
+    "affiliatesEnabled": 0,
+    "affiliatesDisabled": 11,
+    "affiliatesEnabledNames": [],
+    "adsenseStatus": "getting_ready",
+    "adsEnabled": true,
+    "adsenseClient": "ca-pub-1959018852581373",
+    "adsTxtOk": true,
+    "stripeCheckoutWired": false,
+    "dataAffCtas": 114,
+    "signupCtaRefs": 31,
+    "comparePages": 7,
+    "contentQueued": 6,
+    "contentPublished": 16,
+    "commercialTaggedPosts": 15,
+    "hasDemo": true,
+    "hasPricing": true,
+    "hasMoneyOs": true
+  },
+  "gaps": [
+    {
+      "id": "aff-zero-enabled",
+      "severity": "P0",
+      "stream": "affiliates",
+      "owner": "human",
+      "title": "0 affiliate programs enabled — no commission URLs",
+      "detail": "11 partners defined (Semrush, Ahrefs, …) but enabled:false and empty url. Cash path blocked until IDs pasted.",
+      "agentAction": "Keep commercial compare/stack pages shipping; approval-queue lists apply URLs."
+    },
+    {
+      "id": "adsense-not-ready",
+      "severity": "P1",
+      "stream": "adsense",
+      "owner": "human",
+      "title": "AdSense status is \"getting_ready\" not ready",
+      "detail": "Client ca-pub-1959018852581373; ADS_ENABLED=true. Google review / CMP may still be needed.",
+      "agentAction": "Keep commercial pages live; ads.txt + privacy/disclosure already required."
+    },
+    {
+      "id": "stripe-not-wired",
+      "severity": "P1",
+      "stream": "subscriptions",
+      "owner": "agent",
+      "title": "No AF Stripe checkout/subscription API yet",
+      "detail": "Pro $49 / Agency $199 cannot collect payment. Separate from RC limo Stripe.",
+      "agentAction": "Scaffold /api checkout against AF_STRIPE_* env when human creates AF Stripe account; until then price pages stay info-only."
+    }
+  ],
+  "nextAgentWork": [
+    {
+      "id": "money-stripe-not-wired",
+      "role": "monetization-chief",
+      "goal": "Scaffold /api checkout against AF_STRIPE_* env when human creates AF Stripe account; until then price pages stay info-only.",
+      "gapId": "stripe-not-wired",
+      "severity": "P1",
+      "status": "open",
+      "priority": 1,
+      "source": "money-gap-audit",
+      "updatedAt": "2026-07-26T02:44:16.900Z"
+    },
+    {
+      "id": "money-publish-commercial",
+      "role": "content-chief",
+      "goal": "Publish next queued commercial/affiliate post; keep queue ≥5 money topics",
+      "severity": "P1",
+      "priority": 1,
+      "status": "open",
+      "source": "money-gap-audit",
+      "updatedAt": "2026-07-26T02:44:16.900Z"
+    },
+    {
+      "id": "money-aff-ctas",
+      "role": "monetization-chief",
+      "goal": "Grow data-aff CTAs (now ~114) on compare/tools/blog so IDs earn the day they're pasted",
+      "severity": "P1",
+      "priority": 1,
+      "status": "open",
+      "source": "money-gap-audit",
+      "updatedAt": "2026-07-26T02:44:16.900Z"
+    },
+    {
+      "id": "money-signup-paths",
+      "role": "content-chief",
+      "goal": "Add Start free + /demo CTAs from blog and commercial pages (self-serve conversion)",
+      "severity": "P1",
+      "priority": 1,
+      "status": "open",
+      "source": "money-gap-audit",
+      "updatedAt": "2026-07-26T02:44:16.900Z"
+    },
+    {
+      "id": "money-blog-review",
+      "role": "content-chief",
+      "goal": "Review latest 3 published posts for affiliate CTA + money path links; rewrite thin ones",
+      "severity": "P2",
+      "priority": 2,
+      "status": "open",
+      "source": "money-gap-audit",
+      "updatedAt": "2026-07-26T02:44:16.900Z"
+    },
+    {
+      "id": "money-compare-cluster",
+      "role": "seo-chief",
+      "goal": "Expand compare cluster (now 7 pages) for high-intent tool buyers",
+      "severity": "P1",
+      "priority": 1,
+      "status": "open",
+      "source": "money-gap-audit",
+      "updatedAt": "2026-07-26T02:44:16.900Z"
+    }
+  ],
+  "humanGates": [
+    "aff-zero-enabled",
+    "adsense-not-ready"
+  ],
+  "streams": {
+    "affiliates": "blocked",
+    "adsense": "waiting",
+    "subscriptions": "missing",
+    "contentFlywheel": "ok"
+  }
+}
