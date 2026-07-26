@@ -25,6 +25,14 @@ const SKIP = new Set([
   "scripts",
   "content",
   ".github",
+  // Serverless + server data must stay at project root — never inside outputDirectory.
+  // Copying api/ into dist previously caused broken production (directory listing only).
+  "api",
+  "agents",
+  "_agent_staging",
+  "vercel.json",
+  "package.json",
+  "package-lock.json",
 ]);
 
 function walk(dir, acc = []) {
