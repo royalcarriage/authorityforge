@@ -1,7 +1,7 @@
 # APPROVAL REQUIRED — CEO capabilities & what only you can do
 
 **Kind:** ops  
-**Created:** 2026-07-26T01:46:59.042Z  
+**Created:** 2026-07-26T14:33:36.529Z  
 **Agent:** af-ceo-v1  
 
 ## Hard rules
