@@ -19,6 +19,7 @@ const staticUrls = [
   "/products/",
   "/resources/money-dashboard/",
   "/start/",
+  "/demo/",
   "/pricing/",
   "/app/signup/",
   "/app/login/",

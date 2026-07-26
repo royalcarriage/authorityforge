@@ -42,6 +42,27 @@
       "goal": "Guard dual-host: never directory-list deploy; autonomous cycle green daily",
       "status": "open",
       "priority": 1
+    },
+    {
+      "id": "t-cro-1",
+      "role": "monetization-chief",
+      "goal": "Homepage + /demo/ convert: clear what/how, mock dashboard, free CTA, affiliate path visible",
+      "status": "open",
+      "priority": 1
+    },
+    {
+      "id": "t-cro-2",
+      "role": "content-chief",
+      "goal": "Review latest blogs for CTA + affiliate fit; rewrite thin posts; keep queue ≥5 commercial topics",
+      "status": "open",
+      "priority": 1
+    },
+    {
+      "id": "t-cro-3",
+      "role": "seo-chief",
+      "goal": "Commercial compare/stack pages + internal links from blog → signup/demo/affiliates",
+      "status": "open",
+      "priority": 1
     }
   ]
 }

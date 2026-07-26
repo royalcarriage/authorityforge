@@ -70,13 +70,21 @@
       "why": "If a user arrives, product onboards itself — never owner-led"
     }
   ],
+  "conversionLoop": [
+    "Why didn't they signup? Fix homepage clarity, product tour, free CTA",
+    "Why didn't they finish checklist? Shorten steps, better next-action copy",
+    "Why didn't they upgrade? Prove free value → clear Pro money outcome",
+    "Why no affiliate click? Ship commercial compares + disclosed CTAs",
+    "Why weak blog? Review posts for intent, CTA, affiliate fit; rewrite or expand",
+    "Measure: signup rate proxies, page health, publish cadence — not owner demos"
+  ],
   "operatingLoop": [
-    "Sense health + queue + KPIs + money surfaces",
+    "Sense health + queue + KPIs + money surfaces + conversion friction",
     "Plan with free LLM (Gemini / Gateway free / Ollama)",
-    "Act: seed content, publish, affiliates/AdSense prep, agent state",
+    "Act: seed content, publish, affiliates/AdSense prep, homepage/demo CRO, agent state",
     "Ship: git push → Vercel + GH Pages deploy",
     "Learn: research-log + kpi-latest.json",
-    "Never: draft cold sales, schedule demos, or queue owner to onboard a customer"
+    "Never: queue owner to sell, demo, or hand-onboard a customer — product + site sell"
   ],
   "humanGates": [
     "AdSense / CMP one-time UI approvals",
