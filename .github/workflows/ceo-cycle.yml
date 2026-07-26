@@ -41,6 +41,11 @@ jobs:
           SITE_URL: https://authorityforge-tau.vercel.app
         run: node scripts/ceo-run.mjs
 
+      - name: IndexNow ping (non-fatal)
+        env:
+          SITE_URL: https://authorityforge-tau.vercel.app
+        run: node scripts/indexnow-ping.mjs --recent 5 || true
+
       - name: Commit agent state / queue / logs
         run: |
           set -euo pipefail

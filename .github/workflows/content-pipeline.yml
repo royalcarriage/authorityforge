@@ -53,6 +53,11 @@ jobs:
           node scripts/build-blog.mjs
           node scripts/build-sitemap.mjs
 
+      - name: IndexNow ping (non-fatal)
+        env:
+          SITE_URL: https://authorityforge-tau.vercel.app
+        run: node scripts/indexnow-ping.mjs --recent 8 || true
+
       - name: Commit & push if changed
         run: |
           git config user.name "authorityforge-pipeline"

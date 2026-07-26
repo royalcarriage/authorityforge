@@ -3,7 +3,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-export const SITE = process.env.SITE_URL || "https://royalcarriage.github.io/authorityforge";
+// Vercel is the PRIMARY host — canonicals/sitemap must always point here.
+// GH Pages is a mirror that defers via canonical (see fix-canonicals.mjs).
+export const SITE = process.env.SITE_URL || "https://authorityforge-tau.vercel.app";
 export const BASE = process.env.BASE_PATH || "/authorityforge";
 export const NAME = "AuthorityForge";
 

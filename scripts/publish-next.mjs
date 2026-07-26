@@ -110,7 +110,7 @@ function generateTemplate(item, outline) {
 }
 
 async function generateWithFreeLlm(item, outline) {
-  const prompt = `Write a markdown article for AuthorityForge.
+  const prompt = `Write a markdown article for AuthorityForge, a site read by hands-on SEO operators.
 
 Title: ${item.title}
 Description: ${item.description || ""}
@@ -118,15 +118,19 @@ Outline sections:
 ${outline.map((o) => `- ${o}`).join("\n")}
 Hub path: ${item.hub || "/blog/"}
 
-Rules:
-- Start with **Direct answer:** one paragraph
-- Use ## for each outline section
-- Practical, no fake stats, no hype
-- End with Next step linking hub + /legal/affiliate-disclosure/ + /blog/
-- 600–900 words max`;
+Voice rules (strict):
+- Start with **Direct answer:** one specific paragraph (40-60 words) a search engine could quote verbatim.
+- Use ## for each outline section.
+- Every section must contain at least one CONCRETE element: an exact step, a number, a named tool setting, a short example, or a checklist. Never a paragraph of pure generalities.
+- Where two or more options are compared, use a small markdown table with real criteria.
+- BANNED words/phrases (never use): seamless, seamlessly, robust, crucial, comprehensive, leverage, elevate, delve, landscape, game-changer, unlock, supercharge, "in today's world", "it's essential to", "look no further".
+- No invented statistics, no fake reviews, no hype.
+- Write like an operator sharing a working procedure, not a brochure.
+- End with a "## Next step" section linking the hub path, /legal/affiliate-disclosure/, and /blog/.
+- 900–1300 words.`;
 
   try {
-    const r = await freeComplete(prompt, { maxTokens: 1600 });
+    const r = await freeComplete(prompt, { maxTokens: 2600 });
     if (r.text && r.text.length > 200) {
       return {
         body: r.text,

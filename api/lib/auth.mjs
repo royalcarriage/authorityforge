@@ -12,13 +12,20 @@ const USERS_ABS = path.join(ROOT, USERS_REL);
 const COOKIE = "af_session";
 const JWT_TTL_SEC = 60 * 60 * 24 * 14; // 14 days
 
+// Without a configured secret, fall back to a per-instance random one.
+// Sessions then die on cold starts, but nobody can forge an operator JWT
+// with a known default. Set AF_SESSION_SECRET on Vercel for stable sessions.
+const EPHEMERAL_SECRET = crypto.randomBytes(32).toString("hex");
 function sessionSecret() {
-  return (
+  const configured =
     process.env.AF_SESSION_SECRET ||
     process.env.AF_AGENT_SECRET ||
-    process.env.CRON_SECRET ||
-    "af-dev-insecure-change-me"
-  );
+    process.env.CRON_SECRET;
+  if (configured) return configured;
+  if (process.env.VERCEL || process.env.NODE_ENV === "production") {
+    return EPHEMERAL_SECRET;
+  }
+  return "af-dev-insecure-local-only";
 }
 
 function b64url(buf) {
@@ -174,9 +181,21 @@ async function saveStore(store) {
   };
 }
 
+// User PII (emails) must not live in the PUBLIC site repo. Set
+// AF_GITHUB_DATA_REPO=royalcarriage/authorityforge-data (private) on Vercel
+// and give AF_GITHUB_TOKEN access to it; falls back to the site repo so
+// signups never break while the env flip is pending.
+function dataRepo() {
+  return (
+    process.env.AF_GITHUB_DATA_REPO ||
+    process.env.AF_GITHUB_REPO ||
+    "royalcarriage/authorityforge"
+  );
+}
+
 async function githubGetJson(relPath) {
   const token = process.env.AF_GITHUB_TOKEN || process.env.GITHUB_TOKEN;
-  const repo = process.env.AF_GITHUB_REPO || "royalcarriage/authorityforge";
+  const repo = dataRepo();
   if (!token) return null;
   try {
     const r = await fetch(
@@ -200,7 +219,7 @@ async function githubGetJson(relPath) {
 
 async function githubPutText(relPath, text, message) {
   const token = process.env.AF_GITHUB_TOKEN || process.env.GITHUB_TOKEN;
-  const repo = process.env.AF_GITHUB_REPO || "royalcarriage/authorityforge";
+  const repo = dataRepo();
   if (!token) return { ok: false, error: "AF_GITHUB_TOKEN not set" };
   try {
     let sha;

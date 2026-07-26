@@ -1,6 +1,16 @@
 # AuthorityForge
 
 **Live:** https://authorityforge-tau.vercel.app  
+**Owner steps (the only manual work):** [docs/OPERATOR-15MIN-RUNBOOK.md](docs/OPERATOR-15MIN-RUNBOOK.md)
+
+> Host policy: **Vercel is primary** — every page canonicalizes to
+> `authorityforge-tau.vercel.app` (enforced by `scripts/fix-canonicals.mjs`);
+> the GH Pages mirror defers via canonical and is never self-indexed.
+> IndexNow pings Bing/DuckDuckGo/Copilot automatically on every publish
+> (`scripts/indexnow-ping.mjs`, key file at site root).
+> User PII lives in the private repo `royalcarriage/authorityforge-data`
+> once `AF_GITHUB_DATA_REPO` is set on Vercel.
+
 
 Self-optimizing systems for **search authority & rankings**.  
 Primary market: **AI Productivity Tools + Practical SEO Systems**.  
