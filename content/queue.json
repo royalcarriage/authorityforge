@@ -404,7 +404,7 @@
         "conversion"
       ],
       "hub": "/compare/",
-      "status": "queued",
+      "status": "published",
       "outline": [
         "Criteria first",
         "Table layout",
@@ -412,7 +412,10 @@
         "Internal links",
         "GSC feedback"
       ],
-      "source": "money-scaffold"
+      "source": "money-scaffold",
+      "published_at": "2026-07-26",
+      "published_path": "content/posts/comparison-pages-that-earn.md",
+      "llm_provider": "gemini"
     },
     {
       "id": "dashboard-tour-first-7-days",
