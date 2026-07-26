@@ -1,6 +1,8 @@
 /**
  * Consolidated customer/operator app API (Hobby function limit).
  * GET/POST /api/app  body.action = projects|checklist|brief|admin
+ * Also serves /api/checkout via vercel.json rewrite (no session needed) —
+ * a 13th function file would break the 12-function Hobby cap.
  */
 import { cors, json, freeGemini, companySnapshot } from "./lib/runtime.mjs";
 import {
@@ -11,6 +13,87 @@ import {
   operatorSnapshot,
   readBody,
 } from "./lib/auth.mjs";
+
+/**
+ * Stripe Checkout scaffold — dormant until AF_STRIPE_* env vars exist.
+ * Env (AuthorityForge's OWN Stripe account, NEVER the RC limo account):
+ *   AF_STRIPE_SECRET_KEY · AF_STRIPE_PRICE_FORGE · AF_STRIPE_PRICE_AGENCY
+ * GET → { ready, plans } · POST {plan: forge|agency} → { ok, url }
+ */
+const CHECKOUT_PLANS = {
+  forge: { name: "Forge Pro", priceEnv: "AF_STRIPE_PRICE_FORGE", usd: 49 },
+  agency: { name: "Agency OS", priceEnv: "AF_STRIPE_PRICE_AGENCY", usd: 199 },
+};
+
+function checkoutReadiness() {
+  const key = process.env.AF_STRIPE_SECRET_KEY || "";
+  const plans = {};
+  for (const [id, p] of Object.entries(CHECKOUT_PLANS)) {
+    plans[id] = {
+      name: p.name,
+      usd: p.usd,
+      priceConfigured: Boolean(process.env[p.priceEnv]),
+    };
+  }
+  return {
+    ready: Boolean(key) && Object.values(plans).some((p) => p.priceConfigured),
+    keyConfigured: Boolean(key),
+    plans,
+  };
+}
+
+async function handleCheckout(req, res) {
+  if (req.method === "GET") {
+    return json(res, 200, { ok: true, ...checkoutReadiness() });
+  }
+  if (req.method !== "POST") {
+    return json(res, 405, { error: "GET status | POST { plan: forge|agency }" });
+  }
+  const state = checkoutReadiness();
+  if (!state.keyConfigured) {
+    return json(res, 503, {
+      ok: false,
+      ready: false,
+      error: "Payments not enabled yet — AF_STRIPE_SECRET_KEY missing.",
+    });
+  }
+  const body = await readBody(req);
+  const plan = CHECKOUT_PLANS[String(body.plan || "").toLowerCase()];
+  if (!plan) return json(res, 400, { ok: false, error: "Unknown plan. Use forge|agency." });
+  const price = process.env[plan.priceEnv];
+  if (!price) {
+    return json(res, 503, { ok: false, error: `${plan.name} price not configured (${plan.priceEnv}).` });
+  }
+  const site = (process.env.AF_PRIMARY_URL || "https://authorityforge-tau.vercel.app").replace(/\/$/, "");
+  const sess = sessionFromRequest(req);
+  const params = new URLSearchParams({
+    mode: "subscription",
+    "line_items[0][price]": price,
+    "line_items[0][quantity]": "1",
+    success_url: `${site}/app/dashboard/?upgraded=${encodeURIComponent(body.plan)}`,
+    cancel_url: `${site}/pricing/`,
+    allow_promotion_codes: "true",
+  });
+  if (sess?.email) params.set("customer_email", sess.email);
+  if (sess?.sub) params.set("client_reference_id", sess.sub);
+  try {
+    const r = await fetch("https://api.stripe.com/v1/checkout/sessions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.AF_STRIPE_SECRET_KEY}`,
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: params.toString(),
+    });
+    const data = await r.json();
+    if (!r.ok || !data.url) {
+      return json(res, 502, { ok: false, error: data?.error?.message || `stripe ${r.status}` });
+    }
+    return json(res, 200, { ok: true, url: data.url });
+  } catch (e) {
+    return json(res, 500, { ok: false, error: String(e.message || e) });
+  }
+}
 
 function opFromReq(req, body) {
   const url = String(req.url || "");
@@ -23,6 +106,16 @@ function opFromReq(req, body) {
 export default async function handler(req, res) {
   cors(res);
   if (req.method === "OPTIONS") return res.end();
+
+  // Checkout runs BEFORE the session gate — pricing page probes it pre-auth.
+  const urlStr = String(req.url || "");
+  if (urlStr.includes("checkout") || req.query?.op === "checkout") {
+    try {
+      return await handleCheckout(req, res);
+    } catch (e) {
+      return json(res, 500, { ok: false, error: String(e.message || e) });
+    }
+  }
 
   try {
     const sess = sessionFromRequest(req);

@@ -67,6 +67,14 @@
     {
       "source": "/privacy/",
       "destination": "/legal/privacy/"
+    },
+    {
+      "source": "/api/checkout",
+      "destination": "/api/app?op=checkout"
+    },
+    {
+      "source": "/api/checkout/",
+      "destination": "/api/app?op=checkout"
     }
   ]
 }
