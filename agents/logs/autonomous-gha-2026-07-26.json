@@ -1,5 +1,5 @@
 {
-  "at": "2026-07-26T01:48:01.054Z",
+  "at": "2026-07-26T02:44:26.836Z",
   "health": {
     "/": "200",
     "/ads.txt": "200",
@@ -8,8 +8,28 @@
     "/api/company/status": "200",
     "/api/health": "200"
   },
-  "planText": "Here are 5 concrete improvements for AuthorityForge, specific to its niche and \"zero paid APIs\" constraint:\n\n*   **Integrate a Self-Hosted Open-Source LLM for Content Drafting & Expansion:** Leverage local compute",
+  "planText": "As AuthorityForge's autonomous monetization operator, my focus is on immediate cash impact and leveraging existing assets. The P0 gap in affiliates is the most critical and offers the quickest path to revenue.\n\nHere are 6 concrete next actions,",
   "actions": [
+    {
+      "step": "money_gap_audit",
+      "ok": true,
+      "summary": {
+        "gapCount": 3,
+        "p0": 1,
+        "p1": 2,
+        "p2": 0,
+        "agentOwned": 1,
+        "humanOwned": 2,
+        "cashBlocked": true
+      },
+      "streams": {
+        "affiliates": "blocked",
+        "adsense": "waiting",
+        "subscriptions": "missing",
+        "contentFlywheel": "ok"
+      },
+      "log": "{\n  \"ok\": true,\n  \"summary\": {\n    \"gapCount\": 3,\n    \"p0\": 1,\n    \"p1\": 2,\n    \"p2\": 0,\n    \"agentOwned\": 1,\n    \"humanOwned\": 2,\n    \"cashBlocked\": true\n  },\n  \"streams\": {\n    \"affiliates\": \"blocked\",\n    \"adsense\": \"waiting\",\n    \"subscriptions\": \"missing\",\n    \"contentFlywheel\": \"ok\"\n  },\n  \"topGaps\": [\n    \"P0:aff-zero-enabled\",\n    \"P1:adsense-not-ready\",\n    \"P1:stripe-not-wired\"\n  ],\n  \"n"
+    },
     {
       "step": "plan",
       "ok": true
@@ -19,12 +39,17 @@
       "ok": true
     },
     {
+      "step": "seed_queue",
+      "ok": true,
+      "seeded": 3
+    },
+    {
       "step": "publish_next",
       "ok": true,
-      "detail": "{\n  \"published\": \"client-seo-systems-delivery-playbook\",\n  \"path\": \"content/posts/client-seo-systems-delivery-playbook.md\",\n  \"llm\": {\n    \"provider\": \"gemini\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 6\n}"
+      "detail": "{\n  \"published\": \"productized-templates-for-affiliate-sites\",\n  \"path\": \"content/posts/productized-templates-for-affiliate-sites.md\",\n  \"llm\": {\n    \"provider\": \"gemini\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 8\n}"
     }
   ],
-  "cycleCount": 11,
+  "cycleCount": 12,
   "zeroCost": true,
-  "published": "{\n  \"published\": \"client-seo-systems-delivery-playbook\",\n  \"path\": \"content/posts/client-seo-systems-delivery-playbook.md\",\n  \"llm\": {\n    \"provider\": \"gemini\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 6\n}"
+  "published": "{\n  \"published\": \"productized-templates-for-affiliate-sites\",\n  \"path\": \"content/posts/productized-templates-for-affiliate-sites.md\",\n  \"llm\": {\n    \"provider\": \"gemini\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 8\n}"
 }

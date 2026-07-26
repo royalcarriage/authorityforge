@@ -73,7 +73,7 @@
       "status": "open",
       "priority": 1,
       "source": "money-gap-audit",
-      "updatedAt": "2026-07-26T02:44:16.900Z"
+      "updatedAt": "2026-07-26T02:44:28.639Z"
     },
     {
       "id": "money-publish-commercial",
@@ -83,7 +83,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-07-26T02:44:16.900Z"
+      "updatedAt": "2026-07-26T02:44:28.639Z"
     },
     {
       "id": "money-aff-ctas",
@@ -93,7 +93,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-07-26T02:44:16.900Z"
+      "updatedAt": "2026-07-26T02:44:28.639Z"
     },
     {
       "id": "money-signup-paths",
@@ -103,7 +103,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-07-26T02:44:16.900Z"
+      "updatedAt": "2026-07-26T02:44:28.639Z"
     },
     {
       "id": "money-blog-review",
@@ -113,7 +113,7 @@
       "priority": 2,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-07-26T02:44:16.900Z"
+      "updatedAt": "2026-07-26T02:44:28.639Z"
     },
     {
       "id": "money-compare-cluster",
@@ -123,9 +123,9 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-07-26T02:44:16.900Z"
+      "updatedAt": "2026-07-26T02:44:28.639Z"
     }
   ],
-  "updatedAt": "2026-07-26T02:44:16.900Z",
-  "moneyGapRunAt": "2026-07-26T02:44:16.900Z"
+  "updatedAt": "2026-07-26T02:44:28.639Z",
+  "moneyGapRunAt": "2026-07-26T02:44:28.639Z"
 }
