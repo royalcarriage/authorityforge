@@ -105,6 +105,21 @@ for (const pathUrl of ["/", "/ads.txt", "/legal/privacy/", "/css/styles.css", "/
   }
 }
 
+// Money gaps — what's missing to earn (updates open-tasks + approval-queue)
+let moneyGaps = null;
+try {
+  execSync("node scripts/money-gap-audit.mjs", { cwd: ROOT, encoding: "utf8" });
+  moneyGaps = JSON.parse(
+    fs.readFileSync(path.join(AGENTS, "memory", "money-gaps-latest.json"), "utf8")
+  );
+  logAction("monetization-chief", "money_gap_audit", {
+    summary: moneyGaps.summary,
+    streams: moneyGaps.streams,
+  });
+} catch (e) {
+  report.errors.push(`money_gap_audit: ${String(e.message || e).slice(0, 200)}`);
+}
+
 report.sense = {
   primaryUrl: primary,
   queuedPosts: queued.length,
@@ -114,6 +129,9 @@ report.sense = {
   openTasks: (tasks.tasks || []).filter((t) => t.status === "open").length,
   health,
   hardRules: state.hardRules,
+  moneyStreams: moneyGaps?.streams || null,
+  moneySummary: moneyGaps?.summary || null,
+  cashBlocked: moneyGaps?.summary?.cashBlocked ?? null,
 };
 
 // ─── PLAN ────────────────────────────────────────────────
