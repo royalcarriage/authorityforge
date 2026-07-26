@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-26T01:39:27.454Z",
+  "updatedAt": "2026-07-26T01:41:21.756Z",
   "users": [
     {
       "id": "3cffde52-7772-4bd0-99b3-e78859114d8d",
@@ -267,6 +267,29 @@
       "createdAt": "2026-07-26T01:39:27.454Z",
       "projectIds": [
         "c0d54614-4572-4c15-9501-e0e38809940d"
+      ],
+      "services": {
+        "clusterBuilder": true,
+        "moneyWiring": false,
+        "agentOps": false
+      },
+      "revenue": {
+        "affiliateEnabled": false,
+        "adsenseReady": false,
+        "estimatedMonthlyUsd": 0
+      }
+    },
+    {
+      "id": "4a31f926-49f4-420f-9408-4eaecfe8bd41",
+      "email": "postpromote-1785030081@example.com",
+      "name": "PP",
+      "role": "customer",
+      "plan": "free",
+      "salt": "bd69e59b6dd3c746035ca65ae6716579",
+      "hash": "0f583735ffdb32dd676a9f88633c8930bb7aaf927629c0c1def80bfea1250535",
+      "createdAt": "2026-07-26T01:41:21.756Z",
+      "projectIds": [
+        "db23b188-6c22-41d6-8bb5-626899ee49af"
       ],
       "services": {
         "clusterBuilder": true,
@@ -768,6 +791,46 @@
       "status": "active",
       "type": "authority_cluster",
       "createdAt": "2026-07-26T01:39:27.454Z",
+      "metrics": {
+        "pages": 0,
+        "spokesPlanned": 12,
+        "revenueUsd": 0
+      },
+      "checklist": [
+        {
+          "id": "niche",
+          "label": "Define niche + money keywords",
+          "done": false
+        },
+        {
+          "id": "hub",
+          "label": "Ship hub page",
+          "done": false
+        },
+        {
+          "id": "spokes",
+          "label": "Ship 6–12 commercial spokes",
+          "done": false
+        },
+        {
+          "id": "affiliates",
+          "label": "Enable 1+ affiliate IDs",
+          "done": false
+        },
+        {
+          "id": "adsense",
+          "label": "AdSense site ready",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "db23b188-6c22-41d6-8bb5-626899ee49af",
+      "ownerId": "4a31f926-49f4-420f-9408-4eaecfe8bd41",
+      "name": "PP's first forge",
+      "status": "active",
+      "type": "authority_cluster",
+      "createdAt": "2026-07-26T01:41:21.756Z",
       "metrics": {
         "pages": 0,
         "spokesPlanned": 12,
