@@ -1,0 +1,30 @@
+{
+  "at": "2026-07-26T01:48:01.054Z",
+  "health": {
+    "/": "200",
+    "/ads.txt": "200",
+    "/company/": "200",
+    "/css/styles.css": "200",
+    "/api/company/status": "200",
+    "/api/health": "200"
+  },
+  "planText": "Here are 5 concrete improvements for AuthorityForge, specific to its niche and \"zero paid APIs\" constraint:\n\n*   **Integrate a Self-Hosted Open-Source LLM for Content Drafting & Expansion:** Leverage local compute",
+  "actions": [
+    {
+      "step": "plan",
+      "ok": true
+    },
+    {
+      "step": "research_log",
+      "ok": true
+    },
+    {
+      "step": "publish_next",
+      "ok": true,
+      "detail": "{\n  \"published\": \"client-seo-systems-delivery-playbook\",\n  \"path\": \"content/posts/client-seo-systems-delivery-playbook.md\",\n  \"llm\": {\n    \"provider\": \"gemini\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 6\n}"
+    }
+  ],
+  "cycleCount": 11,
+  "zeroCost": true,
+  "published": "{\n  \"published\": \"client-seo-systems-delivery-playbook\",\n  \"path\": \"content/posts/client-seo-systems-delivery-playbook.md\",\n  \"llm\": {\n    \"provider\": \"gemini\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 6\n}"
+}

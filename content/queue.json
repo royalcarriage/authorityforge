@@ -357,7 +357,7 @@
         "seo"
       ],
       "hub": "/clients/",
-      "status": "queued",
+      "status": "published",
       "outline": [
         "Discovery questions",
         "Architecture deliverable",
@@ -365,7 +365,10 @@
         "Handoff runbook",
         "Pricing bands"
       ],
-      "source": "money-scaffold"
+      "source": "money-scaffold",
+      "published_at": "2026-07-26",
+      "published_path": "content/posts/client-seo-systems-delivery-playbook.md",
+      "llm_provider": "gemini"
     },
     {
       "id": "productized-templates-for-affiliates",
