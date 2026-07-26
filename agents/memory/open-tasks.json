@@ -11,23 +11,37 @@
     {
       "id": "t-bootstrap-2",
       "role": "monetization-chief",
-      "goal": "Enable ≥3 affiliate programs after human applies (Semrush, Ahrefs, Surfer)",
+      "goal": "Queue affiliate enable steps (IDs only) — no sales motion; programs Semrush/Ahrefs/Surfer once human pastes IDs",
       "status": "open",
       "priority": 1
     },
     {
       "id": "t-bootstrap-3",
       "role": "seo-chief",
-      "goal": "Confirm Vercel primary URL is AdSense + GSC property",
+      "goal": "Keep Vercel primary healthy: GSC verified, sitemap, content publish cadence — no owner demos",
       "status": "open",
-      "priority": 2
+      "priority": 1
     },
     {
       "id": "t-bootstrap-4",
       "role": "research-chief",
-      "goal": "List 10 new revenue experiments for AI productivity niche",
+      "goal": "List 10 passive revenue experiments (content/affiliate/AdSense) for AI productivity niche",
       "status": "open",
       "priority": 2
+    },
+    {
+      "id": "t-bootstrap-5",
+      "role": "content-chief",
+      "goal": "Publish next queued post via free LLM; grow commercial + compare pages for affiliate intent",
+      "status": "open",
+      "priority": 1
+    },
+    {
+      "id": "t-bootstrap-6",
+      "role": "devops-chief",
+      "goal": "Guard dual-host: never directory-list deploy; autonomous cycle green daily",
+      "status": "open",
+      "priority": 1
     }
   ]
 }

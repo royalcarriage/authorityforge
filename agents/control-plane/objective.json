@@ -4,6 +4,16 @@
   "updatedAt": "2026-07-25",
   "northStar": "Build a self-operating content + affiliate + AdSense business that earns real revenue at near-zero operating cost, then reinvest earnings to grow.",
   "mission": "Self-optimizing AI + SEO systems that compound rankings and passive revenue.",
+  "operatingMode": "fully_autonomous",
+  "operatorPolicy": {
+    "ownerDoesNotSell": true,
+    "ownerDoesNotOnboardCustomers": true,
+    "ownerDoesNotRunDemos": true,
+    "customersAreSelfServeOrInboundOnly": true,
+    "agentsOwnAcquisitionViaContentSeoAffiliatesAds": true,
+    "agentsOwnContentPublishMeasureLoop": true,
+    "humanIsLegalOwnerOnly": true
+  },
   "successCriteria": [
     {
       "id": "pages",
@@ -48,33 +58,39 @@
       "why": "Client + revenue surfaces"
     },
     {
-      "id": "client_offer",
-      "metric": "clients/ page + contact path",
-      "target": true,
-      "why": "High-ticket systems delivery"
-    },
-    {
       "id": "commercial_compares",
       "metric": "semrush-vs-ahrefs + jasper-vs-copy compare pages",
       "target": true,
-      "why": "Affiliate intent URLs"
+      "why": "Affiliate intent URLs (money, not sales calls)"
+    },
+    {
+      "id": "self_serve_product",
+      "metric": "signup → dashboard works without human touch",
+      "target": true,
+      "why": "If a user arrives, product onboards itself — never owner-led"
     }
   ],
   "operatingLoop": [
-    "Sense health + queue + KPIs",
+    "Sense health + queue + KPIs + money surfaces",
     "Plan with free LLM (Gemini / Gateway free / Ollama)",
-    "Act: seed content, publish, docs, agent state",
-    "Ship: git push \u2192 Vercel deploy",
-    "Learn: research-log + kpi-latest.json"
+    "Act: seed content, publish, affiliates/AdSense prep, agent state",
+    "Ship: git push → Vercel + GH Pages deploy",
+    "Learn: research-log + kpi-latest.json",
+    "Never: draft cold sales, schedule demos, or queue owner to onboard a customer"
   ],
   "humanGates": [
-    "AdSense / CMP publish clicks",
-    "Affiliate program applications + tracking IDs",
-    "GSC property verification",
-    "Vercel env secrets",
-    "Money movement / email send",
-    "Credit card unlock for AI Gateway free tier",
-    "Client project intake replies",
-    "Affiliate enable after program approval"
+    "AdSense / CMP one-time UI approvals",
+    "Affiliate program applications + paste tracking IDs once",
+    "GSC property verification (one-time)",
+    "Vercel/GitHub env secrets (one-time)",
+    "Money movement / email send (approval-queue only)",
+    "Credit card unlock for AI Gateway free tier (one-time)"
+  ],
+  "explicitlyNotOwnerJobs": [
+    "Closing sales",
+    "Running demos or discovery calls",
+    "Manual customer onboarding",
+    "Writing cold outreach to prospects",
+    "Hand-holding Track Setup installs unless productized self-serve later"
   ]
 }

@@ -17,16 +17,18 @@
     "disclosureAlwaysOn": true,
     "humanIsLegalCeo": true,
     "zeroCostUntilSelfFunded": true,
-    "neverPaidLlmUntilRevenue": true
+    "neverPaidLlmUntilRevenue": true,
+    "ownerDoesNotSellOrOnboard": true,
+    "autonomousContentAndMoneyLoop": true
   },
   "monetization": {
     "phase": 2,
     "streams": [
       "affiliates",
       "adsense",
-      "client_systems",
       "products"
     ],
+    "clientSystems": "deferred_self_serve_only",
     "adsenseClient": "ca-pub-1959018852581373",
     "affiliateConfig": "js/config.js",
     "pages": {
