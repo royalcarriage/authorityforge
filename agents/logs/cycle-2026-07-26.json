@@ -1,0 +1,107 @@
+{
+  "agent": "af-ceo-v1",
+  "startedAt": "2026-07-26T01:46:59.042Z",
+  "date": "2026-07-26",
+  "sense": {
+    "primaryUrl": "https://authorityforge-tau.vercel.app",
+    "queuedPosts": 8,
+    "publishedPosts": 14,
+    "totalQueueItems": 22,
+    "affiliateEnabledApprox": 0,
+    "openTasks": 6,
+    "health": {
+      "/": "200",
+      "/ads.txt": "200",
+      "/legal/privacy/": "200",
+      "/css/styles.css": "200",
+      "/sitemap.xml": "200"
+    },
+    "hardRules": {
+      "neverSendEmailOrSmsWithoutApproval": true,
+      "neverMoveMoneyWithoutApproval": true,
+      "neverClickOwnAds": true,
+      "disclosureAlwaysOn": true,
+      "humanIsLegalCeo": true,
+      "zeroCostUntilSelfFunded": true,
+      "neverPaidLlmUntilRevenue": true,
+      "ownerDoesNotSellOrOnboard": true,
+      "autonomousContentAndMoneyLoop": true
+    }
+  },
+  "plan": [
+    {
+      "id": "legal-scan",
+      "role": "legal-gate",
+      "why": "Confirm no blocked actions attempted",
+      "priority": 0
+    },
+    {
+      "id": "publish-next",
+      "role": "content-chief",
+      "why": "AF_CEO_PUBLISH=1 and queue has items",
+      "priority": 1
+    },
+    {
+      "id": "affiliates",
+      "role": "monetization-chief",
+      "why": "Enabled affiliates ~0 < target",
+      "priority": 1
+    },
+    {
+      "id": "money-research",
+      "role": "research-chief",
+      "why": "Always explore new revenue experiments",
+      "priority": 2
+    }
+  ],
+  "actions": [
+    {
+      "role": "content-chief",
+      "action": "publish_next",
+      "out": "{\n  \"published\": \"money-os-for-content-sites\",\n  \"path\": \"content/posts/money-os-for-content-sites.md\",\n  \"llm\": {\n    \"provider\": \"gemini\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 7\n}",
+      "at": "2026-07-26T01:47:08.226Z"
+    },
+    {
+      "role": "content-chief",
+      "action": "rebuild_site",
+      "at": "2026-07-26T01:47:08.330Z"
+    },
+    {
+      "role": "monetization-chief",
+      "action": "approval_affiliates",
+      "at": "2026-07-26T01:47:08.330Z"
+    },
+    {
+      "role": "research-chief",
+      "action": "research_log_append",
+      "at": "2026-07-26T01:47:08.330Z"
+    },
+    {
+      "role": "legal-gate",
+      "action": "scan_ok",
+      "note": "No email/SMS/money actions executed this cycle",
+      "at": "2026-07-26T01:47:08.331Z"
+    }
+  ],
+  "approvals": [
+    {
+      "title": "Apply or enable affiliate programs",
+      "file": "agents/approval-queue/2026-07-26-apply-or-enable-affiliate-programs.md",
+      "kind": "affiliates"
+    },
+    {
+      "title": "CEO capabilities & what only you can do",
+      "file": "agents/approval-queue/2026-07-26-ceo-capabilities-what-only-you-can-do.md",
+      "kind": "ops"
+    }
+  ],
+  "hires": [],
+  "blocked": [
+    "email_send",
+    "sms_send",
+    "money_move",
+    "auto_adsense_click"
+  ],
+  "errors": [],
+  "finishedAt": "2026-07-26T01:47:08.331Z"
+}

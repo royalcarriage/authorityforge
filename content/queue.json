@@ -72,7 +72,7 @@
       "id": "agent-pipelines-for-content",
       "slug": "agent-pipelines-for-content-ops",
       "title": "Agent Pipelines for Content Ops (Without Index Spam)",
-      "description": "How to run audit \u2192 design \u2192 publish with agents while keeping quality bars high.",
+      "description": "How to run audit → design → publish with agents while keeping quality bars high.",
       "tags": [
         "ai-productivity",
         "agents",
@@ -94,7 +94,7 @@
       "id": "best-ai-writers-for-seo-2026",
       "slug": "best-ai-writers-for-seo-2026",
       "title": "Best AI Writers for SEO Operators (Criteria-First)",
-      "description": "How to pick AI writing tools for SEO without thin content \u2014 criteria, workflow, and affiliate-ready comparisons.",
+      "description": "How to pick AI writing tools for SEO without thin content — criteria, workflow, and affiliate-ready comparisons.",
       "tags": [
         "ai-writing",
         "affiliates",
@@ -333,7 +333,7 @@
         "adsense"
       ],
       "hub": "/systems/money/",
-      "status": "queued",
+      "status": "published",
       "outline": [
         "Revenue streams map",
         "Affiliate enable checklist",
@@ -341,7 +341,10 @@
         "Treasury hard rules",
         "Weekly loop"
       ],
-      "source": "money-scaffold"
+      "source": "money-scaffold",
+      "published_at": "2026-07-26",
+      "published_path": "content/posts/money-os-for-content-sites.md",
+      "llm_provider": "gemini"
     },
     {
       "id": "client-seo-systems-delivery",
@@ -431,7 +434,7 @@
       "id": "free-vs-pro-vs-agency",
       "slug": "free-vs-pro-vs-agency-who-should-pay",
       "title": "Free vs Pro vs Agency: Who Should Pay for AuthorityForge",
-      "description": "Honest SKU guide so operators self-select Free, Pro, or Agency OS \u2014 and sales can close without hype.",
+      "description": "Honest SKU guide so operators self-select Free, Pro, or Agency OS — and sales can close without hype.",
       "tags": [
         "pricing",
         "sales",
@@ -471,7 +474,7 @@
       "id": "weekly-measurement-45-min",
       "slug": "weekly-measurement-loop-45-minutes",
       "title": "The 45-Minute Weekly Measurement Loop",
-      "description": "GSC to CTR rewrites to next publish \u2014 the ritual that makes customers return.",
+      "description": "GSC to CTR rewrites to next publish — the ritual that makes customers return.",
       "tags": [
         "measurement",
         "retention",
