@@ -207,3 +207,8 @@ Here are 6 concrete next actions,
 Here are 6 concrete next actions for AuthorityForge, ordered by immediate cash impact:
 
 1.  **(Affiliates) Enable 16 Disabled Affiliate Programs** → Immediate commission revenue from existing `dataAffCtas`.
+
+### Cycle 16 — 2026-07-27
+- KPI: queued=6, affiliates~0, health_ok=true
+- Experiment idea: ship one high-intent comparison page targeting a paid tool query; disclose affiliates; measure GSC 28d.
+- Agent hire: keep research-chief scanning competitor monetization pages weekly.

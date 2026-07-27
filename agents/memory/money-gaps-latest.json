@@ -1,5 +1,5 @@
 {
-  "at": "2026-07-26T15:26:26.515Z",
+  "at": "2026-07-27T15:02:59.247Z",
   "summary": {
     "gapCount": 2,
     "p0": 1,
@@ -18,11 +18,11 @@
     "adsenseClient": "ca-pub-1959018852581373",
     "adsTxtOk": true,
     "stripeCheckoutWired": true,
-    "dataAffCtas": 120,
-    "signupCtaRefs": 33,
+    "dataAffCtas": 123,
+    "signupCtaRefs": 34,
     "comparePages": 7,
-    "contentQueued": 7,
-    "contentPublished": 18,
+    "contentQueued": 6,
+    "contentPublished": 19,
     "commercialTaggedPosts": 17,
     "hasDemo": true,
     "hasPricing": true,
@@ -57,17 +57,17 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-07-26T15:26:26.515Z"
+      "updatedAt": "2026-07-27T15:02:59.247Z"
     },
     {
       "id": "money-aff-ctas",
       "role": "monetization-chief",
-      "goal": "Grow data-aff CTAs (now ~120) on compare/tools/blog so IDs earn the day they're pasted",
+      "goal": "Grow data-aff CTAs (now ~123) on compare/tools/blog so IDs earn the day they're pasted",
       "severity": "P1",
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-07-26T15:26:26.515Z"
+      "updatedAt": "2026-07-27T15:02:59.247Z"
     },
     {
       "id": "money-signup-paths",
@@ -77,7 +77,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-07-26T15:26:26.515Z"
+      "updatedAt": "2026-07-27T15:02:59.247Z"
     },
     {
       "id": "money-blog-review",
@@ -87,7 +87,7 @@
       "priority": 2,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-07-26T15:26:26.515Z"
+      "updatedAt": "2026-07-27T15:02:59.247Z"
     },
     {
       "id": "money-compare-cluster",
@@ -97,7 +97,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-07-26T15:26:26.515Z"
+      "updatedAt": "2026-07-27T15:02:59.247Z"
     }
   ],
   "humanGates": [
