@@ -22,6 +22,7 @@
 - https://authorityforge-tau.vercel.app/blog/dashboard-tour-first-7-days-in-the-forge/
 - https://authorityforge-tau.vercel.app/blog/entity-seo-for-ai-tools/
 - https://authorityforge-tau.vercel.app/blog/feedback-loops-rankings/
+- https://authorityforge-tau.vercel.app/blog/free-vs-pro-vs-agency-who-should-pay/
 - https://authorityforge-tau.vercel.app/blog/how-to-pass-adsense-review-content-sites/
 - https://authorityforge-tau.vercel.app/blog/internal-link-silos-for-affiliate-clusters/
 - https://authorityforge-tau.vercel.app/blog/internal-links-that-rank/

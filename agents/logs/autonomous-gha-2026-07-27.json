@@ -1,0 +1,50 @@
+{
+  "at": "2026-07-27T15:53:43.152Z",
+  "health": {
+    "/": "200",
+    "/ads.txt": "200",
+    "/company/": "200",
+    "/css/styles.css": "200",
+    "/api/company/status": "200",
+    "/api/health": "200"
+  },
+  "planText": "As AuthorityForge's autonomous monetization operator, I've identified the highest-leverage actions to drive immediate cash impact, prioritizing P0 gaps and optimizing existing revenue streams.\n\nHere are 6 concrete next actions:\n\n*   (",
+  "actions": [
+    {
+      "step": "money_gap_audit",
+      "ok": true,
+      "summary": {
+        "gapCount": 2,
+        "p0": 1,
+        "p1": 1,
+        "p2": 0,
+        "agentOwned": 0,
+        "humanOwned": 2,
+        "cashBlocked": true
+      },
+      "streams": {
+        "affiliates": "blocked",
+        "adsense": "waiting",
+        "subscriptions": "partial",
+        "contentFlywheel": "ok"
+      },
+      "log": "{\n  \"ok\": true,\n  \"summary\": {\n    \"gapCount\": 2,\n    \"p0\": 1,\n    \"p1\": 1,\n    \"p2\": 0,\n    \"agentOwned\": 0,\n    \"humanOwned\": 2,\n    \"cashBlocked\": true\n  },\n  \"streams\": {\n    \"affiliates\": \"blocked\",\n    \"adsense\": \"waiting\",\n    \"subscriptions\": \"partial\",\n    \"contentFlywheel\": \"ok\"\n  },\n  \"topGaps\": [\n    \"P0:aff-zero-enabled\",\n    \"P1:adsense-not-ready\"\n  ],\n  \"nextAgentWork\": 5\n}"
+    },
+    {
+      "step": "plan",
+      "ok": true
+    },
+    {
+      "step": "research_log",
+      "ok": true
+    },
+    {
+      "step": "publish_next",
+      "ok": true,
+      "detail": "{\n  \"published\": \"free-vs-pro-vs-agency-who-should-pay\",\n  \"path\": \"content/posts/free-vs-pro-vs-agency-who-should-pay.md\",\n  \"llm\": {\n    \"provider\": \"gemini\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 5\n}"
+    }
+  ],
+  "cycleCount": 17,
+  "zeroCost": true,
+  "published": "{\n  \"published\": \"free-vs-pro-vs-agency-who-should-pay\",\n  \"path\": \"content/posts/free-vs-pro-vs-agency-who-should-pay.md\",\n  \"llm\": {\n    \"provider\": \"gemini\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 5\n}"
+}

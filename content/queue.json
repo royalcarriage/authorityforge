@@ -453,7 +453,7 @@
         "product"
       ],
       "hub": "/pricing/",
-      "status": "queued",
+      "status": "published",
       "outline": [
         "Jobs to be done",
         "Free limits",
@@ -461,7 +461,10 @@
         "Agency white-label",
         "Install vs software"
       ],
-      "source": "ceo-playbook"
+      "source": "ceo-playbook",
+      "published_at": "2026-07-27",
+      "published_path": "content/posts/free-vs-pro-vs-agency-who-should-pay.md",
+      "llm_provider": "gemini"
     },
     {
       "id": "referral-operators",
