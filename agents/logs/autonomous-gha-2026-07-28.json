@@ -1,0 +1,50 @@
+{
+  "at": "2026-07-28T15:47:59.730Z",
+  "health": {
+    "/": "200",
+    "/ads.txt": "200",
+    "/company/": "200",
+    "/css/styles.css": "200",
+    "/api/company/status": "200",
+    "/api/health": "200"
+  },
+  "planText": "Here are 6 concrete next actions for AuthorityForge, ordered by potential cash impact:\n\n*   **(affiliates) Enable Top Affiliate Program** → Immediately begin earning commissions from existing CTAs.\n    *   **Action:**",
+  "actions": [
+    {
+      "step": "money_gap_audit",
+      "ok": true,
+      "summary": {
+        "gapCount": 3,
+        "p0": 1,
+        "p1": 2,
+        "p2": 0,
+        "agentOwned": 1,
+        "humanOwned": 2,
+        "cashBlocked": true
+      },
+      "streams": {
+        "affiliates": "blocked",
+        "adsense": "waiting",
+        "subscriptions": "partial",
+        "contentFlywheel": "thin"
+      },
+      "log": "{\n  \"ok\": true,\n  \"summary\": {\n    \"gapCount\": 3,\n    \"p0\": 1,\n    \"p1\": 2,\n    \"p2\": 0,\n    \"agentOwned\": 1,\n    \"humanOwned\": 2,\n    \"cashBlocked\": true\n  },\n  \"streams\": {\n    \"affiliates\": \"blocked\",\n    \"adsense\": \"waiting\",\n    \"subscriptions\": \"partial\",\n    \"contentFlywheel\": \"thin\"\n  },\n  \"topGaps\": [\n    \"P0:aff-zero-enabled\",\n    \"P1:adsense-not-ready\",\n    \"P1:queue-thin\"\n  ],\n  \"nextA"
+    },
+    {
+      "step": "plan",
+      "ok": true
+    },
+    {
+      "step": "research_log",
+      "ok": true
+    },
+    {
+      "step": "publish_next",
+      "ok": true,
+      "detail": "{\n  \"published\": \"weekly-measurement-loop-45-minutes\",\n  \"path\": \"content/posts/weekly-measurement-loop-45-minutes.md\",\n  \"llm\": {\n    \"provider\": \"gemini\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 3\n}"
+    }
+  ],
+  "cycleCount": 19,
+  "zeroCost": true,
+  "published": "{\n  \"published\": \"weekly-measurement-loop-45-minutes\",\n  \"path\": \"content/posts/weekly-measurement-loop-45-minutes.md\",\n  \"llm\": {\n    \"provider\": \"gemini\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 3\n}"
+}

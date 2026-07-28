@@ -33,4 +33,5 @@
 - https://authorityforge-tau.vercel.app/blog/semrush-vs-ahrefs-for-content-sites/
 - https://authorityforge-tau.vercel.app/blog/topical-maps-for-saas/
 - https://authorityforge-tau.vercel.app/blog/weekly-cluster-audit-20260725/
+- https://authorityforge-tau.vercel.app/blog/weekly-measurement-loop-45-minutes/
 - https://authorityforge-tau.vercel.app/blog/what-is-search-authority/

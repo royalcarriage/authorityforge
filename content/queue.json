@@ -499,7 +499,7 @@
         "seo"
       ],
       "hub": "/systems/measurement-loops/",
-      "status": "queued",
+      "status": "published",
       "outline": [
         "Export",
         "Filter",
@@ -507,7 +507,10 @@
         "Ship",
         "Log win"
       ],
-      "source": "ceo-playbook"
+      "source": "ceo-playbook",
+      "published_at": "2026-07-28",
+      "published_path": "content/posts/weekly-measurement-loop-45-minutes.md",
+      "llm_provider": "gemini"
     },
     {
       "id": "why-visitors-dont-signup-seo-saas",

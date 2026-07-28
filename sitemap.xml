@@ -559,6 +559,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://authorityforge-tau.vercel.app/blog/weekly-measurement-loop-45-minutes/</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://authorityforge-tau.vercel.app/blog/what-is-search-authority/</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>weekly</changefreq>
