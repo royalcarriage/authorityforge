@@ -476,14 +476,17 @@
         "growth"
       ],
       "hub": "/start/",
-      "status": "queued",
+      "status": "published",
       "outline": [
         "Why activation only",
         "Credit design",
         "Agency backlinks",
         "Anti-spam rules"
       ],
-      "source": "ceo-playbook"
+      "source": "ceo-playbook",
+      "published_at": "2026-07-28",
+      "published_path": "content/posts/refer-operators-grow-your-forge.md",
+      "llm_provider": "template"
     },
     {
       "id": "weekly-measurement-45-min",

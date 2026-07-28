@@ -28,6 +28,7 @@
 - https://authorityforge-tau.vercel.app/blog/internal-links-that-rank/
 - https://authorityforge-tau.vercel.app/blog/money-os-for-content-sites/
 - https://authorityforge-tau.vercel.app/blog/productized-templates-for-affiliate-sites/
+- https://authorityforge-tau.vercel.app/blog/refer-operators-grow-your-forge/
 - https://authorityforge-tau.vercel.app/blog/schema-product-review-for-tool-pages/
 - https://authorityforge-tau.vercel.app/blog/semrush-vs-ahrefs-for-content-sites/
 - https://authorityforge-tau.vercel.app/blog/topical-maps-for-saas/
