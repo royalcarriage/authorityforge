@@ -531,8 +531,11 @@
         "Free → paid upgrade timing",
         "What AuthorityForge ships on homepage/demo"
       ],
-      "status": "queued",
-      "source": "full-radius-autonomous"
+      "status": "published",
+      "source": "full-radius-autonomous",
+      "published_at": "2026-07-29",
+      "published_path": "content/posts/why-visitors-dont-signup-seo-saas.md",
+      "llm_provider": "gemini"
     },
     {
       "id": "adsense-for-seo-content-sites-checklist",
