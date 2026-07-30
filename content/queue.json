@@ -555,8 +555,11 @@
         "Placement that does not kill UX",
         "AuthorityForge status board"
       ],
-      "status": "queued",
-      "source": "full-radius-autonomous"
+      "status": "published",
+      "source": "full-radius-autonomous",
+      "published_at": "2026-07-30",
+      "published_path": "content/posts/adsense-for-seo-content-sites-checklist.md",
+      "llm_provider": "gemini"
     },
     {
       "id": "affiliate-cta-placement-on-compare-pages",
