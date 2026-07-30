@@ -255,3 +255,8 @@ Here are 6 concrete next actions for AuthorityForge, ordered by potential cash i
 Here are 6 concrete next actions for AuthorityForge, ordered by immediate cash impact:
 
 1.  **(affiliates) Research & Identify Affiliate Programs** → expected money effect: Unblocks the P0 gap. Prepares for human
+
+### Cycle 22 — 2026-07-30
+- KPI: queued=4, affiliates~0, health_ok=true
+- Experiment idea: ship one high-intent comparison page targeting a paid tool query; disclose affiliates; measure GSC 28d.
+- Agent hire: keep research-chief scanning competitor monetization pages weekly.
