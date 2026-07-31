@@ -10,6 +10,7 @@
 
 ## Blog posts
 - https://authorityforge-tau.vercel.app/blog/adsense-for-seo-content-sites-checklist/
+- https://authorityforge-tau.vercel.app/blog/affiliate-cta-placement-on-compare-pages/
 - https://authorityforge-tau.vercel.app/blog/affiliate-disclosure-that-ranks/
 - https://authorityforge-tau.vercel.app/blog/affiliate-stack-for-seo-operators-20260725/
 - https://authorityforge-tau.vercel.app/blog/agent-pipelines-for-content-ops/

@@ -580,8 +580,11 @@
         "Fallback when IDs not enabled yet",
         "Measurement notes"
       ],
-      "status": "queued",
-      "source": "full-radius-autonomous"
+      "status": "published",
+      "source": "full-radius-autonomous",
+      "published_at": "2026-07-31",
+      "published_path": "content/posts/affiliate-cta-placement-on-compare-pages.md",
+      "llm_provider": "template"
     },
     {
       "id": "auto-2026-07-29-cluster-audit",
