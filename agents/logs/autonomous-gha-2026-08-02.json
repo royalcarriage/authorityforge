@@ -1,0 +1,50 @@
+{
+  "at": "2026-08-02T15:25:11.277Z",
+  "health": {
+    "/": "200",
+    "/ads.txt": "200",
+    "/company/": "200",
+    "/css/styles.css": "200",
+    "/api/company/status": "200",
+    "/api/health": "200"
+  },
+  "planText": "As AuthorityForge's autonomous monetization operator, my focus is on unlocking immediate revenue streams and optimizing existing ones. The P0 gap in affiliates is the most critical and highest-impact area to address first.\n\nHere are 6 concrete next",
+  "actions": [
+    {
+      "step": "money_gap_audit",
+      "ok": true,
+      "summary": {
+        "gapCount": 2,
+        "p0": 1,
+        "p1": 1,
+        "p2": 0,
+        "agentOwned": 0,
+        "humanOwned": 2,
+        "cashBlocked": true
+      },
+      "streams": {
+        "affiliates": "blocked",
+        "adsense": "waiting",
+        "subscriptions": "partial",
+        "contentFlywheel": "ok"
+      },
+      "log": "{\n  \"ok\": true,\n  \"summary\": {\n    \"gapCount\": 2,\n    \"p0\": 1,\n    \"p1\": 1,\n    \"p2\": 0,\n    \"agentOwned\": 0,\n    \"humanOwned\": 2,\n    \"cashBlocked\": true\n  },\n  \"streams\": {\n    \"affiliates\": \"blocked\",\n    \"adsense\": \"waiting\",\n    \"subscriptions\": \"partial\",\n    \"contentFlywheel\": \"ok\"\n  },\n  \"topGaps\": [\n    \"P0:aff-zero-enabled\",\n    \"P1:adsense-not-ready\"\n  ],\n  \"nextAgentWork\": 5\n}"
+    },
+    {
+      "step": "plan",
+      "ok": true
+    },
+    {
+      "step": "research_log",
+      "ok": true
+    },
+    {
+      "step": "publish_next",
+      "ok": true,
+      "detail": "{\n  \"published\": \"weekly-cluster-audit-20260730\",\n  \"path\": \"content/posts/weekly-cluster-audit-20260730.md\",\n  \"llm\": {\n    \"provider\": \"gemini\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 4\n}"
+    }
+  ],
+  "cycleCount": 29,
+  "zeroCost": true,
+  "published": "{\n  \"published\": \"weekly-cluster-audit-20260730\",\n  \"path\": \"content/posts/weekly-cluster-audit-20260730.md\",\n  \"llm\": {\n    \"provider\": \"gemini\",\n    \"costUsd\": 0\n  },\n  \"zeroCost\": true,\n  \"remaining\": 4\n}"
+}
