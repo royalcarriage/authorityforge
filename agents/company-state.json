@@ -59,19 +59,21 @@
     "moneyOsLive": true
   },
   "lastCycle": {
-    "at": "2026-08-04T14:52:17.035Z",
-    "queuedPosts": 4,
+    "at": "2026-08-04T15:49:35.040Z",
+    "platform": "full-radius",
     "health": {
       "/": "200",
       "/ads.txt": "200",
-      "/legal/privacy/": "200",
+      "/company/": "200",
       "/css/styles.css": "200",
-      "/sitemap.xml": "200"
+      "/api/company/status": "200",
+      "/api/health": "200"
     },
-    "actions": 6,
-    "approvals": 2
+    "queued": 3,
+    "actions": 4,
+    "published": true
   },
-  "cycleCount": 32,
+  "cycleCount": 33,
   "llm": {
     "mode": "free_only",
     "providers": [
@@ -96,7 +98,7 @@
     "primaryUrl": "https://authorityforge-tau.vercel.app",
     "autonomous": "scripts/agent-autonomous.mjs",
     "zeroCost": true,
-    "lastFullRadiusAt": "2026-08-03T15:54:21.980Z"
+    "lastFullRadiusAt": "2026-08-04T15:49:35.040Z"
   },
   "controlPlane": {
     "host": "vercel",
