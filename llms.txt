@@ -15,6 +15,7 @@
 - https://authorityforge-tau.vercel.app/blog/affiliate-stack-for-seo-operators-20260725/
 - https://authorityforge-tau.vercel.app/blog/affiliate-stack-for-seo-operators-20260729/
 - https://authorityforge-tau.vercel.app/blog/affiliate-stack-for-seo-operators-20260801/
+- https://authorityforge-tau.vercel.app/blog/affiliate-stack-for-seo-operators-20260805/
 - https://authorityforge-tau.vercel.app/blog/agent-pipelines-for-content-ops/
 - https://authorityforge-tau.vercel.app/blog/ai-productivity-seo-stack/
 - https://authorityforge-tau.vercel.app/blog/best-ai-writers-for-seo-2026/
