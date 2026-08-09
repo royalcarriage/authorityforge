@@ -1,14 +1,12 @@
 # Money gaps — 2026-08-09
 
-**Streams:** affiliates `blocked` · AdSense `waiting` · subscriptions `partial` · content `thin`
+**Streams:** affiliates `blocked` · AdSense `waiting` · subscriptions `partial` · content `ok`
 
 ## What's missing (priority)
 - **P0** [human] **0 affiliate programs enabled — no commission URLs** — 16 partners defined (Semrush, Ahrefs, …) but enabled:false and empty url. Cash path blocked until IDs pasted. → _Agent:_ Keep commercial compare/stack pages shipping; approval-queue lists apply URLs.
 - **P1** [human] **AdSense status is "getting_ready" not ready** — Client ca-pub-1959018852581373; ADS_ENABLED=true. Google review / CMP may still be needed. → _Agent:_ Keep commercial pages live; ads.txt + privacy/disclosure already required.
-- **P1** [agent] **Content queue depth 4 < 5** — Autonomous publish needs backlog of monetizable topics. → _Agent:_ Seed queue with commercial SEO/affiliate topics.
 
 ## Next agent work
-- (P1) content-chief: Seed queue with commercial SEO/affiliate topics.
 - (P1) content-chief: Publish next queued commercial/affiliate post; keep queue ≥5 money topics
 - (P1) monetization-chief: Grow data-aff CTAs (now ~174) on compare/tools/blog so IDs earn the day they're pasted
 - (P1) content-chief: Add Start free + /demo CTAs from blog and commercial pages (self-serve conversion)
@@ -29,7 +27,7 @@
   "dataAffCtas": 174,
   "signupCtaRefs": 34,
   "comparePages": 7,
-  "contentQueued": 4,
+  "contentQueued": 5,
   "contentPublished": 36,
   "commercialTaggedPosts": 32,
   "hasDemo": true,
