@@ -933,6 +933,27 @@
         "Weekly revenue review"
       ],
       "source": "af-ceo"
+    },
+    {
+      "id": "auto-2026-08-09-cluster-audit",
+      "slug": "weekly-cluster-audit-20260809",
+      "title": "Weekly Cluster Audit Checklist for Content Sites",
+      "description": "A repeatable weekly audit so hubs and spokes stay intentional and monetizable.",
+      "tags": [
+        "seo",
+        "clusters",
+        "ops"
+      ],
+      "hub": "/systems/topical-clusters/",
+      "status": "queued",
+      "outline": [
+        "Export index coverage",
+        "Map hub ownership",
+        "Kill or merge thin URLs",
+        "Add one commercial spoke",
+        "Measure impressions"
+      ],
+      "source": "af-ceo"
     }
   ]
 }
