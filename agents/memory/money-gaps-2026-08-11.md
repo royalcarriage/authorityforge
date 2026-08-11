@@ -10,7 +10,7 @@
 ## Next agent work
 - (P1) content-chief: Seed queue with commercial SEO/affiliate topics.
 - (P1) content-chief: Publish next queued commercial/affiliate post; keep queue ≥5 money topics
-- (P1) monetization-chief: Grow data-aff CTAs (now ~180) on compare/tools/blog so IDs earn the day they're pasted
+- (P1) monetization-chief: Grow data-aff CTAs (now ~183) on compare/tools/blog so IDs earn the day they're pasted
 - (P1) content-chief: Add Start free + /demo CTAs from blog and commercial pages (self-serve conversion)
 - (P2) content-chief: Review latest 3 published posts for affiliate CTA + money path links; rewrite thin ones
 - (P1) seo-chief: Expand compare cluster (now 7 pages) for high-intent tool buyers
@@ -26,12 +26,12 @@
   "adsenseClient": "ca-pub-1959018852581373",
   "adsTxtOk": true,
   "stripeCheckoutWired": true,
-  "dataAffCtas": 180,
+  "dataAffCtas": 183,
   "signupCtaRefs": 34,
   "comparePages": 7,
   "contentQueued": 4,
-  "contentPublished": 38,
-  "commercialTaggedPosts": 34,
+  "contentPublished": 39,
+  "commercialTaggedPosts": 35,
   "hasDemo": true,
   "hasPricing": true,
   "hasMoneyOs": true
