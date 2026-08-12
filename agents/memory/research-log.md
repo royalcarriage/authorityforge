@@ -452,3 +452,8 @@ Here are 6 concrete next actions, ordered by estimated cash impact:
 Here are 6 concrete next actions, ordered by estimated cash impact:
 
 *   (affiliates) **Integrate the highest-potential affiliate program:** Review the 16 `affiliatesDisabled` programs. Prioritize one
+
+### Cycle 48 — 2026-08-12
+- KPI: queued=3, affiliates~0, health_ok=true
+- Experiment idea: ship one high-intent comparison page targeting a paid tool query; disclose affiliates; measure GSC 28d.
+- Agent hire: keep research-chief scanning competitor monetization pages weekly.
