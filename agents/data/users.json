@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-13T05:21:41.772Z",
+  "updatedAt": "2026-08-13T05:21:44.259Z",
   "users": [
     {
       "id": "3cffde52-7772-4bd0-99b3-e78859114d8d",
@@ -897,7 +897,7 @@
       "metrics": {
         "pages": 0,
         "spokesPlanned": 12,
-        "revenueUsd": 25
+        "revenueUsd": 50
       },
       "checklist": [
         {
@@ -908,12 +908,12 @@
         {
           "id": "hub",
           "label": "Ship hub page",
-          "done": false
+          "done": true
         },
         {
           "id": "spokes",
           "label": "Ship 6–12 commercial spokes",
-          "done": false
+          "done": true
         },
         {
           "id": "affiliates",
