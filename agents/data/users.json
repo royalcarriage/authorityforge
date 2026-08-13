@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-13T05:21:45.364Z",
+  "updatedAt": "2026-08-13T05:21:49.864Z",
   "users": [
     {
       "id": "3cffde52-7772-4bd0-99b3-e78859114d8d",
@@ -897,7 +897,7 @@
       "metrics": {
         "pages": 0,
         "spokesPlanned": 12,
-        "revenueUsd": 62.5
+        "revenueUsd": 50
       },
       "checklist": [
         {
@@ -918,7 +918,7 @@
         {
           "id": "affiliates",
           "label": "Enable 1+ affiliate IDs",
-          "done": true
+          "done": false
         },
         {
           "id": "adsense",
