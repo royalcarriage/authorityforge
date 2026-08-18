@@ -65,6 +65,17 @@
       "priority": 1
     },
     {
+      "id": "money-queue-thin",
+      "role": "content-chief",
+      "goal": "Seed queue with commercial SEO/affiliate topics.",
+      "gapId": "queue-thin",
+      "severity": "P1",
+      "status": "open",
+      "priority": 1,
+      "source": "money-gap-audit",
+      "updatedAt": "2026-08-18T15:10:20.569Z"
+    },
+    {
       "id": "money-publish-commercial",
       "role": "content-chief",
       "goal": "Publish next queued commercial/affiliate post; keep queue ≥5 money topics",
@@ -72,17 +83,17 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-08-17T15:08:08.067Z"
+      "updatedAt": "2026-08-18T15:10:20.569Z"
     },
     {
       "id": "money-aff-ctas",
       "role": "monetization-chief",
-      "goal": "Grow data-aff CTAs (now ~204) on compare/tools/blog so IDs earn the day they're pasted",
+      "goal": "Grow data-aff CTAs (now ~210) on compare/tools/blog so IDs earn the day they're pasted",
       "severity": "P1",
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-08-17T15:08:08.067Z"
+      "updatedAt": "2026-08-18T15:10:20.569Z"
     },
     {
       "id": "money-signup-paths",
@@ -92,7 +103,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-08-17T15:08:08.067Z"
+      "updatedAt": "2026-08-18T15:10:20.569Z"
     },
     {
       "id": "money-blog-review",
@@ -102,7 +113,7 @@
       "priority": 2,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-08-17T15:08:08.067Z"
+      "updatedAt": "2026-08-18T15:10:20.569Z"
     },
     {
       "id": "money-compare-cluster",
@@ -112,9 +123,9 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-08-17T15:08:08.067Z"
+      "updatedAt": "2026-08-18T15:10:20.569Z"
     }
   ],
-  "updatedAt": "2026-08-17T15:08:08.067Z",
-  "moneyGapRunAt": "2026-08-17T15:08:08.067Z"
+  "updatedAt": "2026-08-18T15:10:20.569Z",
+  "moneyGapRunAt": "2026-08-18T15:10:20.569Z"
 }

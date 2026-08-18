@@ -1149,7 +1149,7 @@
         "monetization"
       ],
       "hub": "/guide/affiliate-monetization/",
-      "status": "queued",
+      "status": "published",
       "outline": [
         "Criteria before links",
         "Disclosure placement",
@@ -1157,7 +1157,10 @@
         "What not to promote",
         "Weekly revenue review"
       ],
-      "source": "af-ceo"
+      "source": "af-ceo",
+      "published_at": "2026-08-18",
+      "published_path": "content/posts/affiliate-stack-for-seo-operators-20260815.md",
+      "llm_provider": "gemini"
     },
     {
       "id": "auto-2026-08-16-cluster-audit",
