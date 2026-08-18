@@ -1,0 +1,144 @@
+{
+  "agent": "af-ceo-v1",
+  "startedAt": "2026-08-18T14:13:43.707Z",
+  "date": "2026-08-18",
+  "sense": {
+    "primaryUrl": "https://authorityforge-tau.vercel.app",
+    "queuedPosts": 4,
+    "publishedPosts": 47,
+    "totalQueueItems": 51,
+    "affiliateEnabledApprox": 0,
+    "openTasks": 14,
+    "health": {
+      "/": "200",
+      "/ads.txt": "200",
+      "/legal/privacy/": "200",
+      "/css/styles.css": "200",
+      "/sitemap.xml": "200"
+    },
+    "hardRules": {
+      "neverSendEmailOrSmsWithoutApproval": true,
+      "neverMoveMoneyWithoutApproval": true,
+      "neverClickOwnAds": true,
+      "disclosureAlwaysOn": true,
+      "humanIsLegalCeo": true,
+      "zeroCostUntilSelfFunded": true,
+      "neverPaidLlmUntilRevenue": true,
+      "ownerDoesNotSellOrOnboard": true,
+      "autonomousContentAndMoneyLoop": true
+    },
+    "moneyStreams": {
+      "affiliates": "blocked",
+      "adsense": "waiting",
+      "subscriptions": "partial",
+      "contentFlywheel": "thin"
+    },
+    "moneySummary": {
+      "gapCount": 3,
+      "p0": 1,
+      "p1": 2,
+      "p2": 0,
+      "agentOwned": 1,
+      "humanOwned": 2,
+      "cashBlocked": true
+    },
+    "cashBlocked": true
+  },
+  "plan": [
+    {
+      "id": "legal-scan",
+      "role": "legal-gate",
+      "why": "Confirm no blocked actions attempted",
+      "priority": 0
+    },
+    {
+      "id": "refill-queue",
+      "role": "content-chief",
+      "why": "Queue depth 4 < min 5",
+      "priority": 1
+    },
+    {
+      "id": "affiliates",
+      "role": "monetization-chief",
+      "why": "Enabled affiliates ~0 < target",
+      "priority": 1
+    },
+    {
+      "id": "money-research",
+      "role": "research-chief",
+      "why": "Always explore new revenue experiments",
+      "priority": 2
+    }
+  ],
+  "actions": [
+    {
+      "role": "monetization-chief",
+      "action": "money_gap_audit",
+      "summary": {
+        "gapCount": 3,
+        "p0": 1,
+        "p1": 2,
+        "p2": 0,
+        "agentOwned": 1,
+        "humanOwned": 2,
+        "cashBlocked": true
+      },
+      "streams": {
+        "affiliates": "blocked",
+        "adsense": "waiting",
+        "subscriptions": "partial",
+        "contentFlywheel": "thin"
+      },
+      "at": "2026-08-18T14:13:44.415Z"
+    },
+    {
+      "role": "content-chief",
+      "action": "queue_topic",
+      "id": "auto-2026-08-18-cluster-audit",
+      "at": "2026-08-18T14:13:44.415Z"
+    },
+    {
+      "role": "content-chief",
+      "action": "queue_refilled",
+      "added": 1,
+      "at": "2026-08-18T14:13:44.416Z"
+    },
+    {
+      "role": "monetization-chief",
+      "action": "approval_affiliates",
+      "at": "2026-08-18T14:13:44.416Z"
+    },
+    {
+      "role": "research-chief",
+      "action": "research_log_append",
+      "at": "2026-08-18T14:13:44.416Z"
+    },
+    {
+      "role": "legal-gate",
+      "action": "scan_ok",
+      "note": "No email/SMS/money actions executed this cycle",
+      "at": "2026-08-18T14:13:44.416Z"
+    }
+  ],
+  "approvals": [
+    {
+      "title": "Apply or enable affiliate programs",
+      "file": "agents/approval-queue/2026-08-18-apply-or-enable-affiliate-programs.md",
+      "kind": "affiliates"
+    },
+    {
+      "title": "CEO capabilities & what only you can do",
+      "file": "agents/approval-queue/2026-08-18-ceo-capabilities-what-only-you-can-do.md",
+      "kind": "ops"
+    }
+  ],
+  "hires": [],
+  "blocked": [
+    "email_send",
+    "sms_send",
+    "money_move",
+    "auto_adsense_click"
+  ],
+  "errors": [],
+  "finishedAt": "2026-08-18T14:13:44.417Z"
+}
