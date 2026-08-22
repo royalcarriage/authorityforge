@@ -59,21 +59,19 @@
     "moneyOsLive": true
   },
   "lastCycle": {
-    "at": "2026-08-21T15:11:05.279Z",
-    "platform": "full-radius",
+    "at": "2026-08-22T14:05:42.994Z",
+    "queuedPosts": 3,
     "health": {
       "/": "200",
       "/ads.txt": "200",
-      "/company/": "200",
+      "/legal/privacy/": "200",
       "/css/styles.css": "200",
-      "/api/company/status": "200",
-      "/api/health": "200"
+      "/sitemap.xml": "200"
     },
-    "queued": 3,
-    "actions": 4,
-    "published": true
+    "actions": 7,
+    "approvals": 2
   },
-  "cycleCount": 67,
+  "cycleCount": 68,
   "llm": {
     "mode": "free_only",
     "providers": [
