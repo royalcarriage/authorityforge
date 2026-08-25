@@ -647,3 +647,8 @@ Here are 6 concrete next actions, ordered
 Here are 6 concrete next actions for AuthorityForge, ordered by potential cash impact:
 
 *   (affiliates) **Prioritize and enable 3-5 high-value affiliate programs:** Identify the top 3-5
+
+### Cycle 74 — 2026-08-25
+- KPI: queued=4, affiliates~0, health_ok=true
+- Experiment idea: ship one high-intent comparison page targeting a paid tool query; disclose affiliates; measure GSC 28d.
+- Agent hire: keep research-chief scanning competitor monetization pages weekly.
