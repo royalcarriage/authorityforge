@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weekly Cluster Audit Checklist for Content Sites | AuthorityForge</title>
+  <meta name="description" content="A repeatable weekly audit so hubs and spokes stay intentional and monetizable." />
+  <link rel="canonical" href="https://authorityforge-tau.vercel.app/blog/weekly-cluster-audit-20260823/" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#0b0d10" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="AuthorityForge" />
+  <meta property="og:title" content="Weekly Cluster Audit Checklist for Content Sites | AuthorityForge" />
+  <meta property="og:description" content="A repeatable weekly audit so hubs and spokes stay intentional and monetizable." />
+  <meta property="og:url" content="https://authorityforge-tau.vercel.app/blog/weekly-cluster-audit-20260823/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="/authorityforge/css/styles.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1959018852581373" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Weekly Cluster Audit Checklist for Content Sites","description":"A repeatable weekly audit so hubs and spokes stay intentional and monetizable.","datePublished":"2026-08-26","dateModified":"2026-08-26","author":{"@type":"Organization","name":"AuthorityForge"},"publisher":{"@type":"Organization","name":"AuthorityForge","url":"https://authorityforge-tau.vercel.app"},"mainEntityOfPage":"https://authorityforge-tau.vercel.app/blog/weekly-cluster-audit-20260823/"}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="/authorityforge/">AuthorityForge<span class="logo-mark">⚡</span></a>
+      <nav class="nav" aria-label="Primary">
+          <a href="/authorityforge/" class="nav-link">Home</a>
+          <a href="/authorityforge/systems/" class="nav-link">Systems</a>
+          <a href="/authorityforge/systems/money/" class="nav-link">Money</a>
+          <a href="/authorityforge/clients/" class="nav-link">Clients</a>
+          <a href="/authorityforge/blog/" class="nav-link is-active">Blog</a>
+          <a href="/authorityforge/resources/" class="nav-link">Resources</a>
+      </nav>
+      <a class="btn btn-sm" href="/authorityforge/guide/search-authority-playbook/">Start playbook</a>
+    </div>
+  </header>
+  <aside class="disclosure-bar" role="note">
+    <div class="wrap">
+      <strong>Affiliate disclosure:</strong> Some links may be affiliate links. We may earn a commission at no extra cost to you.
+      <a href="/authorityforge/legal/affiliate-disclosure/">Full disclosure</a>
+      · <a href="/authorityforge/legal/monetization/">How we monetize</a>
+    </div>
+  </aside>
+  <main id="main">
+
+  <header class="page-hero"><div class="wrap prose">
+    <p class="kicker">Blog · 2026-08-26</p>
+    <h1>Weekly Cluster Audit Checklist for Content Sites</h1>
+    <p>A repeatable weekly audit so hubs and spokes stay intentional and monetizable.</p>
+  </div></header>
+  <section class="section"><div class="wrap prose">
+    <p>A weekly cluster audit ensures your content hubs maintain topical authority, prevent content decay, and remain monetizable assets for your site. This repeatable process helps operators identify underperforming pages, consolidate authority, and strategically expand relevant commercial content to drive conversions.</p>
+<h2 null>Export index coverage</h2>
+<p>Begin your weekly audit by pulling all currently indexed URLs from Google Search Console (GSC). Navigate to the "Pages" report under "Indexing," then select the "Indexed" filter. Export this list to a CSV file. This provides a baseline of what Google currently recognizes from your site, helping you identify pages that might be indexed but shouldn't be, or those that are performing poorly.</p>
+<p>This GSC export offers actual indexed status, which a site crawler cannot. For a broader site inventory, a crawler can supplement.</p>
+<p>| Tool              | Purpose                                       | Pros                                                     | Cons                                                      | | :---------------- | :-------------------------------------------- | :------------------------------------------------------- | :-------------------------------------------------------- | | <strong>Google Search Console</strong> | Verifying indexed URLs &amp; performance data     | Shows actual indexed status; provides impressions/clicks | Data can have a 2-3 day lag; limited crawl depth insights | | <strong>Screaming Frog SEO Spider</strong> | Comprehensive site crawl for all URLs | Finds all discoverable URLs; identifies technical issues | Does not show indexed status; requires setup and crawl time |</p>
+<p>For this audit, the GSC export is primary because it reflects Google's current view of your site's index.</p>
+<h2 null>Map hub ownership</h2>
+<p>Open your exported URL list in a spreadsheet (Google Sheets works well). Add columns for "Primary Keyword," "Target Cluster," "Hub URL," "Owner/Writer," and "Last Updated Date." For each URL, assign it to its logical parent hub. For example, a page titled "How to Use Midjourney Prompts" would map to the hub <code>/systems/topical-clusters/ai-content-generation/</code>.</p>
+<p>This step ensures every piece of content has a strategic home and a clear point of contact. If a URL doesn't fit into an existing cluster, flag it for review. It might be an orphan page needing a new hub, a redirect, or a candidate for removal.</p>
+<p>Use this checklist for mapping: *   Is every URL assigned to a specific topical cluster? *   Is the designated hub URL the most authoritative page for that topic? *   Is there a clear owner or content lead assigned to each cluster's content? *   Does the primary keyword for the spoke align directly with the cluster's theme?</p>
+<h2 null>Kill or merge thin URLs</h2>
+<p>Identify low-value content that drains crawl budget or offers minimal user value. Filter your GSC data for pages with low impressions (e.g., fewer than 10 per month over the last 90 days) and low clicks. Cross-reference this with your content management system (CMS) to check content length. Pages under 300 words often qualify as "thin."</p>
+<p>Deciding whether to kill (delete) or merge (combine) a URL depends on its relevance and potential for consolidation.</p>
+<p>| Action           | Criteria for Decision                                      | Implementation                                                 | | :--------------- | :--------------------------------------------------------- | :------------------------------------------------------------- | | <strong>Kill (410 Gone)</strong> | Zero traffic, no internal links, completely off-topic, duplicate content with no unique value. | Set a 410 (Gone) status code. If there's a <em>highly</em> relevant, single alternative, a 301 redirect is acceptable. | | <strong>Merge (301 Redirect)</strong> | Low traffic, relevant to another page but shallow, can be combined to create a more comprehensive resource. | Combine content onto the stronger, more comprehensive page. Set a 301 redirect from the old URL to the new, combined URL. |</p>
+<p><strong>Example:</strong> If you have separate pages titled "What is SEO" and "Basic SEO Terms," and both are thin, merge them into a single, more detailed "Beginner's Guide to SEO" and 301 redirect the old URLs. This consolidates authority and improves user experience.</p>
+<h2 null>Add one commercial spoke</h2>
+<p>Every topical cluster should have a path to monetization. During your weekly audit, identify opportunities to add a new commercial spoke within an existing cluster. A "commercial spoke" directly addresses transactional or commercial investigation intent, leading users toward a product, service, or affiliate offer.</p>
+<p>First, review your existing spokes. Does the cluster already contain content like "best [product] for [niche]," "[tool name] review," or "[service] comparison"? If not, identify a gap. Use keyword research tools (e.g., Ahrefs, Semrush) to find high-commercial-intent keywords related to your hub that competitors are ranking for, but you are not.</p>
+<p>Use this checklist to guide your decision: *   Does this cluster currently lack a page with clear transactional intent? *   What specific product, service, or affiliate offer can this cluster naturally lead to? *   What commercial keywords are competitors ranking for that align with this hub? *   Can we create a buying guide, comparison, or review that adds value to the cluster?</p>
+<p><strong>Example:</strong> For a hub on "Content Marketing Strategy," you might add a commercial spoke like "Top 5 AI Writing Tools for SEO Content</p>
+    <div class="cta-band partner-cta">
+      <p><strong>Tools we research</strong> (affiliate when live):
+        <a href="#" data-aff="semrush">Semrush</a> ·
+        <a href="#" data-aff="ahrefs">Ahrefs</a> ·
+        <a href="#" data-aff="surfer">Surfer</a> ·
+        <a href="/authorityforge/resources/affiliates/">all programs</a>
+      </p>
+    </div>
+    <p><a href="/authorityforge/systems/topical-clusters/">Related hub</a> · <a href="/authorityforge/blog/">← All posts</a> · <a href="/authorityforge/guide/search-authority-playbook/">Playbook</a></p>
+  </div></section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong>AuthorityForge</strong>
+        <p class="muted">Self-optimizing systems for search authority and compounding rankings.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul class="footer-links">
+          <li><a href="/authorityforge/systems/">Systems</a></li>
+          <li><a href="/authorityforge/guide/">Guides</a></li>
+          <li><a href="/authorityforge/blog/">Blog</a></li>
+          <li><a href="/authorityforge/resources/">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Monetization</h3>
+        <ul class="footer-links">
+          <li><a href="/authorityforge/systems/money/">Money OS</a></li>
+          <li><a href="/authorityforge/resources/affiliates/">Affiliates</a></li>
+          <li><a href="/authorityforge/products/">Products</a></li>
+          <li><a href="/authorityforge/legal/monetization/">Structure</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Clients &amp; legal</h3>
+        <ul class="footer-links">
+          <li><a href="/authorityforge/clients/">Client systems</a></li>
+          <li><a href="/authorityforge/legal/affiliate-disclosure/">Disclosure</a></li>
+          <li><a href="/authorityforge/legal/privacy/">Privacy</a></li>
+          <li><a href="/authorityforge/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© 2026 AuthorityForge</span>
+      <a href="/authorityforge/legal/affiliate-disclosure/">Affiliate disclosure</a>
+      <a href="/authorityforge/sitemap.xml">Sitemap</a>
+      <a href="/authorityforge/llms.txt">llms.txt</a>
+    </div>
+  </footer>
+  <script src="/authorityforge/js/config.js"></script>
+  <script src="/authorityforge/js/affiliates.js" defer></script>
+  <script src="/authorityforge/js/ads.js" defer></script>
+  <script src="/authorityforge/js/main.js" defer></script>
+  <div class="af-ad af-ad-auto wrap" aria-hidden="true" style="min-height:0;margin:1rem auto;max-width:728px"></div>
+</body>
+</html>
