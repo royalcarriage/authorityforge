@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-25T15:18:38.398Z",
+  "at": "2026-08-26T14:17:24.621Z",
   "summary": {
     "gapCount": 3,
     "p0": 1,
@@ -18,12 +18,12 @@
     "adsenseClient": "ca-pub-1959018852581373",
     "adsTxtOk": true,
     "stripeCheckoutWired": true,
-    "dataAffCtas": 237,
+    "dataAffCtas": 240,
     "signupCtaRefs": 34,
     "comparePages": 7,
-    "contentQueued": 4,
-    "contentPublished": 57,
-    "commercialTaggedPosts": 53,
+    "contentQueued": 3,
+    "contentPublished": 58,
+    "commercialTaggedPosts": 54,
     "hasDemo": true,
     "hasPricing": true,
     "hasMoneyOs": true
@@ -52,7 +52,7 @@
       "severity": "P1",
       "stream": "content",
       "owner": "agent",
-      "title": "Content queue depth 4 < 5",
+      "title": "Content queue depth 3 < 5",
       "detail": "Autonomous publish needs backlog of monetizable topics.",
       "agentAction": "Seed queue with commercial SEO/affiliate topics."
     }
@@ -67,7 +67,7 @@
       "status": "open",
       "priority": 1,
       "source": "money-gap-audit",
-      "updatedAt": "2026-08-25T15:18:38.398Z"
+      "updatedAt": "2026-08-26T14:17:24.621Z"
     },
     {
       "id": "money-publish-commercial",
@@ -77,17 +77,17 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-08-25T15:18:38.398Z"
+      "updatedAt": "2026-08-26T14:17:24.621Z"
     },
     {
       "id": "money-aff-ctas",
       "role": "monetization-chief",
-      "goal": "Grow data-aff CTAs (now ~237) on compare/tools/blog so IDs earn the day they're pasted",
+      "goal": "Grow data-aff CTAs (now ~240) on compare/tools/blog so IDs earn the day they're pasted",
       "severity": "P1",
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-08-25T15:18:38.398Z"
+      "updatedAt": "2026-08-26T14:17:24.621Z"
     },
     {
       "id": "money-signup-paths",
@@ -97,7 +97,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-08-25T15:18:38.398Z"
+      "updatedAt": "2026-08-26T14:17:24.621Z"
     },
     {
       "id": "money-blog-review",
@@ -107,7 +107,7 @@
       "priority": 2,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-08-25T15:18:38.398Z"
+      "updatedAt": "2026-08-26T14:17:24.621Z"
     },
     {
       "id": "money-compare-cluster",
@@ -117,7 +117,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-08-25T15:18:38.398Z"
+      "updatedAt": "2026-08-26T14:17:24.621Z"
     }
   ],
   "humanGates": [
