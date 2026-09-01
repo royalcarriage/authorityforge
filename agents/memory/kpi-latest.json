@@ -1,6 +1,6 @@
 {
-  "at": "2026-08-31T15:12:16.799Z",
-  "cycle": 87,
+  "at": "2026-09-01T15:12:01.842Z",
+  "cycle": 89,
   "health": {
     "/": "200",
     "/ads.txt": "200",
@@ -9,8 +9,8 @@
     "/api/company/status": "200",
     "/api/health": "200"
   },
-  "queued": 4,
-  "publishedCount": 65,
+  "queued": 3,
+  "publishedCount": 67,
   "zeroCost": true,
   "primary": "https://authorityforge-tau.vercel.app",
   "money": {
@@ -18,14 +18,14 @@
       "affiliates": "blocked",
       "adsense": "waiting",
       "subscriptions": "partial",
-      "contentFlywheel": "ok"
+      "contentFlywheel": "thin"
     },
     "summary": {
-      "gapCount": 2,
+      "gapCount": 3,
       "p0": 1,
-      "p1": 1,
+      "p1": 2,
       "p2": 0,
-      "agentOwned": 0,
+      "agentOwned": 1,
       "humanOwned": 2,
       "cashBlocked": true
     },
