@@ -1,11 +1,11 @@
 {
-  "at": "2026-08-31T15:12:19.222Z",
+  "at": "2026-09-01T14:13:26.959Z",
   "summary": {
-    "gapCount": 2,
+    "gapCount": 3,
     "p0": 1,
-    "p1": 1,
+    "p1": 2,
     "p2": 0,
-    "agentOwned": 0,
+    "agentOwned": 1,
     "humanOwned": 2,
     "cashBlocked": true
   },
@@ -18,12 +18,12 @@
     "adsenseClient": "ca-pub-1959018852581373",
     "adsTxtOk": true,
     "stripeCheckoutWired": true,
-    "dataAffCtas": 258,
+    "dataAffCtas": 261,
     "signupCtaRefs": 34,
     "comparePages": 7,
-    "contentQueued": 5,
-    "contentPublished": 64,
-    "commercialTaggedPosts": 60,
+    "contentQueued": 4,
+    "contentPublished": 65,
+    "commercialTaggedPosts": 61,
     "hasDemo": true,
     "hasPricing": true,
     "hasMoneyOs": true
@@ -46,9 +46,29 @@
       "title": "AdSense status is \"getting_ready\" not ready",
       "detail": "Client ca-pub-1959018852581373; ADS_ENABLED=true. Google review / CMP may still be needed.",
       "agentAction": "Keep commercial pages live; ads.txt + privacy/disclosure already required."
+    },
+    {
+      "id": "queue-thin",
+      "severity": "P1",
+      "stream": "content",
+      "owner": "agent",
+      "title": "Content queue depth 4 < 5",
+      "detail": "Autonomous publish needs backlog of monetizable topics.",
+      "agentAction": "Seed queue with commercial SEO/affiliate topics."
     }
   ],
   "nextAgentWork": [
+    {
+      "id": "money-queue-thin",
+      "role": "content-chief",
+      "goal": "Seed queue with commercial SEO/affiliate topics.",
+      "gapId": "queue-thin",
+      "severity": "P1",
+      "status": "open",
+      "priority": 1,
+      "source": "money-gap-audit",
+      "updatedAt": "2026-09-01T14:13:26.959Z"
+    },
     {
       "id": "money-publish-commercial",
       "role": "content-chief",
@@ -57,17 +77,17 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-08-31T15:12:19.222Z"
+      "updatedAt": "2026-09-01T14:13:26.959Z"
     },
     {
       "id": "money-aff-ctas",
       "role": "monetization-chief",
-      "goal": "Grow data-aff CTAs (now ~258) on compare/tools/blog so IDs earn the day they're pasted",
+      "goal": "Grow data-aff CTAs (now ~261) on compare/tools/blog so IDs earn the day they're pasted",
       "severity": "P1",
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-08-31T15:12:19.222Z"
+      "updatedAt": "2026-09-01T14:13:26.959Z"
     },
     {
       "id": "money-signup-paths",
@@ -77,7 +97,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-08-31T15:12:19.222Z"
+      "updatedAt": "2026-09-01T14:13:26.959Z"
     },
     {
       "id": "money-blog-review",
@@ -87,7 +107,7 @@
       "priority": 2,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-08-31T15:12:19.222Z"
+      "updatedAt": "2026-09-01T14:13:26.959Z"
     },
     {
       "id": "money-compare-cluster",
@@ -97,7 +117,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-08-31T15:12:19.222Z"
+      "updatedAt": "2026-09-01T14:13:26.959Z"
     }
   ],
   "humanGates": [
@@ -108,6 +128,6 @@
     "affiliates": "blocked",
     "adsense": "waiting",
     "subscriptions": "partial",
-    "contentFlywheel": "ok"
+    "contentFlywheel": "thin"
   }
 }
