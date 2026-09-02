@@ -1,11 +1,11 @@
 {
-  "at": "2026-09-02T14:12:56.077Z",
+  "at": "2026-09-02T15:14:40.857Z",
   "summary": {
-    "gapCount": 3,
+    "gapCount": 2,
     "p0": 1,
-    "p1": 2,
+    "p1": 1,
     "p2": 0,
-    "agentOwned": 1,
+    "agentOwned": 0,
     "humanOwned": 2,
     "cashBlocked": true
   },
@@ -21,7 +21,7 @@
     "dataAffCtas": 267,
     "signupCtaRefs": 34,
     "comparePages": 7,
-    "contentQueued": 3,
+    "contentQueued": 5,
     "contentPublished": 67,
     "commercialTaggedPosts": 63,
     "hasDemo": true,
@@ -46,29 +46,9 @@
       "title": "AdSense status is \"getting_ready\" not ready",
       "detail": "Client ca-pub-1959018852581373; ADS_ENABLED=true. Google review / CMP may still be needed.",
       "agentAction": "Keep commercial pages live; ads.txt + privacy/disclosure already required."
-    },
-    {
-      "id": "queue-thin",
-      "severity": "P1",
-      "stream": "content",
-      "owner": "agent",
-      "title": "Content queue depth 3 < 5",
-      "detail": "Autonomous publish needs backlog of monetizable topics.",
-      "agentAction": "Seed queue with commercial SEO/affiliate topics."
     }
   ],
   "nextAgentWork": [
-    {
-      "id": "money-queue-thin",
-      "role": "content-chief",
-      "goal": "Seed queue with commercial SEO/affiliate topics.",
-      "gapId": "queue-thin",
-      "severity": "P1",
-      "status": "open",
-      "priority": 1,
-      "source": "money-gap-audit",
-      "updatedAt": "2026-09-02T14:12:56.077Z"
-    },
     {
       "id": "money-publish-commercial",
       "role": "content-chief",
@@ -77,7 +57,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-09-02T14:12:56.077Z"
+      "updatedAt": "2026-09-02T15:14:40.857Z"
     },
     {
       "id": "money-aff-ctas",
@@ -87,7 +67,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-09-02T14:12:56.077Z"
+      "updatedAt": "2026-09-02T15:14:40.857Z"
     },
     {
       "id": "money-signup-paths",
@@ -97,7 +77,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-09-02T14:12:56.077Z"
+      "updatedAt": "2026-09-02T15:14:40.857Z"
     },
     {
       "id": "money-blog-review",
@@ -107,7 +87,7 @@
       "priority": 2,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-09-02T14:12:56.077Z"
+      "updatedAt": "2026-09-02T15:14:40.857Z"
     },
     {
       "id": "money-compare-cluster",
@@ -117,7 +97,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-09-02T14:12:56.077Z"
+      "updatedAt": "2026-09-02T15:14:40.857Z"
     }
   ],
   "humanGates": [
@@ -128,6 +108,6 @@
     "affiliates": "blocked",
     "adsense": "waiting",
     "subscriptions": "partial",
-    "contentFlywheel": "thin"
+    "contentFlywheel": "ok"
   }
 }
