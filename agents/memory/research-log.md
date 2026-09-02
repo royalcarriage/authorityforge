@@ -766,3 +766,8 @@ Here are 6 concrete next actions, ordered by estimated cash impact for Authority
 
 *   **(affiliates) Research & Identify Top Affiliate Programs → Immediate commission revenue from existing CTAs**
     Analyze the 16 `
+
+### Cycle 90 — 2026-09-02
+- KPI: queued=3, affiliates~0, health_ok=true
+- Experiment idea: ship one high-intent comparison page targeting a paid tool query; disclose affiliates; measure GSC 28d.
+- Agent hire: keep research-chief scanning competitor monetization pages weekly.
