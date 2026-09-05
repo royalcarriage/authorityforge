@@ -59,19 +59,19 @@
     "moneyOsLive": true
   },
   "lastCycle": {
-    "at": "2026-09-05T07:58:07.628Z",
-    "platform": "vercel",
-    "queued": 3,
+    "at": "2026-09-05T14:10:15.751Z",
+    "queuedPosts": 3,
     "health": {
-      "/": 200,
-      "/ads.txt": 200,
-      "/legal/privacy/": 200,
-      "/css/styles.css": 200,
-      "/sitemap.xml": 200
+      "/": "200",
+      "/ads.txt": "200",
+      "/legal/privacy/": "200",
+      "/css/styles.css": "200",
+      "/sitemap.xml": "200"
     },
-    "actions": 2
+    "actions": 7,
+    "approvals": 2
   },
-  "cycleCount": 96,
+  "cycleCount": 97,
   "llm": {
     "mode": "free_only",
     "providers": [
