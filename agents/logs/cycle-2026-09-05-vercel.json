@@ -1,0 +1,57 @@
+{
+  "agent": "af-ceo-vercel-v1",
+  "platform": "vercel",
+  "startedAt": "2026-09-05T07:58:07.628Z",
+  "zeroCost": true,
+  "sense": {
+    "primary": "https://authorityforge-tau.vercel.app",
+    "health": {
+      "/": 200,
+      "/ads.txt": 200,
+      "/legal/privacy/": 200,
+      "/css/styles.css": 200,
+      "/sitemap.xml": 200
+    },
+    "queued": 3,
+    "published": 71,
+    "openTasks": 15
+  },
+  "plan": [
+    {
+      "id": "refill-queue",
+      "role": "content-chief"
+    },
+    {
+      "id": "research",
+      "role": "research-chief"
+    },
+    {
+      "id": "legal-gate",
+      "role": "legal-gate"
+    }
+  ],
+  "actions": [
+    {
+      "role": "af-ceo",
+      "action": "llm_briefing",
+      "provider": "gemini"
+    },
+    {
+      "role": "legal-gate",
+      "action": "enforce",
+      "blocked": [
+        "email_send",
+        "money_move",
+        "paid_llm",
+        "click_own_ads"
+      ]
+    }
+  ],
+  "approvals": [],
+  "llm": {
+    "provider": "gemini",
+    "costUsd": 0,
+    "briefing": "Here are 5 bullet action items for AuthorityForge today, operating with zero",
+    "error": null
+  }
+}
