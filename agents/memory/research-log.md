@@ -836,3 +836,8 @@ Here are 6 concrete next actions, ordered by cash impact, for AuthorityForge:
 
 *   **(affiliates) Enable 16 Disabled Affiliate Programs → Immediate commission earnings from 282 existing CTAs.**
     
+
+### Cycle 101 — 2026-09-07
+- KPI: queued=4, affiliates~0, health_ok=true
+- Experiment idea: ship one high-intent comparison page targeting a paid tool query; disclose affiliates; measure GSC 28d.
+- Agent hire: keep research-chief scanning competitor monetization pages weekly.
