@@ -895,6 +895,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://authorityforge-tau.vercel.app/blog/weekly-cluster-audit-20260909/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://authorityforge-tau.vercel.app/blog/weekly-measurement-loop-45-minutes/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
