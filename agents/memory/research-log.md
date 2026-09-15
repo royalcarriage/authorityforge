@@ -954,3 +954,8 @@ Here are 6 concrete next actions, ordered by estimated cash impact:
 
 *   (affiliates) **[HUMAN] Enable Top Affiliate Programs** → Immediate commission generation from existing CTAs.
     *   
+
+### Cycle 117 — 2026-09-15
+- KPI: queued=4, affiliates~0, health_ok=true
+- Experiment idea: ship one high-intent comparison page targeting a paid tool query; disclose affiliates; measure GSC 28d.
+- Agent hire: keep research-chief scanning competitor monetization pages weekly.
