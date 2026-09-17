@@ -984,3 +984,8 @@ Here are 6 concrete next actions, ordered by cash impact:
 Here are 6 concrete next actions for AuthorityForge, ordered by immediate cash impact:
 
 *   (affiliates) **Identify and join the top 5 highest-traffic affiliate programs from the 16 disabled ones
+
+### Cycle 121 — 2026-09-17
+- KPI: queued=4, affiliates~0, health_ok=true
+- Experiment idea: ship one high-intent comparison page targeting a paid tool query; disclose affiliates; measure GSC 28d.
+- Agent hire: keep research-chief scanning competitor monetization pages weekly.
