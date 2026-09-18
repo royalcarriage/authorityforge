@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-18T14:12:49.966Z",
+  "at": "2026-09-18T15:11:25.074Z",
   "summary": {
     "gapCount": 3,
     "p0": 1,
@@ -18,12 +18,12 @@
     "adsenseClient": "ca-pub-1959018852581373",
     "adsTxtOk": true,
     "stripeCheckoutWired": true,
-    "dataAffCtas": 327,
+    "dataAffCtas": 330,
     "signupCtaRefs": 34,
     "comparePages": 7,
     "contentQueued": 4,
-    "contentPublished": 87,
-    "commercialTaggedPosts": 83,
+    "contentPublished": 88,
+    "commercialTaggedPosts": 84,
     "hasDemo": true,
     "hasPricing": true,
     "hasMoneyOs": true
@@ -67,7 +67,7 @@
       "status": "open",
       "priority": 1,
       "source": "money-gap-audit",
-      "updatedAt": "2026-09-18T14:12:49.966Z"
+      "updatedAt": "2026-09-18T15:11:25.074Z"
     },
     {
       "id": "money-publish-commercial",
@@ -77,17 +77,17 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-09-18T14:12:49.966Z"
+      "updatedAt": "2026-09-18T15:11:25.074Z"
     },
     {
       "id": "money-aff-ctas",
       "role": "monetization-chief",
-      "goal": "Grow data-aff CTAs (now ~327) on compare/tools/blog so IDs earn the day they're pasted",
+      "goal": "Grow data-aff CTAs (now ~330) on compare/tools/blog so IDs earn the day they're pasted",
       "severity": "P1",
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-09-18T14:12:49.966Z"
+      "updatedAt": "2026-09-18T15:11:25.074Z"
     },
     {
       "id": "money-signup-paths",
@@ -97,7 +97,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-09-18T14:12:49.966Z"
+      "updatedAt": "2026-09-18T15:11:25.074Z"
     },
     {
       "id": "money-blog-review",
@@ -107,7 +107,7 @@
       "priority": 2,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-09-18T14:12:49.966Z"
+      "updatedAt": "2026-09-18T15:11:25.074Z"
     },
     {
       "id": "money-compare-cluster",
@@ -117,7 +117,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-09-18T14:12:49.966Z"
+      "updatedAt": "2026-09-18T15:11:25.074Z"
     }
   ],
   "humanGates": [
