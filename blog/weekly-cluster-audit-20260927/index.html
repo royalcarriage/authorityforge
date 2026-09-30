@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weekly Cluster Audit Checklist for Content Sites | AuthorityForge</title>
+  <meta name="description" content="A repeatable weekly audit so hubs and spokes stay intentional and monetizable." />
+  <link rel="canonical" href="https://authorityforge-tau.vercel.app/blog/weekly-cluster-audit-20260927/" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#0b0d10" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="AuthorityForge" />
+  <meta property="og:title" content="Weekly Cluster Audit Checklist for Content Sites | AuthorityForge" />
+  <meta property="og:description" content="A repeatable weekly audit so hubs and spokes stay intentional and monetizable." />
+  <meta property="og:url" content="https://authorityforge-tau.vercel.app/blog/weekly-cluster-audit-20260927/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="/authorityforge/css/styles.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1959018852581373" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Weekly Cluster Audit Checklist for Content Sites","description":"A repeatable weekly audit so hubs and spokes stay intentional and monetizable.","datePublished":"2026-09-30","dateModified":"2026-09-30","author":{"@type":"Organization","name":"AuthorityForge"},"publisher":{"@type":"Organization","name":"AuthorityForge","url":"https://authorityforge-tau.vercel.app"},"mainEntityOfPage":"https://authorityforge-tau.vercel.app/blog/weekly-cluster-audit-20260927/"}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="/authorityforge/">AuthorityForge<span class="logo-mark">⚡</span></a>
+      <nav class="nav" aria-label="Primary">
+          <a href="/authorityforge/" class="nav-link">Home</a>
+          <a href="/authorityforge/systems/" class="nav-link">Systems</a>
+          <a href="/authorityforge/systems/money/" class="nav-link">Money</a>
+          <a href="/authorityforge/clients/" class="nav-link">Clients</a>
+          <a href="/authorityforge/blog/" class="nav-link is-active">Blog</a>
+          <a href="/authorityforge/resources/" class="nav-link">Resources</a>
+      </nav>
+      <a class="btn btn-sm" href="/authorityforge/guide/search-authority-playbook/">Start playbook</a>
+    </div>
+  </header>
+  <aside class="disclosure-bar" role="note">
+    <div class="wrap">
+      <strong>Affiliate disclosure:</strong> Some links may be affiliate links. We may earn a commission at no extra cost to you.
+      <a href="/authorityforge/legal/affiliate-disclosure/">Full disclosure</a>
+      · <a href="/authorityforge/legal/monetization/">How we monetize</a>
+    </div>
+  </aside>
+  <main id="main">
+
+  <header class="page-hero"><div class="wrap prose">
+    <p class="kicker">Blog · 2026-09-30</p>
+    <h1>Weekly Cluster Audit Checklist for Content Sites</h1>
+    <p>A repeatable weekly audit so hubs and spokes stay intentional and monetizable.</p>
+  </div></header>
+  <section class="section"><div class="wrap prose">
+    <p><strong>Direct answer:</strong> A weekly topical cluster audit is a 30-minute operational review of your site’s index coverage, URL inventory, and internal link architecture. By running this five-step checklist every Monday morning, you prevent keyword cannibalization, prune dead weight that wastes crawl budget, and systematically plug revenue gaps in your hub-and-spoke model.</p>
+<h2 null>Export index coverage</h2>
+<p>Run your audit by pulling fresh data from Google Search Console and your server log files. Do not rely on third-party scrapers for true indexing status.</p>
+<p>1. Open Google Search Console. 2. Navigate to <strong>Indexing</strong> &gt; <strong>Pages</strong>. 3. Click the <strong>Excluded</strong> and <strong>Not indexed</strong> tabs to view flagged URLs. 4. Export the tables to CSV for offline analysis. 5. Filter out intentional noindex tags, pagination, and URL parameters.</p>
+<p>| Tool | Primary Data Point | Best Use Case | Limitation | | :--- | :--- | :--- | :--- | | Google Search Console | <code>Crawled - currently not indexed</code> | Finding actual Google indexing blocks | Sampled data for large sites | | Screaming Frog | <code>Response Code</code> / <code>Canonical</code> | Spotting redirect chains and soft 404s | Requires local machine resources | | Log Parser Tool | Bot hit frequency | Confirming if Googlebot wastes time on dead URLs | Complex setup for non-technical operators |</p>
+<p>Cross-reference your export against your core database. If a money spoke has zero impressions over the last 28 days and sits in the "Discovered - currently not indexed" bucket, force-recrawl it via the URL inspection tool or check your internal link depth.</p>
+<h2 null>Map hub ownership</h2>
+<p>Every spoke page must point upward to exactly one primary hub URL, and that hub must link back down. Orphaned pages destroy topical authority signals.</p>
+<p>Run a site-wide crawl in Screaming Frog and review your inbound internal links:</p>
+<ul><li><strong>Check 1:</strong> Does every article in the <code>/systems/</code> folder link back to the main hub?</li><li><strong>Check 2:</strong> Are you using exact-match anchor text sparingly, preferring natural semantic variations?</li><li><strong>Check 3:</strong> Are secondary hubs accidentally linking across unrelated categories without a contextual bridge?</li></ul>
+<p>Fix broken hierarchies immediately by inserting a contextual text link from the nearest parent page. Never rely on automated related-post plugins to build your topical map; hardcode the editorial relationships.</p>
+<h2 null>Kill or merge thin URLs</h2>
+<p>Dead weight drags down your site-wide quality score. If a URL generates zero organic traffic, has no backlinks, and fails to convert, prune it.</p>
+<p>Apply this decision matrix to every URL flagged during your coverage export:</p>
+<p>| Metric Threshold | Action | Next Step | | :--- | :--- | :--- | | &lt; 500 words, 0 impressions, 0 clicks | Kill | 301 redirect to the parent hub and remove internal links. | | Overlapping intent with a stronger page | Merge | Consolidate unique paragraphs into the survivor, then 301 redirect the loser. | | Low traffic, but high-intent affiliate clicks | Keep | Refresh content, expand target keyword variations, and add a comparison table. |</p>
+<p>When you 301 redirect a dead URL to a hub, update your sitemap immediately. Do not leave dead redirects pointing to other redirected URLs, as this creates messy redirect chains that slow down user experience and crawl efficiency.</p>
+<h2 null>Add one commercial spoke</h2>
+<p>Your cluster needs a steady influx of revenue-generating pages to balance informational intent. Every week, publish or commission exactly one high-intent commercial spoke.</p>
+<p>Use this operational template for your commercial content:</p>
+<ul><li><strong>Target Query:</strong> Product X vs Product Y, Best [Tool] for [Use Case], or [Tool] Pricing Breakdown.</li><li><strong>Minimum Word Count:</strong> 1,200 words.</li><li><strong>Required Elements:</strong> One comparison table, one pricing breakdown list, and clear affiliate disclosures.</li><li><strong>Internal Link Rule:</strong> Link upward to the hub and outward to two related informational spokes within the same cluster.</li></ul>
+<p>Keep commercial intent tightly bound to the parent hub. If your hub is <code>/systems/topical-clusters/</code>, your commercial spoke should target software or services that build, audit, or manage those exact clusters.</p>
+<h2 null>Measure impressions</h2>
+<p>Traffic fluctuates, but impression trends reveal whether your topical authority is expanding or contracting. Check your Search Console performance report for week-over-week changes.</p>
+<p>Execute these exact filters in Google Search Console:</p>
+<p>1. Set the date range to <strong>Last 7 days compared to previous period</strong>. 2. Filter the report by your specific hub path (e.g., URL containing <code>/systems/topical-clusters/</code>). 3. Sort the query list by <strong>Impressions: Change</strong> from highest to lowest. 4. Identify queries where impressions dropped by more than 20% compared to the prior week.</p>
+<p>Investigate any sudden impression drops. Check if a competitor published a fresher article, if Google rewrote your title tags, or if you accidentally removed an internal link during a recent site update. Restore missing links or refresh outdated paragraphs to recover lost visibility.</p>
+<h2 null>Next step</h2>
+<p>Implement this weekly workflow to keep your site architecture clean and profitable. Read our foundational guide on <a href="/authorityforge/systems/topical-clusters/">topical clusters</a>, review our mandatory <a href="/authorityforge/legal/affiliate-disclosure/">affiliate disclosure</a>, and explore more operational playbooks on the <a href="/authorityforge/blog/">blog</a>.</p>
+    <div class="cta-band partner-cta">
+      <p><strong>Tools we research</strong> (affiliate when live):
+        <a href="#" data-aff="semrush">Semrush</a> ·
+        <a href="#" data-aff="ahrefs">Ahrefs</a> ·
+        <a href="#" data-aff="surfer">Surfer</a> ·
+        <a href="/authorityforge/resources/affiliates/">all programs</a>
+      </p>
+    </div>
+    <p><a href="/authorityforge/systems/topical-clusters/">Related hub</a> · <a href="/authorityforge/blog/">← All posts</a> · <a href="/authorityforge/guide/search-authority-playbook/">Playbook</a></p>
+  </div></section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong>AuthorityForge</strong>
+        <p class="muted">Self-optimizing systems for search authority and compounding rankings.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul class="footer-links">
+          <li><a href="/authorityforge/systems/">Systems</a></li>
+          <li><a href="/authorityforge/guide/">Guides</a></li>
+          <li><a href="/authorityforge/blog/">Blog</a></li>
+          <li><a href="/authorityforge/resources/">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Monetization</h3>
+        <ul class="footer-links">
+          <li><a href="/authorityforge/systems/money/">Money OS</a></li>
+          <li><a href="/authorityforge/resources/affiliates/">Affiliates</a></li>
+          <li><a href="/authorityforge/products/">Products</a></li>
+          <li><a href="/authorityforge/legal/monetization/">Structure</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Clients &amp; legal</h3>
+        <ul class="footer-links">
+          <li><a href="/authorityforge/clients/">Client systems</a></li>
+          <li><a href="/authorityforge/legal/affiliate-disclosure/">Disclosure</a></li>
+          <li><a href="/authorityforge/legal/privacy/">Privacy</a></li>
+          <li><a href="/authorityforge/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© 2026 AuthorityForge</span>
+      <a href="/authorityforge/legal/affiliate-disclosure/">Affiliate disclosure</a>
+      <a href="/authorityforge/sitemap.xml">Sitemap</a>
+      <a href="/authorityforge/llms.txt">llms.txt</a>
+    </div>
+  </footer>
+  <script src="/authorityforge/js/config.js"></script>
+  <script src="/authorityforge/js/affiliates.js" defer></script>
+  <script src="/authorityforge/js/ads.js" defer></script>
+  <script src="/authorityforge/js/main.js" defer></script>
+  <div class="af-ad af-ad-auto wrap" aria-hidden="true" style="min-height:0;margin:1rem auto;max-width:728px"></div>
+</body>
+</html>
