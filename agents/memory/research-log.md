@@ -1194,3 +1194,8 @@ Here are 6 concrete next actions, ordered by potential cash impact for Authority
 - publish: true
 - plan:
 (no gemini — template mode)
+
+### Cycle 149 — 2026-10-01
+- KPI: queued=4, affiliates~0, health_ok=true
+- Experiment idea: ship one high-intent comparison page targeting a paid tool query; disclose affiliates; measure GSC 28d.
+- Agent hire: keep research-chief scanning competitor monetization pages weekly.
