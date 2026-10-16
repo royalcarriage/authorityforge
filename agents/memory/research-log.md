@@ -1420,3 +1420,13 @@ Here are 6 concrete next actions, ordered by cash impact, for AuthorityForge:
 - KPI: queued=4, affiliates~0, health_ok=true
 - Experiment idea: ship one high-intent comparison page targeting a paid tool query; disclose affiliates; measure GSC 28d.
 - Agent hire: keep research-chief scanning competitor monetization pages weekly.
+
+### Full-radius cycle 2026-10-16T15:10:52.219Z
+- health: {"/":"200","/ads.txt":"200","/company/":"200","/css/styles.css":"200","/api/company/status":"200","/api/health":"200"}
+- queued: 4
+- zeroCost: true
+- publish: true
+- plan:
+Here are 6 concrete next actions for AuthorityForge, ordered by potential cash impact:
+
+*   (affiliates) **Prioritize and enable highest-impact affiliate program**: Identify the affiliate program among the 16 disabled
