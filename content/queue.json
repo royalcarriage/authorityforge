@@ -3165,7 +3165,7 @@
         "ops"
       ],
       "hub": "/systems/topical-clusters/",
-      "status": "queued",
+      "status": "published",
       "outline": [
         "Export index coverage",
         "Map hub ownership",
@@ -3173,7 +3173,10 @@
         "Add one commercial spoke",
         "Measure impressions"
       ],
-      "source": "af-ceo"
+      "source": "af-ceo",
+      "published_at": "2026-10-23",
+      "published_path": "content/posts/weekly-cluster-audit-20261020.md",
+      "llm_provider": "template"
     },
     {
       "id": "auto-2026-10-21-cluster-audit",
