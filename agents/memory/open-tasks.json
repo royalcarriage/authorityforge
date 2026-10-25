@@ -72,17 +72,17 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-10-24T15:09:35.038Z"
+      "updatedAt": "2026-10-25T15:09:43.179Z"
     },
     {
       "id": "money-aff-ctas",
       "role": "monetization-chief",
-      "goal": "Grow data-aff CTAs (now ~468) on compare/tools/blog so IDs earn the day they're pasted",
+      "goal": "Grow data-aff CTAs (now ~471) on compare/tools/blog so IDs earn the day they're pasted",
       "severity": "P1",
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-10-24T15:09:35.038Z"
+      "updatedAt": "2026-10-25T15:09:43.179Z"
     },
     {
       "id": "money-signup-paths",
@@ -92,7 +92,7 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-10-24T15:09:35.038Z"
+      "updatedAt": "2026-10-25T15:09:43.179Z"
     },
     {
       "id": "money-blog-review",
@@ -102,7 +102,7 @@
       "priority": 2,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-10-24T15:09:35.038Z"
+      "updatedAt": "2026-10-25T15:09:43.179Z"
     },
     {
       "id": "money-compare-cluster",
@@ -112,9 +112,9 @@
       "priority": 1,
       "status": "open",
       "source": "money-gap-audit",
-      "updatedAt": "2026-10-24T15:09:35.038Z"
+      "updatedAt": "2026-10-25T15:09:43.179Z"
     }
   ],
-  "updatedAt": "2026-10-24T15:09:35.038Z",
-  "moneyGapRunAt": "2026-10-24T15:09:35.038Z"
+  "updatedAt": "2026-10-25T15:09:43.179Z",
+  "moneyGapRunAt": "2026-10-25T15:09:43.179Z"
 }

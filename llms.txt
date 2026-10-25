@@ -145,6 +145,7 @@
 - https://authorityforge-tau.vercel.app/blog/weekly-cluster-audit-20261019/
 - https://authorityforge-tau.vercel.app/blog/weekly-cluster-audit-20261020/
 - https://authorityforge-tau.vercel.app/blog/weekly-cluster-audit-20261021/
+- https://authorityforge-tau.vercel.app/blog/weekly-cluster-audit-20261022/
 - https://authorityforge-tau.vercel.app/blog/weekly-measurement-loop-45-minutes/
 - https://authorityforge-tau.vercel.app/blog/what-is-search-authority/
 - https://authorityforge-tau.vercel.app/blog/why-visitors-dont-signup-seo-saas/
