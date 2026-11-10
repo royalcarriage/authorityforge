@@ -1,6 +1,6 @@
 {
-  "at": "2026-11-09T15:08:07.539Z",
-  "cycle": 228,
+  "at": "2026-11-10T21:12:10.348Z",
+  "cycle": 230,
   "health": {
     "/": "200",
     "/ads.txt": "200",
@@ -10,7 +10,7 @@
     "/api/health": "200"
   },
   "queued": 4,
-  "publishedCount": 155,
+  "publishedCount": 157,
   "zeroCost": true,
   "primary": "https://authorityforge-tau.vercel.app",
   "money": {
